@@ -6,8 +6,8 @@
 </description>
     <link>www.awesomex.in//</link>
     <atom:link href="www.awesomex.in//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 08 Sep 2016 18:12:30 +0530</pubDate>
-    <lastBuildDate>Thu, 08 Sep 2016 18:12:30 +0530</lastBuildDate>
+    <pubDate>Thu, 08 Sep 2016 19:31:16 +0530</pubDate>
+    <lastBuildDate>Thu, 08 Sep 2016 19:31:16 +0530</lastBuildDate>
     <generator>Jekyll v3.0.1</generator>
     
       <item>
@@ -175,7 +175,17 @@ function myFunction(inu)
 &lt;/div&gt;
 &lt;/div&gt;
 
-
+&lt;div id=&quot;fb-root&quot;&gt;&lt;/div&gt;
+&lt;script&gt;(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = &quot;//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.7&quot;;
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, &#39;script&#39;, &#39;facebook-jssdk&#39;));&lt;/script&gt;
+&lt;div class=&quot;w3-display-container w3-card-4 w3-round&quot;&gt;
+&lt;div class=&quot;fb-comments&quot; data-href=&quot;http://www.awesomex.in//10-torrent-sites.html&quot; data-width=&quot;600&quot; data-numposts=&quot;5&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
 
 &lt;/div&gt;
 &lt;div class=&quot;w3-quarter w3-container w3-light-grey&quot;&gt;
@@ -367,7 +377,17 @@ function myFunction(inu)
 &lt;/div&gt;
 &lt;/div&gt;
 
-
+&lt;div id=&quot;fb-root&quot;&gt;&lt;/div&gt;
+&lt;script&gt;(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = &quot;//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.7&quot;;
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, &#39;script&#39;, &#39;facebook-jssdk&#39;));&lt;/script&gt;
+&lt;div class=&quot;w3-display-container w3-card-4 w3-round&quot;&gt;
+&lt;div class=&quot;fb-comments&quot; data-href=&quot;http://www.awesomex.in//10-unknown-backgrounds-of-bollywood-stars.html&quot; data-width=&quot;600&quot; data-numposts=&quot;5&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
 
 &lt;/div&gt;
 &lt;div class=&quot;w3-quarter w3-container w3-light-grey&quot;&gt;
@@ -560,7 +580,17 @@ function myFunction(inu)
 &lt;/div&gt;
 &lt;/div&gt;
 
-
+&lt;div id=&quot;fb-root&quot;&gt;&lt;/div&gt;
+&lt;script&gt;(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = &quot;//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.7&quot;;
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, &#39;script&#39;, &#39;facebook-jssdk&#39;));&lt;/script&gt;
+&lt;div class=&quot;w3-display-container w3-card-4 w3-round&quot;&gt;
+&lt;div class=&quot;fb-comments&quot; data-href=&quot;http://www.awesomex.in//10-richest-indians.html&quot; data-width=&quot;600&quot; data-numposts=&quot;5&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
 
 &lt;/div&gt;
 &lt;div class=&quot;w3-quarter w3-container w3-light-grey&quot;&gt;
@@ -753,7 +783,17 @@ function myFunction(inu)
 &lt;/div&gt;
 &lt;/div&gt;
 
-
+&lt;div id=&quot;fb-root&quot;&gt;&lt;/div&gt;
+&lt;script&gt;(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = &quot;//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.7&quot;;
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, &#39;script&#39;, &#39;facebook-jssdk&#39;));&lt;/script&gt;
+&lt;div class=&quot;w3-display-container w3-card-4 w3-round&quot;&gt;
+&lt;div class=&quot;fb-comments&quot; data-href=&quot;http://www.awesomex.in//10-Most-Powerful-Militaries.html&quot; data-width=&quot;600&quot; data-numposts=&quot;5&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
 
 &lt;/div&gt;
 &lt;div class=&quot;w3-quarter w3-container w3-light-grey&quot;&gt;
@@ -958,7 +998,17 @@ function myFunction(inu)
                                       &lt;p class=&quot;w3-large w3-panel w3-leftbar w3-border-blue&quot;&gt;The names of two Pokemon, &lt;b&gt;Ekans and Arbok, are reversed words&lt;/b&gt;.&lt;/p&gt;
                                         &lt;/div&gt;
 
-
+                                        &lt;div id=&quot;fb-root&quot;&gt;&lt;/div&gt;
+                                        &lt;script&gt;(function(d, s, id) {
+                                          var js, fjs = d.getElementsByTagName(s)[0];
+                                          if (d.getElementById(id)) return;
+                                          js = d.createElement(s); js.id = id;
+                                          js.src = &quot;//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.7&quot;;
+                                          fjs.parentNode.insertBefore(js, fjs);
+                                        }(document, &#39;script&#39;, &#39;facebook-jssdk&#39;));&lt;/script&gt;
+                                        &lt;div class=&quot;w3-display-container w3-card-4 w3-round&quot;&gt;
+                                        &lt;div class=&quot;fb-comments&quot; data-href=&quot;http://www.awesomex.in//10-childhood-anime.html&quot; data-width=&quot;600&quot; data-numposts=&quot;5&quot;&gt;&lt;/div&gt;
+                                        &lt;/div&gt;
 
 &lt;/div&gt;
 &lt;div class=&quot;w3-quarter w3-container w3-light-grey&quot;&gt;
@@ -1073,6 +1123,17 @@ function myFunction(inu)
   &lt;button class=&quot;w3-btn demo&quot; onclick=&quot;currentDiv(10)&quot;&gt;1&lt;/button&gt;
 &lt;/div&gt;
 
+&lt;div id=&quot;fb-root&quot;&gt;&lt;/div&gt;
+&lt;script&gt;(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = &quot;//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.7&quot;;
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, &#39;script&#39;, &#39;facebook-jssdk&#39;));&lt;/script&gt;
+&lt;div class=&quot;w3-display-container w3-card-4 w3-round&quot;&gt;
+&lt;div class=&quot;fb-comments&quot; data-href=&quot;http://www.awesomex.in//10-Olympics.html&quot; data-width=&quot;600&quot; data-numposts=&quot;5&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
 
 &lt;/div&gt;
 &lt;div class=&quot;w3-quarter w3-container w3-light-grey&quot;&gt;
@@ -1303,7 +1364,17 @@ function myFunction(inu)
 &lt;/div&gt;
 &lt;/div&gt;
 
-
+&lt;div id=&quot;fb-root&quot;&gt;&lt;/div&gt;
+&lt;script&gt;(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = &quot;//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.7&quot;;
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, &#39;script&#39;, &#39;facebook-jssdk&#39;));&lt;/script&gt;
+&lt;div class=&quot;w3-display-container w3-card-4 w3-round&quot;&gt;
+&lt;div class=&quot;fb-comments&quot; data-href=&quot;http://www.awesomex.in//10-popular-sports.html&quot; data-width=&quot;600&quot; data-numposts=&quot;5&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
 
 &lt;/div&gt;
 &lt;div class=&quot;w3-quarter w3-container w3-light-grey&quot;&gt;
