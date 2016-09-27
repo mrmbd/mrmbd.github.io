@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
   <link rel="icon" href="images/tab_logo.png" type="image/x-icon" />
-  <style amp-custom>
+  <style>
   /* W3.CSS 2.74 by Jan Egil and Borge Refsnes */
 *{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
 /* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
@@ -492,9 +492,9 @@ a {text-decoration:none;}
 
   <body>
 
-    <header class="w3-section w3-border-blue w3-border-bottom w3-light-grey">
+    <header class="w3-border-blue">
 
-  <div class="w3-large w3-expletus w3-white w3-center">
+  <div class="w3-large w3-expletus w3-white w3-center" style="margin-top:8px!important;margin-bottom:8px!important;">
     <a href="/index.html">
     <div class="w3-btn w3-round">
     <span class="w3-tag w3-blue w3-xlarge w3-round">A</span>
@@ -508,7 +508,9 @@ a {text-decoration:none;}
   </div>
 </a>
 </div>
-<ul class="w3-navbar w3-hide-small">
+</header>
+<div class="w3-border-blue w3-border-bottom w3-light-grey">
+<ul class="w3-navbar w3-hide-small w3-large">
 <li class="w3-text-bottom"><a class="w3-hover-red " href="/index.html">Home</a></li>
 <li><a class="w3-hover-red w3-bottombar w3-border-blue" href="/index.html">Top X</a></li>
 <li><a class="w3-hover-red " href="./techindex.html">Technology</a></li>
@@ -517,10 +519,11 @@ a {text-decoration:none;}
 <li><a class="w3-hover-red " href="./findex.html">Fun</a></li>
 
 <li class="w3-navitem w3-right"><div class="w3-btn w3-tiny w3-margin-0 w3-padding-1 w3-round w3-red " onclick="exec();">Search</div>  </li>
-<li class="w3-navitem w3-right"><input type="text" id="some" class="w3-input w3-border-2 w3-padding-0" placeholder="Search..">  </li>
+<li class="w3-navitem w3-right"><input type="text" id="some" class="w3-input w3-border-2 w3-padding-0 w3-hover-pale-blue" placeholder="Search..">  </li>
 
 </ul>
-</header>
+</div>
+
 <div class="w3-white">
  <span class="w3-opennav w3-animate-left w3-left w3-xlarge w3-hide-medium w3-hide-large" onclick="w3_open()"><img src="images/navicon.png" alt="Menu" style="height:30px;width:40px;"></span>
   <div class="w3-btn w3-small w3-round w3-red w3-right w3-hide-medium w3-hide-large" onclick="exec2();">Search</div>
