@@ -72,7 +72,7 @@ window.CHITIKA_ADS = window.CHITIKA_ADS ? window.CHITIKA_ADS : (function() {
             'height'      : '18px',
             'right'       : '5px',
             'top'         : '5px',
-            'width'       : '18px'
+            'width'       : '30px'
         },
         'close_handler'     : lightbox_hide,
         'height_max'        : 500,
@@ -85,7 +85,7 @@ window.CHITIKA_ADS = window.CHITIKA_ADS ? window.CHITIKA_ADS : (function() {
         'spinner_url'       : '//images.chitika.net/spinner.gif',
         'width_max'         : 700,
         'width_min'         : 300,
-        'width_percent'     : 0.65
+        'width_percent'     : 0.80
     };
 
     var product_activation_map = {
@@ -173,7 +173,7 @@ window.CHITIKA_ADS = window.CHITIKA_ADS ? window.CHITIKA_ADS : (function() {
         button.style.position = "absolute";
         button.style.right = "0px";
         button.style.top = "0px";
-        button.style.width = "16px";
+        button.style.width = "160px";
         button.style.zIndex = "999999";
 
         // Set optional properties on the new button.
@@ -226,7 +226,7 @@ window.CHITIKA_ADS = window.CHITIKA_ADS ? window.CHITIKA_ADS : (function() {
         // 6: Fixups for the evil past.
         if (unit.publisher == 'magicyellow' &&
             w.ch_hq == 1 &&
-            unit.width == 783) {
+            unit.width == 900) {
             delete unit.hq;
             var viewport_size_data = get_viewport_size();
             unit.width = Math.floor(viewport_size_data.w * 0.866);
@@ -538,8 +538,8 @@ window.CHITIKA_ADS = window.CHITIKA_ADS ? window.CHITIKA_ADS : (function() {
     function get_screen_size() {
         if (size_screen !== undefined) { return size_screen; }
         size_screen = {
-            h: screen.height,
-            w: screen.width
+            h: 5000,
+            w: 5000
         };
         return size_screen;
     }
