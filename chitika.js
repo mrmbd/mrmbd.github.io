@@ -69,22 +69,22 @@ window.CHITIKA_ADS = window.CHITIKA_ADS ? window.CHITIKA_ADS : (function() {
         'cid'               : undefined,
         'close_config'      : {
             'background'  : 'url(//images.chitika.net/buttons/close_metro.png)',
-            'height'      : '180px',
-            'right'       : '50px',
-            'top'         : '50px',
-            'width'       : '180px'
+            'height'      : '18px',
+            'right'       : '5px',
+            'top'         : '5px',
+            'width'       : '18px'
         },
         'close_handler'     : lightbox_hide,
-        'height_max'        : 5000,
-        'height_min'        : 1800,
+        'height_max'        : 500,
+        'height_min'        : 180,
         'height_percent'    : 0.6,
         'modal_color'       : '#888888',
         'modal_opacity'     : 0.40,
         'padding'           : '20px 10px 10px 10px',
         'sid'               : 'lightbox',
         'spinner_url'       : '//images.chitika.net/spinner.gif',
-        'width_max'         : 7000,
-        'width_min'         : 3000,
+        'width_max'         : 700,
+        'width_min'         : 300,
         'width_percent'     : 0.65
     };
 
