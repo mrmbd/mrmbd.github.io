@@ -549,7 +549,7 @@ window.CHITIKA_ADS = window.CHITIKA_ADS ? window.CHITIKA_ADS : (function() {
         if (size_scroll !== undefined) { return size_scroll; }
         var d = window_data.top_accessible ? top.document : window.document;
         size_scroll = {
-            h: 800
+            h: 800,
             w: 1200
         };
         return size_scroll;
