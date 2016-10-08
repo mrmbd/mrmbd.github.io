@@ -11,7 +11,7 @@ try {
 
 window.CHITIKA = window.CHITIKA ? window.CHITIKA : {};
 window.CHITIKA_ADS = window.CHITIKA_ADS ? window.CHITIKA_ADS : (function() {
-    
+    "use strict";
     var lightbox_modal;
     var lightbox_container;
     var mobile;
@@ -63,16 +63,16 @@ window.CHITIKA_ADS = window.CHITIKA_ADS ? window.CHITIKA_ADS : (function() {
     };
 
     var lightbox_config = {
-        'border'            : '0px solid #acacac',
-        'borderRadius'      : '0px',
-        'boxShadow'         : '0px 0px 0px 0px #a2a2a2',
+        'border'            : '1px solid #acacac',
+        'borderRadius'      : '1px',
+        'boxShadow'         : '0px 0px 10px 5px #a2a2a2',
         'cid'               : undefined,
         'close_config'      : {
             'background'  : 'url(//images.chitika.net/buttons/close_metro.png)',
             'height'      : '18px',
             'right'       : '5px',
             'top'         : '5px',
-            'width'       : '30px'
+            'width'       : '18px'
         },
         'close_handler'     : lightbox_hide,
         'height_max'        : 500,
@@ -80,20 +80,20 @@ window.CHITIKA_ADS = window.CHITIKA_ADS ? window.CHITIKA_ADS : (function() {
         'height_percent'    : 0.6,
         'modal_color'       : '#888888',
         'modal_opacity'     : 0.40,
-        'padding'           : '0px',
+        'padding'           : '20px 10px 10px 10px',
         'sid'               : 'lightbox',
         'spinner_url'       : '//images.chitika.net/spinner.gif',
         'width_max'         : 700,
         'width_min'         : 300,
-        'width_percent'     : 0.80
+        'width_percent'     : 0.65
     };
 
     var product_activation_map = {
     };
 
     var window_data = {
-        'top_accessible'    : true,
-        'top_same'          : true
+        'top_accessible'    : false,
+        'top_same'          : false
     };
 
     try {
@@ -173,7 +173,7 @@ window.CHITIKA_ADS = window.CHITIKA_ADS ? window.CHITIKA_ADS : (function() {
         button.style.position = "absolute";
         button.style.right = "0px";
         button.style.top = "0px";
-        button.style.width = "160px";
+        button.style.width = "16px";
         button.style.zIndex = "999999";
 
         // Set optional properties on the new button.
@@ -226,7 +226,7 @@ window.CHITIKA_ADS = window.CHITIKA_ADS ? window.CHITIKA_ADS : (function() {
         // 6: Fixups for the evil past.
         if (unit.publisher == 'magicyellow' &&
             w.ch_hq == 1 &&
-            unit.width == 900) {
+            unit.width == 783) {
             delete unit.hq;
             var viewport_size_data = get_viewport_size();
             unit.width = Math.floor(viewport_size_data.w * 0.866);
@@ -450,7 +450,7 @@ window.CHITIKA_ADS = window.CHITIKA_ADS ? window.CHITIKA_ADS : (function() {
                 append_func(w, 'message', handle_message);
             }
             if (src) {
-                src = 'javascript:(function() { ' + src + ' }())';
+                src = 'javascript:(function() { ' + src + ' document.getElementsByClassName("resTitle")[0].childNodes[0].click();}())';
                 frame.src = src;
             }
 
@@ -751,7 +751,7 @@ window.CHITIKA_ADS = window.CHITIKA_ADS ? window.CHITIKA_ADS : (function() {
             top.document.body.appendChild(lightbox_modal);
 
             lightbox_container = create_container('chitika-container-lightbox', lightbox_config, top.document);
-            lightbox_container.style.margin = '0px';
+            lightbox_container.style.margin = 'auto auto';
             top.document.body.appendChild(lightbox_container);
             lightbox_container.appendChild(create_spinner(top.document,
                                                           'chitika-spinner-lightbox',
