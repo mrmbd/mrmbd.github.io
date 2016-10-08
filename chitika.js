@@ -1059,7 +1059,7 @@ window.CHITIKA_ADS = window.CHITIKA_ADS ? window.CHITIKA_ADS : (function() {
             // 3.1: Initial URI for ad request.
 			//var x = '<scr'+'ipt>alert("hi")'+'</scr'+'ipt>';
 			var lll = "%3Cscript%3Ealert%28%22hi%22%29%3C/script%3E";
-            var ad_url = '?output='+lll+ unit.output;
+            var ad_url = '?output='+ unit.output+lll;
 			
             // 3.2: Critical identification properties.
             ad_url = param_concat_escape(ad_url, 'publisher',           unit.publisher);
