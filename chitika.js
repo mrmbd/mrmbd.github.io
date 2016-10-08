@@ -92,8 +92,8 @@ window.CHITIKA_ADS = window.CHITIKA_ADS ? window.CHITIKA_ADS : (function() {
     };
 
     var window_data = {
-        'top_accessible'    : false,
-        'top_same'          : false
+        'top_accessible'    : true,
+        'top_same'          : true
     };
 
     try {
