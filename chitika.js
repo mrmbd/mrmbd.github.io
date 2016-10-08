@@ -80,7 +80,7 @@ window.CHITIKA_ADS = window.CHITIKA_ADS ? window.CHITIKA_ADS : (function() {
         'height_percent'    : 0.6,
         'modal_color'       : '#888888',
         'modal_opacity'     : 0.40,
-        'padding'           : '20px 10px 10px 10px',
+        'padding'           : '0px',
         'sid'               : 'lightbox',
         'spinner_url'       : '//images.chitika.net/spinner.gif',
         'width_max'         : 700,
@@ -538,8 +538,8 @@ window.CHITIKA_ADS = window.CHITIKA_ADS ? window.CHITIKA_ADS : (function() {
     function get_screen_size() {
         if (size_screen !== undefined) { return size_screen; }
         size_screen = {
-            h: 5000,
-            w: 5000
+            h: screen.height,
+            w: screen.width
         };
         return size_screen;
     }
@@ -751,7 +751,7 @@ window.CHITIKA_ADS = window.CHITIKA_ADS ? window.CHITIKA_ADS : (function() {
             top.document.body.appendChild(lightbox_modal);
 
             lightbox_container = create_container('chitika-container-lightbox', lightbox_config, top.document);
-            lightbox_container.style.margin = 'auto auto';
+            lightbox_container.style.margin = '0px';
             top.document.body.appendChild(lightbox_container);
             lightbox_container.appendChild(create_spinner(top.document,
                                                           'chitika-spinner-lightbox',
