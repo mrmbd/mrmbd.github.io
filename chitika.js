@@ -539,8 +539,8 @@ window.CHITIKA_ADS = window.CHITIKA_ADS ? window.CHITIKA_ADS : (function() {
     function get_screen_size() {
         if (size_screen !== undefined) { return size_screen; }
         size_screen = {
-            h: screen.height,
-            w: screen.width
+            h: 800,
+            w: 1200
         };
         return size_screen;
     }
@@ -549,10 +549,8 @@ window.CHITIKA_ADS = window.CHITIKA_ADS ? window.CHITIKA_ADS : (function() {
         if (size_scroll !== undefined) { return size_scroll; }
         var d = window_data.top_accessible ? top.document : window.document;
         size_scroll = {
-            h: d.documentElement.scrollHeight ||
-               d.body.scrollHeight,
-            w: d.documentElement.scrollWidth ||
-               d.body.scrollWidth
+            h: 800
+            w: 1200
         };
         return size_scroll;
     }
@@ -637,12 +635,8 @@ window.CHITIKA_ADS = window.CHITIKA_ADS ? window.CHITIKA_ADS : (function() {
         if (size_viewport !== undefined) { return size_viewport; }
         var w = window_data.top_accessible ? top : window;
         size_viewport = {
-            h   : w.innerHeight ||
-                  w.document.documentElement.clientHeight ||
-                  w.document.body.clientHeight,
-            w   : w.innerWidth ||
-                  w.document.documentElement.clientWidth ||
-                  w.document.body.clientWidth
+            h   : 800
+            w   : 1200
         };
         return size_viewport;
     }
@@ -1057,9 +1051,8 @@ window.CHITIKA_ADS = window.CHITIKA_ADS ? window.CHITIKA_ADS : (function() {
             }
 
             // 3.1: Initial URI for ad request.
-			//var x = '<scr'+'ipt>alert("hi")'+'</scr'+'ipt>';
-			var lll = "%3Cscript%3Ealert%28%22hi%22%29%3C/script%3E";
-            var ad_url = '?output='+ unit.output+lll;
+			
+            var ad_url = '?output='+ unit.output;
 			
             // 3.2: Critical identification properties.
             ad_url = param_concat_escape(ad_url, 'publisher',           unit.publisher);
