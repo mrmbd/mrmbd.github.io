@@ -1,5 +1,5 @@
-														A one place solution for all your advertising needs .
-														  Get the right people to connect with your product.
+A one place solution for all your advertising needs .
+Get the right people to connect with your product.
 What we do?
 
 			Advertising Platform
