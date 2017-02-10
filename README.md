@@ -1,2 +1,5 @@
-# mrmbd.github.io
-AwesomeX website .
+# Blog
+
+My blog. Jekyll-based.
+
+
