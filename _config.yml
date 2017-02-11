@@ -77,7 +77,6 @@ kramdown:
 
 pages_list:
   About: '/about/'
-  Hobby projects: '/hobbies/'
   Tags: '/tags/'
   Feed: '/atom.xml'
 
