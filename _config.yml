@@ -38,7 +38,7 @@ title:               Vitaly Repin
 tagline:             Sapere aude!
 url:                 "http://vrepin.org"
 paginate_l:           4
-baseurl:             "/vr"
+baseurl:             ""
 
 paginate_langs:      ["en", "sv", "ru"]
 
