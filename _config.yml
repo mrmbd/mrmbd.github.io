@@ -3,7 +3,7 @@
 # Use of `relative_permalinks` ensures post links from the index work properly.
 permalink: "/:title/"
 
-highlighter: pygments
+highlighter: rouge
 
 timezone: Europe/Helsinki
 
@@ -34,13 +34,13 @@ exclude: ["transfer.sh", README.md]
 #fb_appid:           337414769782635
 
 # Setup
-title:               Vitaly Repin
+title:               Del Bao
 tagline:             Sapere aude!
-url:                 "http://vrepin.org"
+url:                 ""
 paginate_l:           4
 baseurl:             ""
 
-paginate_langs:      ["en", "sv", "ru"]
+paginate_langs:      ["en"]
 
 # Assets
 #
@@ -51,14 +51,14 @@ sass:
 
 # About/contact
 author:
-  name:              Vitaly Repin
-  url:               https://twitter.com/vitalyrepin
-  email:             vitaly_repin@fsfe.org
+  name:              Del Bao
+  url:               https://twitter.com/delbao1
+  email:             #vitaly_repin@fsfe.org
 
 # Custom vars
 version:             1.0.0
 github:
-  repo:              https://github.com/vitalyrepin/vrepinblog
+  repo:              https://github.com/delbao
 
 # Google sitemap generation
 gems:
@@ -66,7 +66,7 @@ gems:
   - jekyll-paginate
 
 # Conversion
-markdown:    redcarpet
+# markdown:    redcarpet
 excerpt_separator: "<!--break-->"
 
 redcarpet:
@@ -76,10 +76,9 @@ kramdown:
   auto_ids: true
 
 pages_list:
-  About: '/vr/about/'
-  Hobby projects: '/vr/hobbies/'
-  Tags: '/vr/tags/'
-  Feed: '/vr/atom.xml'
+  About: '/about/'
+  Tags: '/tags/'
+  Feed: '/atom.xml'
 
 picture:
   source: "_assets/imgs/_fullsize"
