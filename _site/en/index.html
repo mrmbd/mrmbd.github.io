@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+  <script src="/vr/public/lib/leaflet-ajax/dist/leaflet.ajax.min.js"></script>
+  <script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v0.0.2/Leaflet.fullscreen.min.js'></script>
+  <link href='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v0.0.2/leaflet.fullscreen.css' rel='stylesheet' />
+  <script src="/vr/public/lib/leaflet-gpx/gpx.js"></script>
+  
+
+
+
+<!-- Facebook tags -->
+<meta property="og:title" content="Home">
+<meta property="og:type" content="website">
+<meta property="og:url" content="http://localhost:4000/vr/en//">
+<meta property="og:image" content="http://localhost:4000/vr/public/images/me_hires.png">
+<meta property="og:description" content="">
+<meta property="og:site_name" content="Vitaly Repin">
+<meta property="og:locale" content="en_US">
+
+
+
+<meta property="fb:admins" content="606660677">
+<!-- <meta property="fb:app_id" content=""> -->
+
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Vitaly Repin &middot; Sapere aude!
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/vr/public/css/poole.css">
+  <link rel="stylesheet" href="/vr/public/css/syntax.css">
+  <link rel="stylesheet" href="/vr/public/css/lanyon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/vr/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/vr/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p></p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/vr/about">About</a>
+    <a class="sidebar-nav-item" href="/vr/hobbies">Hobby projects</a>
+    <a class="sidebar-nav-item" href="/vr/tags">Tags</a>
+    <a class="sidebar-nav-item" href="/vr/atom.xml">Feed</a>
+    <a class="sidebar-nav-item" href="/vr/">Latest posts</a>
+
+  <ul class="posts">  
+	  
+	   <li>  
+		   <span>14 Apr 2016</span> &raquo;  
+		   <a href="/vr/DigitalFree-Moddle/">  
+		   Course "On the Road to the Free Digital Society" is available in Moodle and IMS Common Cartridge formats now</a>  
+	   </li>  
+	  
+	   <li>  
+		   <span>04 Apr 2016</span> &raquo;  
+		   <a href="/vr/Kekkonen-Estonia-1964/">  
+		   Визит президента Финляндии Кекконена в Эстонию в 1964 году</a>  
+	   </li>  
+	  
+	   <li>  
+		   <span>06 Feb 2016</span> &raquo;  
+		   <a href="/vr/Logstash-filter-external-script/">  
+		   How to incorporate external utility scripts into Logstash Pipeline</a>  
+	   </li>  
+	  
+	   <li>  
+		   <span>18 Sep 2015</span> &raquo;  
+		   <a href="/vr/CopyrightedMonumentsFinland/">  
+		   Copyrighted monuments in Finland. Why Finnish works of art are not widely represented in Wikipedia</a>  
+	   </li>  
+	  
+	   <li>  
+		   <span>04 Sep 2015</span> &raquo;  
+		   <a href="/vr/Tour-de-Helsinki-2015/">  
+		   Tour de Helsinki 2015. Nybörjares intryck från cykelloppet</a>  
+	   </li>  
+	  
+	   <li>  
+		   <span>03 Sep 2015</span> &raquo;  
+		   <a href="/vr/Android-InsufficientSpace/">  
+		   Fixing annoying Android's 'insufficient storage available' issue</a>  
+	   </li>  
+	  
+	   <li>  
+		   <span>05 Aug 2015</span> &raquo;  
+		   <a href="/vr/Abo-skargard/">  
+		   Åbo omnejd. Skärgårdens ringväg med cykel / Saariston Rengastie</a>  
+	   </li>  
+	  
+	   <li>  
+		   <span>30 Jul 2015</span> &raquo;  
+		   <a href="/vr/IPsec-PacketLeakage/">  
+		   [ipsec, iptables, ebtables] How to avoid leakage of packets addressed to/from private IP space</a>  
+	   </li>  
+	  
+	   <li>  
+		   <span>09 Jul 2015</span> &raquo;  
+		   <a href="/vr/JekyllDeploy/">  
+		   How to automatically deploy static web site to the hosting</a>  
+	   </li>  
+	  
+	   <li>  
+		   <span>07 Jul 2015</span> &raquo;  
+		   <a href="/vr/Bagehot-ECB/">  
+		   Is ECB really enemy of the euro? More on Bagehot's rule</a>  
+	   </li>  
+	  
+	   <li>  
+		   <span>29 Jun 2015</span> &raquo;  
+		   <a href="/vr/JekyllMeta/">  
+		   Jekyll: how to add metadata to your site</a>  
+	   </li>  
+	  
+	   <li>  
+		   <span>29 Jun 2015</span> &raquo;  
+		   <a href="/vr/DisqusAddComments/">  
+		   Blog comments = Disqus + Jekyll</a>  
+	   </li>  
+	  
+	   <li>  
+		   <span>24 Jun 2015</span> &raquo;  
+		   <a href="/vr/Tagging/">  
+		   How to implement proper blog tagging with Jekyll</a>  
+	   </li>  
+	  
+	   <li>  
+		   <span>23 Jun 2015</span> &raquo;  
+		   <a href="/vr/Jekyll-is-cool/">  
+		   Jekyll is cool</a>  
+	   </li>  
+	  
+   </ul>
+
+    
+
+ 
+    
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+    
+      
+        
+      
+    
+      
+    
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">The content of this site </span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://vrepin.org/blog" property="cc:attributionName" rel="cc:attributionURL">Vitaly Repin</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>,
+	  <time datetime="2017-02-12T05:19:33+02:00">2017</time>.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+
+        <div class="container">
+ <h3 class="masthead-title">
+          <h3 class="masthead-title">
+            <a href="/vr/" title="Home">Vitaly Repin</a>
+            <small>
+	
+  &nbsp;&nbsp;&nbsp;
+  <small><a href="/vr/about/">About</a></small>
+
+  &nbsp;&nbsp;&nbsp;
+  <small><a href="/vr/hobbies/">Hobby projects</a></small>
+
+  &nbsp;&nbsp;&nbsp;
+  <small><a href="/vr/tags/">Tags</a></small>
+
+  &nbsp;&nbsp;&nbsp;
+  <small><a href="/vr/atom.xml">Feed</a></small>
+
+	   </small>
+	</h3>
+        <h3 class="masthead-title">
+           <small>
+	     <a href="http://localhost:4000/vr/en">English</a>
+	     <a href="http://localhost:4000/vr/sv">Svenska</a>
+	     <a href="http://localhost:4000/vr/ru">Русский</a>
+	   </small>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="posts">
+  
+  <article class="post">
+    <h1 class="post-title">
+      <a href="/vr/DigitalFree-Moddle/">
+        Course "On the Road to the Free Digital Society" is available in Moodle and IMS Common Cartridge formats now
+      </a>
+    </h1>
+
+    <time datetime="2016-04-14T00:00:00+03:00" class="post-date">14 Apr 2016</time>
+
+    <p>If you are interested in launching your own instance of the Stallman&#39;s course <a href="http://digitalfree.info/FreeDigitalSociety/">&quot;On the Road to the Free Digital Society&quot;</a>, I have good news for you.
+I have published the course in Moodle Backup and IMS Common Cartridge formats.</p>
+
+<p>The files are available in the <a href="http://digitalfree.info/FreeDigitalSociety/downloads/index.html">&quot;Download&quot; section</a> of the course website.</p>
+
+<p>I will be happy to hear your feedback about the course!</p>
+
+<p>Don&#39;t forget that we need your help in several areas:</p>
+
+<ul>
+<li><a href="https://github.com/vitalyrepin/FreedomRMS/tree/master/subtitles">Translations and subtitles</a></li>
+<li>Spreading the world about the course</li>
+<li>Launching the course in the LMS platforms you have access to</li>
+</ul>
+
+    
+    
+    
+    <p><a class="btn btn-sm btn-primary" href="/vr/DigitalFree-Moddle//#read-more" role="button">Read more <i class="fa fa-arrow-circle-right"></i></a>
+    </p>
+    
+
+    
+
+
+
+
+
+
+
+<a href="/vr/tag/FSF">#FSF</a>
+
+<a href="/vr/tag/Stallman">#Stallman</a>
+
+<a href="/vr/tag/freesoftware">#freesoftware</a>
+
+
+
+
+
+  </article>
+  
+  <article class="post">
+    <h1 class="post-title">
+      <a href="/vr/Logstash-filter-external-script/">
+        How to incorporate external utility scripts into Logstash Pipeline
+      </a>
+    </h1>
+
+    <time datetime="2016-02-06T00:00:00+02:00" class="post-date">06 Feb 2016</time>
+
+    <h3>Overview</h3>
+
+<p><a href="https://www.elastic.co/products/logstash">Logstash</a> is a great tool to process the logs and extract valuable data from them. There are many useful Logstash
+<a href="https://www.elastic.co/guide/en/logstash/current/filter-plugins.html">filter plugins</a> which make it easy to process the raw log data. However, sometimes
+external utilities are required to process the data in a more complicated way than existing filter plugins can.</p>
+
+<p>It&#39;s possible to <a href="https://www.elastic.co/guide/en/logstash/current/_how_to_write_a_logstash_filter_plugin.html">code your own filter plugin</a> in Ruby
+but what to do if you already have the filter implemented in some other programming language and want to reuse it in Logstash?</p>
+
+<p>In this case it&#39;s easier to communicate with this external filter from Logstash. This article demonstrates the simplest way of incorporating external
+applications into the Logstash pipeline:</p>
+
+<ol>
+<li>Logstash launches external program and delivers the input data to it through command line arguments and stdin</li>
+<li>External program writes results to stdout in any format understood by Logstash filters (e.g., JSON)</li>
+<li>Logstash parses output of the external program and continues to handle it in the pipeline</li>
+</ol>
+
+<p>It&#39;s needless to say that it is not the very best approach in terms of performance.
+E.g., if startup time of the external application is significant, you may consider
+to launch this application once (as a daemon/service) and communicate with it using <a href="http://en.wikipedia.org/wiki/%C3%98MQ">ØMQ</a> or other high-performance message queue.</p>
+
+<p>Detailed explanation and usage example are stated below.</p>
+
+    
+    
+    
+    <p><a class="btn btn-sm btn-primary" href="/vr/Logstash-filter-external-script//#read-more" role="button">Read more <i class="fa fa-arrow-circle-right"></i></a>
+    </p>
+    
+
+    
+
+
+
+
+
+
+
+<a href="/vr/tag/elasticsearch">#elasticsearch</a>
+
+<a href="/vr/tag/logstash">#logstash</a>
+
+<a href="/vr/tag/ruby">#ruby</a>
+
+
+
+
+
+  </article>
+  
+  <article class="post">
+    <h1 class="post-title">
+      <a href="/vr/CopyrightedMonumentsFinland/">
+        Copyrighted monuments in Finland. Why Finnish works of art are not widely represented in Wikipedia
+      </a>
+    </h1>
+
+    <time datetime="2015-09-18T00:00:00+03:00" class="post-date">18 Sep 2015</time>
+
+    <h1>What are you talking about?</h1>
+
+<p><img alt="Monument to Tapio Rautavaara in Åggelby (Oulunkylä)" src="/vr/public/images/Tapio_Rautavaara.jpg" width="50%" align="left" style="margin: 0px 15px">
+It can be a huge surprise for most of Finns but a lot of statues and monuments installed in public places in Finland are copyrighted.
+Unfortunately this is not only a curious fact. It has serious affect on the rights to publish photos of these works of art.</p>
+
+<p>I have recently faced this problem when I shot a photo of the beautiful <a href="https://fi.wikipedia.org/wiki/Tapio_Rautavaara#/media/File:Monument_to_Tapio_Rautavaara_in_%C3%85ggelby_%28Oulunkyl%C3%A4%29_1.jpg">Tapio Rautavaara&#39;s statue</a> installed in Åggelby in the capital area and uploaded it
+to <a href="https://commons.wikimedia.org/wiki/Main_Page">Wikimedia Commons</a> (this repository hosts most of the images used in Wikipedia articles).
+My contribution was almost immediately marked for deletion. In fact,
+Wikimedia has a lot of <a href="https://commons.wikimedia.org/wiki/Category:FOP-related_deletion_requests">deletion requests based on the same reason</a>.</p>
+
+<p>This was a surprise and pushed me to investigate the situation deeper. At the end, I managed to find a way to publish my photo in Finnish Wikipedia (but not in Wikimedia).</p>
+
+<p>I hope my findings can be useful for others facing similar issues in Finland and other countries which lack &quot;freedom of panorama&quot;. Besides all, it is a good illustration that even Europe
+is still on the way to a <a href="http://digitalfree.info/FreeDigitalSociety/index.html">free digital society</a>.</p>
+
+<p>This article is written in English because it&#39;s content (as I believe) can be beneficial for the foreigners who visited Finland and want to contribute their photos to Wikipedia.</p>
+
+    
+    
+    
+    <p><a class="btn btn-sm btn-primary" href="/vr/CopyrightedMonumentsFinland//#read-more" role="button">Read more <i class="fa fa-arrow-circle-right"></i></a>
+    </p>
+    
+
+    
+
+
+
+
+
+
+
+<a href="/vr/tag/Finland">#Finland</a>
+
+<a href="/vr/tag/IPR">#IPR</a>
+
+<a href="/vr/tag/copyright">#copyright</a>
+
+<a href="/vr/tag/photo">#photo</a>
+
+
+
+
+
+  </article>
+  
+  <article class="post">
+    <h1 class="post-title">
+      <a href="/vr/Android-InsufficientSpace/">
+        Fixing annoying Android's 'insufficient storage available' issue
+      </a>
+    </h1>
+
+    <time datetime="2015-09-03T00:00:00+03:00" class="post-date">03 Sep 2015</time>
+
+    <h1>The root of all evil: ridiculously small amount of free space in &#39;/data&#39; partition</h1>
+
+<p><img src="/vr/public/images/Android11Gb-goal.png" width="50%" alt="Android 'Apps' phone screenshot" align="left" style="margin: 0px 15px"></p>
+
+<p>I am happy <a href="http://www.catphones.com/phones/b15q-smartphone/">CAT B15</a> user. So far it&#39;s the only phone in my possession which survived more than 1 year — it is rugged and therefore
+can cope with my lifestyle. But last months it became almost unusable because of &#39;insufficient storage available&#39; message which came out all the time.</p>
+
+<p>The reason is simple — system updates are installed to the &#39;/data&#39; partition which has only 1 GB and they take around half of available space.
+I googled and found a lot of ridiculous solutions like &#39;install app X and it will magically solve all your problems including this&#39;, &#39;put all apps to the SD and you will save additional 40M&#39; etc.</p>
+
+<p>These advices sounded like a meaningless loss of time and I decided to fix the real problem which is lack of space in &#39;/data&#39;.
+1 GB is ridiculously low limit for modern device with a lot of apps and updates for Android components.</p>
+
+<p>May be my way of fixing the problem can be helpful for other users of Caterpillar phones and other Android phones with similar issues.</p>
+
+    
+    
+    
+    <p><a class="btn btn-sm btn-primary" href="/vr/Android-InsufficientSpace//#read-more" role="button">Read more <i class="fa fa-arrow-circle-right"></i></a>
+    </p>
+    
+
+    
+
+
+
+
+
+
+
+<a href="/vr/tag/android">#android</a>
+
+<a href="/vr/tag/linux">#linux</a>
+
+
+
+
+
+  </article>
+  
+</div>
+
+<div class="pagination">
+  
+    <a class="pagination-item older" href="/vr/en/page2">Older</a>
+  
+  
+    <span class="pagination-item newer">Newer</span>
+  
+</div>
+
+<!-- Analytics begin -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67139587-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- Analytics end -->
+
+
+
+
+
+
+<!-- Analytics begin -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67139587-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- Analytics end -->
+
+ 
+
+ <footer class="footer">
+ <small>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">The content of this page </span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://vrepin.org/" property="cc:attributionName" rel="cc:attributionURL">Vitaly Repin</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>,
+	  <time datetime="2017-02-12T05:19:33+02:00">2017</time>.
+	  </small>
+</footer>
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+  </body>
+</html>

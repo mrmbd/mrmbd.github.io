@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  
+
+<meta name="description" content="This article describes Castle Approach to filtering IP packets addressed to/from private IP space. iptables and ebtables firewall tools are used. Keywords: ipsec, BCP38, iptables, ebtables, linux">
+
+
+<meta name="keywords" content="vpn, firewall, ebtables, iptables, linux"/>
+
+
+<!-- Facebook tags -->
+<meta property="og:title" content="[ipsec, iptables, ebtables] How to avoid leakage of packets addressed to/from private IP space">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://localhost:4000/vr/IPsec-PacketLeakage//">
+<meta property="og:image" content="http://localhost:4000/vr/public/images/me_hires.png">
+<meta property="og:description" content="This article describes Castle Approach to filtering IP packets addressed to/from private IP space. iptables and ebtables firewall tools are used. Keywords: ipsec, BCP38, iptables, ebtables, linux">
+<meta property="og:site_name" content="Vitaly Repin">
+<meta property="og:locale" content="en_US">
+
+
+  <meta property="article:published_time" content="2015-07-30T00:00:00+03:00">
+  <meta property="article:author" content="606660677">
+  
+    <meta property="og:see_also" content="http://localhost:4000/vr/DigitalFree-Moddle/">
+  
+    <meta property="og:see_also" content="http://localhost:4000/vr/Kekkonen-Estonia-1964/">
+  
+    <meta property="og:see_also" content="http://localhost:4000/vr/Logstash-filter-external-script/">
+  
+
+
+<meta property="fb:admins" content="606660677">
+<!-- <meta property="fb:app_id" content=""> -->
+
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      [ipsec, iptables, ebtables] How to avoid leakage of packets addressed to/from private IP space &middot; Vitaly Repin
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/vr/public/css/poole.css">
+  <link rel="stylesheet" href="/vr/public/css/syntax.css">
+  <link rel="stylesheet" href="/vr/public/css/lanyon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/vr/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/vr/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p></p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/vr/about">About</a>
+    <a class="sidebar-nav-item" href="/vr/hobbies">Hobby projects</a>
+    <a class="sidebar-nav-item" href="/vr/tags">Tags</a>
+    <a class="sidebar-nav-item" href="/vr/atom.xml">Feed</a>
+    <a class="sidebar-nav-item" href="/vr/">Latest posts</a>
+
+  <ul class="posts">  
+	  
+	   <li>  
+		   <span>14 Apr 2016</span> &raquo;  
+		   <a href="/vr/DigitalFree-Moddle/">  
+		   Course "On the Road to the Free Digital Society" is available in Moodle and IMS Common Cartridge formats now</a>  
+	   </li>  
+	  
+	   <li>  
+		   <span>04 Apr 2016</span> &raquo;  
+		   <a href="/vr/Kekkonen-Estonia-1964/">  
+		   Визит президента Финляндии Кекконена в Эстонию в 1964 году</a>  
+	   </li>  
+	  
+	   <li>  
+		   <span>06 Feb 2016</span> &raquo;  
+		   <a href="/vr/Logstash-filter-external-script/">  
+		   How to incorporate external utility scripts into Logstash Pipeline</a>  
+	   </li>  
+	  
+	   <li>  
+		   <span>18 Sep 2015</span> &raquo;  
+		   <a href="/vr/CopyrightedMonumentsFinland/">  
+		   Copyrighted monuments in Finland. Why Finnish works of art are not widely represented in Wikipedia</a>  
+	   </li>  
+	  
+	   <li>  
+		   <span>04 Sep 2015</span> &raquo;  
+		   <a href="/vr/Tour-de-Helsinki-2015/">  
+		   Tour de Helsinki 2015. Nybörjares intryck från cykelloppet</a>  
+	   </li>  
+	  
+	   <li>  
+		   <span>03 Sep 2015</span> &raquo;  
+		   <a href="/vr/Android-InsufficientSpace/">  
+		   Fixing annoying Android's 'insufficient storage available' issue</a>  
+	   </li>  
+	  
+	   <li>  
+		   <span>05 Aug 2015</span> &raquo;  
+		   <a href="/vr/Abo-skargard/">  
+		   Åbo omnejd. Skärgårdens ringväg med cykel / Saariston Rengastie</a>  
+	   </li>  
+	  
+	   <li>  
+		   <span>30 Jul 2015</span> &raquo;  
+		   <a href="/vr/IPsec-PacketLeakage/">  
+		   [ipsec, iptables, ebtables] How to avoid leakage of packets addressed to/from private IP space</a>  
+	   </li>  
+	  
+	   <li>  
+		   <span>09 Jul 2015</span> &raquo;  
+		   <a href="/vr/JekyllDeploy/">  
+		   How to automatically deploy static web site to the hosting</a>  
+	   </li>  
+	  
+	   <li>  
+		   <span>07 Jul 2015</span> &raquo;  
+		   <a href="/vr/Bagehot-ECB/">  
+		   Is ECB really enemy of the euro? More on Bagehot's rule</a>  
+	   </li>  
+	  
+	   <li>  
+		   <span>29 Jun 2015</span> &raquo;  
+		   <a href="/vr/JekyllMeta/">  
+		   Jekyll: how to add metadata to your site</a>  
+	   </li>  
+	  
+	   <li>  
+		   <span>29 Jun 2015</span> &raquo;  
+		   <a href="/vr/DisqusAddComments/">  
+		   Blog comments = Disqus + Jekyll</a>  
+	   </li>  
+	  
+	   <li>  
+		   <span>24 Jun 2015</span> &raquo;  
+		   <a href="/vr/Tagging/">  
+		   How to implement proper blog tagging with Jekyll</a>  
+	   </li>  
+	  
+	   <li>  
+		   <span>23 Jun 2015</span> &raquo;  
+		   <a href="/vr/Jekyll-is-cool/">  
+		   Jekyll is cool</a>  
+	   </li>  
+	  
+   </ul>
+
+    
+
+ 
+    
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+    
+      
+        
+      
+    
+      
+    
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">The content of this site </span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://vrepin.org/blog" property="cc:attributionName" rel="cc:attributionURL">Vitaly Repin</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>,
+	  <time datetime="2017-02-12T05:19:33+02:00">2017</time>.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+
+        <div class="container">
+ <h3 class="masthead-title">
+          <h3 class="masthead-title">
+            <a href="/vr/" title="Home">Vitaly Repin</a>
+            <small>
+	
+  &nbsp;&nbsp;&nbsp;
+  <small><a href="/vr/about/">About</a></small>
+
+  &nbsp;&nbsp;&nbsp;
+  <small><a href="/vr/hobbies/">Hobby projects</a></small>
+
+  &nbsp;&nbsp;&nbsp;
+  <small><a href="/vr/tags/">Tags</a></small>
+
+  &nbsp;&nbsp;&nbsp;
+  <small><a href="/vr/atom.xml">Feed</a></small>
+
+	   </small>
+	</h3>
+        <h3 class="masthead-title">
+           <small>
+	     <a href="http://localhost:4000/vr/en">English</a>
+	     <a href="http://localhost:4000/vr/sv">Svenska</a>
+	     <a href="http://localhost:4000/vr/ru">Русский</a>
+	   </small>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="post">
+  <h1 class="post-title">[ipsec, iptables, ebtables] How to avoid leakage of packets addressed to/from private IP space</h1>
+  <span class="post-date">30 Jul 2015</span>
+  <h1>Background</h1>
+
+<p>I&#39;ve been asked by <a href="https://seed4.me/">SEED4.ME VPN</a> to investigate the package leakaging issue in their environment raised after delivering new VPN features for Apple devices.</p>
+
+<p>We&#39;ve agreed that we do want not only to solve this particular problem with Apple IPsec, but
+<em>to build a fence system which can completely eliminate any packet leaking problems in future caused by any bug, feature, misconfiguration etc.</em></p>
+
+<p>I hope results of this small project can be useful for other engineers facing similar challenges.</p>
+
+<h1>Problem: packet leakage</h1>
+
+<p>Packets belonging to <a href="http://en.wikipedia.org/wiki/Private_network">private IP address space</a> shall not appear in the network interfaces which do not belong to private networks.</p>
+
+<p>Typical example is VPS hosted in the cloud. If it sends packets addressed to private IP address space through its external NIC, it usually means that something wrong is happening.
+More providers started to implement <a href="http://www.bcp38.info/index.php/Main_Page">BCP38</a> RFC for defeating  Denial of Service Attacks which employ IP Source Address Spoofing.
+They block such packets and complain to VPS administrators.</p>
+
+<p>However, <a href="http://en.wikipedia.org/wiki/List_of_Latin_phrases_%28E%29#errare_humanum_est"><em>errare humanum est</em></a> &mdash; administrators are people too. Typical cases are <a href="http://www.smythies.com/%7Edoug/network/iptables_notes/index.html">NAT</a>- and <a href="http://marc.info/?l=netfilter&m=143654558816715&w=2">IPsec</a>-related.</p>
+
+<p>This article describes <a href="https://en.wikipedia.org/wiki/Defense_in_depth_%28computing%29">Castle Approach</a> to this problem. An idea is simple:</p>
+
+<ol>
+<li>Leaked packets are filtered by Linux firewall (netfilter iptables)</li>
+<li>If packets are not filtered by Linux firewall, they are filtered by Linux ethernet bridging firewall (netfilter ebtables). In the same time, they are logged and became visible to the monitoring system</li>
+</ol>
+
+<a class="anchor" id="read-more"></a>
+
+<p>Ebtables is used as last line of defense. It has additional benefit &mdash; usually ebtables rules are simple (if they even exist!) and iptables rules can be very complex, managed with sophisticated tools etc. As a result, it&#39;s much easier to make a mistake managing iptables than ebtables <sup id="fnref1"><a href="#fn1" rel="footnote">1</a></sup>.</p>
+
+<h1>IPsec: dropping packets without a matched policy</h1>
+
+<p>Create a drop rule in filter FORWARD, that drops incoming packets for SNATed IPs without a matching policy: <sup id="fnref2"><a href="#fn2" rel="footnote">2</a></sup></p>
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>iptables -A FORWARD -d &lt;src&gt; -m policy --pol none --dir out -j DROP
+</code></pre></div>
+<p><code>&lt;src&gt;</code> is your IPSEC VPN network. E.g., <code>10.57.0.0/16</code>.</p>
+
+<p>This is our first line of defense. Don&#39;t forget to test that it really works (e.g., by adding logging)!</p>
+
+<p>This step really depends on your networking configuration. Example above is valid for IPsec VPN implementation based on <a href="http://man7.org/linux/man-pages/man8/ip-xfrm.8.html">xfrm</a>.</p>
+
+<h1>Ebtables as last line of defense</h1>
+
+<p><a href="http://ebtables.netfilter.org/">ebtables</a>  is a filtering tool for a Linux-based bridging firewall. It works in the link layer.</p>
+
+<p>We will use it to log and drop unwanted packets. Presence of ebtables logs is a signal to administrator that something wrong has happened &mdash; packets were not filtered in the higher layers
+and reached link layer.</p>
+
+<h2>Filtering by IP with ebtables: goal setting</h2>
+
+<p>Our goal is to drop all the packets addressed to private networks from your external network interface. Filtering mechanism should also support exceptions. In other words, it shall be possible
+to allow packets addressed to certain (exceptional) private networks to flow through external network interface.</p>
+
+<p>We will suppose that your network interface is called eth0.</p>
+
+<h2>Step 1: Enable network bridge functionality</h2>
+
+<p>ebtables works with network bridges. It means we need to have one. First, make sure your kernel supports network bridges. Set &quot;networking -&gt; 802.1d Ethernet Bridging&quot; to either yes or module.</p>
+
+<p>Second, check that bridge device can be created:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span># ip link add name br0 type bridge
+# ifconfig br0
+</code></pre></div>
+<h2>Step 2: Enable ebtables filtering</h2>
+
+<p>Make sure <a href="http://ebtables.netfilter.org/misc/ebtables-faq.html#quiz1">your kernel supports ethernet bridge tables functionality</a>.</p>
+
+<p>Then install ebtables utility. Installation command for Ubuntu:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>apt-get install ebtables
+</code></pre></div>
+<p>Check that command line <code>ebtables -L</code> shows you an empty output for all three chains &mdash; <em>FORWARD, OUTPUT</em> and <em>INPUT</em>.</p>
+
+<h2>Step 3: Create a bridge and add physical network interface to it</h2>
+
+<p>We need to have a bridge with only one network card connected (eth0). It means that you need to configure bridge IP address to be the same as it is currently set for your NIC. And change routing.</p>
+
+<p>It is done through network interfaces configuration.</p>
+
+<p>E.g., in Ubuntu you need to change <code>/etc/network/interfaces</code> file in the following manner:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text"><span></span>auto br0
+
+iface eth0 inet manual
+up ip link set eth0 up
+up ip link set dev eth0 promisc on
+
+down ip link set eth0 promisc off
+down ip link set eth0 down
+
+# The local network bridge
+iface br0 inet static
+  bridge_ports eth0
+  bridge_stp off       # disable Spanning Tree Protocol
+  bridge_waitport 0    # no delay before a port becomes available
+  bridge_fd 0          # no forwarding delay
+  address &lt;IP address of your host&gt;
+  netmask &lt;netmask of your host&gt;
+  gateway &lt;default gateway&gt;
+  metric 1
+  post-up ip link set dev br0 promisc on
+  post-up /usr/local/bin/ebtables-filter.sh br0
+  post-down ebtables -F
+</code></pre></div>
+<p>Most of the parameters are obvious. Several comments:</p>
+
+<ul>
+<li>We set <a href="https://en.wikipedia.org/wiki/Promiscuous_mode">promiscuous mode</a> for <code>eth0</code> and <code>br0</code>. This mode is activated after bringing the interfaces up.  This step seems to be
+unnecessary in the recent kernels (4.1.0 and later).</li>
+<li>Filtering is activated by the script <code>ebtables-filter.sh</code> which is launched after bridge interface came up.</li>
+</ul>
+
+<h2>Step 4: Filtering</h2>
+
+<p>Filtering script <code>/usr/local/bin/ebtables-filter.sh</code> is relatively simple:</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"><span></span><span class="ch">#!/bin/sh</span>
+
+
+<span class="c1"># Bridge interface to add rules for. Typically br0</span>
+<span class="nv">IFACE</span><span class="o">=</span>br0
+
+<span class="c1"># Networks to block: private addresses as defined in RFC 1918</span>
+<span class="nv">BLK_ADDR</span><span class="o">=</span><span class="s2">&quot;10.0.0.0/8 172.16.0.0/12 192.168.0.0/16&quot;</span>
+
+<span class="c1"># Private networks to NOT block: e.g. they are used to connect to the VPN console</span>
+<span class="nv">UNBLK_ADDR</span><span class="o">=</span><span class="s2">&quot;192.168.2.0/24&quot;</span>
+
+<span class="c1"># First - adding exceptions</span>
+<span class="k">for</span> addr in <span class="nv">$UNBLK_ADDR</span><span class="p">;</span> <span class="k">do</span>
+  ebtables -A OUTPUT -p IPv4 --ip-destination <span class="nv">$addr</span>  -j ACCEPT
+  ebtables -A FORWARD -i <span class="nv">$IFACE</span> -p IPv4 --ip-destination <span class="nv">$addr</span>  -j ACCEPT
+  ebtables -A OUTPUT -p IPv4 --ip-source <span class="nv">$addr</span> -j ACCEPT
+  ebtables -A FORWARD -i <span class="nv">$IFACE</span> -p IPv4 --ip-source <span class="nv">$addr</span> -j ACCEPT
+<span class="k">done</span>
+
+<span class="c1"># Second - adding blocked networks</span>
+<span class="k">for</span> addr in <span class="nv">$BLK_ADDR</span><span class="p">;</span> <span class="k">do</span>
+  <span class="c1"># Log leaks</span>
+  ebtables -A OUTPUT  -p IPv4 --ip-destination <span class="nv">$addr</span>  --log-level info --log-ip --log-prefix <span class="s2">&quot;EBTABLES-BLKO&quot;</span>
+  ebtables -A FORWARD -i <span class="nv">$IFACE</span> -p IPv4 --ip-destination <span class="nv">$addr</span>  --log-level info --log-ip --log-prefix <span class="s2">&quot;EBTABLES-BLKF&quot;</span>
+  ebtables -A OUTPUT  -p IPv4 --ip-source <span class="nv">$addr</span>  --log-level info --log-ip --log-prefix <span class="s2">&quot;EBTABLES-BLKO&quot;</span>
+  ebtables -A FORWARD -i <span class="nv">$IFACE</span> -p IPv4 --ip-source <span class="nv">$addr</span>  --log-level info --log-ip --log-prefix <span class="s2">&quot;EBTABLES-BLKF&quot;</span>
+
+  <span class="c1"># Drop leaks</span>
+  ebtables -A OUTPUT -p IPv4 --ip-destination <span class="nv">$addr</span>  -j DROP
+  ebtables -A FORWARD -i <span class="nv">$IFACE</span> -p IPv4 --ip-destination <span class="nv">$addr</span>  -j DROP
+  ebtables -A OUTPUT -p IPv4 --ip-source <span class="nv">$addr</span> -j DROP
+  ebtables -A FORWARD -i <span class="nv">$IFACE</span> -p IPv4 --ip-source <span class="nv">$addr</span> -j DROP
+<span class="k">done</span></code></pre></figure>
+
+<p>It instructs ebtables to drop all packets which are coming from or addressed to private networks. In order to support exceptions we set acceptance rules in the beginning &mdash;
+the packets which are coming from or to these networks will not be dropped. Every chain has a different logging prefix which makes it easier for the reader of log files to understand
+where the packet was caught.</p>
+
+<h2>Step 5: Test your setup</h2>
+
+<p>We are done. Now it&#39;s time to test your setup. If any packet is dropped, it is also logged into you logging system (the same way iptables logs their packets if requested to do so)
+and you can easily monitor these logs in your network monitoring platform.</p>
+
+<p>If you have any questions, comments, improvements ideas, don&#39;t hesitate to comment under this post!</p>
+
+<p>If you liked this post, you can
+<a href="https://twitter.com/intent/tweet?url=http://localhost:4000/IPsec-PacketLeakage/&text=[ipsec, iptables, ebtables] How to avoid leakage of packets addressed to/from private IP space&via=vitalyrepin" 
+   target="_blank">
+  share it with your followers</a> 
+or 
+<a href="https://twitter.com/vitalyrepin">
+  follow me on Twitter</a>!</p>
+
+<div class="footnotes">
+<hr>
+<ol>
+
+<li id="fn1">
+<p>Ebtables and iptables are userland utilities to manage Linux kernel firewall, they are NOT filtering anything by themselves. This article uses &quot;ebtables&quot; as a synonym to &quot;Linux-based bridging firewall&quot;. &quot;iptables&quot; is used in a similar manner.&nbsp;<a href="#fnref1" rev="footnote">&#8617;</a></p>
+</li>
+
+<li id="fn2">
+<p>Adapted from <a href="http://marc.info/?l=netfilter&m=143654576916745&w=2">Noel Kuntze&#39;s post</a>.&nbsp;<a href="#fnref2" rev="footnote">&#8617;</a></p>
+</li>
+
+</ol>
+</div>
+
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/1.2.1/anchor.min.js"></script>
+<script type="text/javascript">
+anchors.options.visible = 'hoover';
+anchors.options.placement = 'left';
+anchors.add();
+anchors.remove('.masthead-title');
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/2.3.1/picturefill.min.js"></script>
+
+
+
+
+
+
+
+
+
+<a href="/vr/tag/ebtables">#ebtables</a>
+
+<a href="/vr/tag/firewall">#firewall</a>
+
+<a href="/vr/tag/iptables">#iptables</a>
+
+<a href="/vr/tag/linux">#linux</a>
+
+<a href="/vr/tag/vpn">#vpn</a>
+
+
+
+
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="/vr/DigitalFree-Moddle/">
+            Course "On the Road to the Free Digital Society" is available in Moodle and IMS Common Cartridge formats now
+            <small>14 Apr 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/vr/Kekkonen-Estonia-1964/">
+            Визит президента Финляндии Кекконена в Эстонию в 1964 году
+            <small>04 Apr 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+      <li>
+        <h3>
+          <a href="/vr/Logstash-filter-external-script/">
+            How to incorporate external utility scripts into Logstash Pipeline
+            <small>06 Feb 2016</small>
+          </a>
+        </h3>
+      </li>
+    
+  </ul>
+</div>
+
+
+<!-- Analytics begin -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67139587-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- Analytics end -->
+
+ 
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'vitalyrepinblog';
+    
+    var disqus_identifier = '/IPsec-PacketLeakage';
+    var disqus_title = '[ipsec, iptables, ebtables] How to avoid leakage of packets addressed to/from private IP space';
+    var disqus_url = 'http://localhost:4000/vr/IPsec-PacketLeakage/';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+ 
+
+ <footer class="footer">
+ <small>
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">The content of this page </span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://vrepin.org/" property="cc:attributionName" rel="cc:attributionURL">Vitaly Repin</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>,
+	  <time datetime="2017-02-12T05:19:33+02:00">2017</time>.
+	  </small>
+</footer>
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+  </body>
+</html>
