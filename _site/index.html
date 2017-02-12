@@ -77,36 +77,6 @@
 	
 	   <li>
 		   <span>06 Feb 2016</span> &raquo;
-		   <a href="/2016/02/06/Logstash-filter-external-script9.html">
-		   How to incorporate external utility scripts into Logstash Pipeline</a>
-	   </li>
-	
-	   <li>
-		   <span>06 Feb 2016</span> &raquo;
-		   <a href="/2016/02/06/Logstash-filter-external-script8.html">
-		   How to incorporate external utility scripts into Logstash Pipeline</a>
-	   </li>
-	
-	   <li>
-		   <span>06 Feb 2016</span> &raquo;
-		   <a href="/2016/02/06/Logstash-filter-external-script7.html">
-		   How to incorporate external utility scripts into Logstash Pipeline</a>
-	   </li>
-	
-	   <li>
-		   <span>06 Feb 2016</span> &raquo;
-		   <a href="/2016/02/06/Logstash-filter-external-script6.html">
-		   How to incorporate external utility scripts into Logstash Pipeline</a>
-	   </li>
-	
-	   <li>
-		   <span>06 Feb 2016</span> &raquo;
-		   <a href="/2016/02/06/Logstash-filter-external-script5.html">
-		   How to incorporate external utility scripts into Logstash Pipeline</a>
-	   </li>
-	
-	   <li>
-		   <span>06 Feb 2016</span> &raquo;
 		   <a href="/2016/02/06/Logstash-filter-external-script4.html">
 		   How to incorporate external utility scripts into Logstash Pipeline</a>
 	   </li>
@@ -148,14 +118,6 @@
         
       
     
-      
-    
-      
-        
-      
-    
-      
-        
       
     
       
@@ -221,13 +183,13 @@
   
   <article class="post">
     <h1 class="post-title">
-      <a href="/2016/02/06/Logstash-filter-external-script9.html">
+      <a href="/2016/02/06/Logstash-filter-external-script4.html">
         How to incorporate external utility scripts into Logstash Pipeline
       </a>
     </h1>
 
     <time datetime="2016-02-06T00:00:00+02:00" class="post-date">06 Feb 2016</time>
-
+    
     <h3 id="overview">Overview</h3>
 
 <p><a href="https://www.elastic.co/products/logstash">Logstash</a> is a great tool to process the logs and extract valuable data from them. There are many useful Logstash
@@ -237,8 +199,9 @@ external utilities are required to process the data in a more complicated way th
 <p>It’s possible to <a href="https://www.elastic.co/guide/en/logstash/current/_how_to_write_a_logstash_filter_plugin.html">code your own filter plugin</a> in Ruby
 but what to do if you already have the filter implemented in some other programming language and want to reuse it in Logstash?</p>
 
-<p>In this case it’s easier to communicate with this external filter from Logstash. This article demonstrates the simplest way of incorporating external
-applications into the Logstash pipeline:</p>
+<p>In this case it’s easier to communicate with this external filter from Logstash. This article demonstrates the simplest way of incorporating external</p>
+
+<p>applications into the Logstash pipeline:</p>
 
 <ol>
   <li>Logstash launches external program and delivers the input data to it through command line arguments and stdin</li>
@@ -254,11 +217,10 @@ to launch this application once (as a daemon/service) and communicate with it us
 
 
     
-    
-    
-    <p><a class="btn btn-sm btn-primary" href="/2016/02/06/Logstash-filter-external-script9.html/#read-more" role="button">Read more <i class="fa fa-arrow-circle-right"></i></a>
+
+    <p><a class="btn btn-sm btn-primary" href="/2016/02/06/Logstash-filter-external-script4.html/#read-more" role="button">Read more <i class="fa fa-arrow-circle-right"></i></a>
     </p>
-    
+
 
     
 
@@ -282,44 +244,19 @@ to launch this application once (as a daemon/service) and communicate with it us
   
   <article class="post">
     <h1 class="post-title">
-      <a href="/2016/02/06/Logstash-filter-external-script8.html">
+      <a href="/2016/02/06/Logstash-filter-external-script3.html">
         How to incorporate external utility scripts into Logstash Pipeline
       </a>
     </h1>
 
     <time datetime="2016-02-06T00:00:00+02:00" class="post-date">06 Feb 2016</time>
-
-    <h3 id="overview">Overview</h3>
-
-<p><a href="https://www.elastic.co/products/logstash">Logstash</a> is a great tool to process the logs and extract valuable data from them. There are many useful Logstash
-<a href="https://www.elastic.co/guide/en/logstash/current/filter-plugins.html">filter plugins</a> which make it easy to process the raw log data. However, sometimes
-external utilities are required to process the data in a more complicated way than existing filter plugins can.</p>
-
-<p>It’s possible to <a href="https://www.elastic.co/guide/en/logstash/current/_how_to_write_a_logstash_filter_plugin.html">code your own filter plugin</a> in Ruby
-but what to do if you already have the filter implemented in some other programming language and want to reuse it in Logstash?</p>
-
-<p>In this case it’s easier to communicate with this external filter from Logstash. This article demonstrates the simplest way of incorporating external
-applications into the Logstash pipeline:</p>
-
-<ol>
-  <li>Logstash launches external program and delivers the input data to it through command line arguments and stdin</li>
-  <li>External program writes results to stdout in any format understood by Logstash filters (e.g., JSON)</li>
-  <li>Logstash parses output of the external program and continues to handle it in the pipeline</li>
-</ol>
-
-<p>It’s needless to say that it is not the very best approach in terms of performance.
-E.g., if startup time of the external application is significant, you may consider
-to launch this application once (as a daemon/service) and communicate with it using <a href="http://en.wikipedia.org/wiki/%C3%98MQ">ØMQ</a> or other high-performance message queue.</p>
-
-<p>Detailed explanation and usage example are stated below.</p>
-
-
     
+    <h3 id="overview">Overview</h3> <p><a href="https://www.elastic.co/products/logstash">Logstash</a> is a great tool to process the logs and extract valuable data from them. There are many useful Logstash <a href="https://www.elastic.co/guide/en/logstash/current/filter-plugins.html">filter plugins</a>...
     
-    
-    <p><a class="btn btn-sm btn-primary" href="/2016/02/06/Logstash-filter-external-script8.html/#read-more" role="button">Read more <i class="fa fa-arrow-circle-right"></i></a>
+
+    <p><a class="btn btn-sm btn-primary" href="/2016/02/06/Logstash-filter-external-script3.html/#read-more" role="button">Read more <i class="fa fa-arrow-circle-right"></i></a>
     </p>
-    
+
 
     
 
@@ -343,44 +280,25 @@ to launch this application once (as a daemon/service) and communicate with it us
   
   <article class="post">
     <h1 class="post-title">
-      <a href="/2016/02/06/Logstash-filter-external-script7.html">
+      <a href="/2016/02/06/Logstash-filter-external-script2.html">
         How to incorporate external utility scripts into Logstash Pipeline
       </a>
     </h1>
 
     <time datetime="2016-02-06T00:00:00+02:00" class="post-date">06 Feb 2016</time>
-
+    
     <h3 id="overview">Overview</h3>
 
 <p><a href="https://www.elastic.co/products/logstash">Logstash</a> is a great tool to process the logs and extract valuable data from them. There are many useful Logstash
 <a href="https://www.elastic.co/guide/en/logstash/current/filter-plugins.html">filter plugins</a> which make it easy to process the raw log data. However, sometimes
 external utilities are required to process the data in a more complicated way than existing filter plugins can.</p>
 
-<p>It’s possible to <a href="https://www.elastic.co/guide/en/logstash/current/_how_to_write_a_logstash_filter_plugin.html">code your own filter plugin</a> in Ruby
-but what to do if you already have the filter implemented in some other programming language and want to reuse it in Logstash?</p>
-
-<p>In this case it’s easier to communicate with this external filter from Logstash. This article demonstrates the simplest way of incorporating external
-applications into the Logstash pipeline:</p>
-
-<ol>
-  <li>Logstash launches external program and delivers the input data to it through command line arguments and stdin</li>
-  <li>External program writes results to stdout in any format understood by Logstash filters (e.g., JSON)</li>
-  <li>Logstash parses output of the external program and continues to handle it in the pipeline</li>
-</ol>
-
-<p>It’s needless to say that it is not the very best approach in terms of performance.
-E.g., if startup time of the external application is significant, you may consider
-to launch this application once (as a daemon/service) and communicate with it using <a href="http://en.wikipedia.org/wiki/%C3%98MQ">ØMQ</a> or other high-performance message queue.</p>
-
-<p>Detailed explanation and usage example are stated below.</p>
-
 
     
-    
-    
-    <p><a class="btn btn-sm btn-primary" href="/2016/02/06/Logstash-filter-external-script7.html/#read-more" role="button">Read more <i class="fa fa-arrow-circle-right"></i></a>
+
+    <p><a class="btn btn-sm btn-primary" href="/2016/02/06/Logstash-filter-external-script2.html/#read-more" role="button">Read more <i class="fa fa-arrow-circle-right"></i></a>
     </p>
-    
+
 
     
 
@@ -404,44 +322,19 @@ to launch this application once (as a daemon/service) and communicate with it us
   
   <article class="post">
     <h1 class="post-title">
-      <a href="/2016/02/06/Logstash-filter-external-script6.html">
+      <a href="/2016/02/06/Logstash-filter-external-script.html">
         How to incorporate external utility scripts into Logstash Pipeline
       </a>
     </h1>
 
     <time datetime="2016-02-06T00:00:00+02:00" class="post-date">06 Feb 2016</time>
-
-    <h3 id="overview">Overview</h3>
-
-<p><a href="https://www.elastic.co/products/logstash">Logstash</a> is a great tool to process the logs and extract valuable data from them. There are many useful Logstash
-<a href="https://www.elastic.co/guide/en/logstash/current/filter-plugins.html">filter plugins</a> which make it easy to process the raw log data. However, sometimes
-external utilities are required to process the data in a more complicated way than existing filter plugins can.</p>
-
-<p>It’s possible to <a href="https://www.elastic.co/guide/en/logstash/current/_how_to_write_a_logstash_filter_plugin.html">code your own filter plugin</a> in Ruby
-but what to do if you already have the filter implemented in some other programming language and want to reuse it in Logstash?</p>
-
-<p>In this case it’s easier to communicate with this external filter from Logstash. This article demonstrates the simplest way of incorporating external
-applications into the Logstash pipeline:</p>
-
-<ol>
-  <li>Logstash launches external program and delivers the input data to it through command line arguments and stdin</li>
-  <li>External program writes results to stdout in any format understood by Logstash filters (e.g., JSON)</li>
-  <li>Logstash parses output of the external program and continues to handle it in the pipeline</li>
-</ol>
-
-<p>It’s needless to say that it is not the very best approach in terms of performance.
-E.g., if startup time of the external application is significant, you may consider
-to launch this application once (as a daemon/service) and communicate with it using <a href="http://en.wikipedia.org/wiki/%C3%98MQ">ØMQ</a> or other high-performance message queue.</p>
-
-<p>Detailed explanation and usage example are stated below.</p>
-
-
     
+    <h3 id="overview">Overview</h3> <p><a href="https://www.elastic.co/products/logstash">Logstash</a> is a great tool to process the logs and extract valuable data from them. There are many useful Logstash <a href="https://www.elastic.co/guide/en/logstash/current/filter-plugins.html">filter plugins</a>...
     
-    
-    <p><a class="btn btn-sm btn-primary" href="/2016/02/06/Logstash-filter-external-script6.html/#read-more" role="button">Read more <i class="fa fa-arrow-circle-right"></i></a>
+
+    <p><a class="btn btn-sm btn-primary" href="/2016/02/06/Logstash-filter-external-script.html/#read-more" role="button">Read more <i class="fa fa-arrow-circle-right"></i></a>
     </p>
-    
+
 
     
 
@@ -467,7 +360,7 @@ to launch this application once (as a daemon/service) and communicate with it us
 
 <div class="pagination">
   
-    <a class="pagination-item older" href="/page2">Older</a>
+    <span class="pagination-item older">Older</span>
   
   
     <span class="pagination-item newer">Newer</span>

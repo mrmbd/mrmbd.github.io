@@ -13,7 +13,7 @@ tags: [logstash,elasticsearch,ruby]
 [Logstash](https://www.elastic.co/products/logstash) is a great tool to process the logs and extract valuable data from them. There are many useful Logstash
 [filter plugins](https://www.elastic.co/guide/en/logstash/current/filter-plugins.html) which make it easy to process the raw log data. However, sometimes
 external utilities are required to process the data in a more complicated way than existing filter plugins can.
-
+<!--break-->
 It's possible to [code your own filter plugin](https://www.elastic.co/guide/en/logstash/current/_how_to_write_a_logstash_filter_plugin.html) in Ruby
 but what to do if you already have the filter implemented in some other programming language and want to reuse it in Logstash?
 

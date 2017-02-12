@@ -30,7 +30,7 @@ E.g., if startup time of the external application is significant, you may consid
 to launch this application once (as a daemon/service) and communicate with it using [ØMQ](http://en.wikipedia.org/wiki/%C3%98MQ) or other high-performance message queue.
 
 Detailed explanation and usage example are stated below.
-
+<!--break-->
 
 
 ## Launching external program
