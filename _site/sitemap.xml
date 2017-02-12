@@ -17,6 +17,10 @@
 <lastmod>2016-02-06T00:00:00+02:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/2016/02/06/Logstash-filter-external-script5.html</loc>
+<lastmod>2016-02-06T00:00:00+02:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/404.html</loc>
 </url>
 <url>
@@ -36,5 +40,8 @@
 </url>
 <url>
 <loc>http://localhost:4000/tag/ruby/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/page2/</loc>
 </url>
 </urlset>
