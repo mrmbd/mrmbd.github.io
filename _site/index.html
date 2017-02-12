@@ -172,29 +172,30 @@
 
     <time datetime="2016-02-06T00:00:00+02:00" class="post-date">06 Feb 2016</time>
 
-    <h3>Overview</h3>
+    <h3 id="overview">Overview</h3>
 
 <p><a href="https://www.elastic.co/products/logstash">Logstash</a> is a great tool to process the logs and extract valuable data from them. There are many useful Logstash
 <a href="https://www.elastic.co/guide/en/logstash/current/filter-plugins.html">filter plugins</a> which make it easy to process the raw log data. However, sometimes
 external utilities are required to process the data in a more complicated way than existing filter plugins can.</p>
 
-<p>It&#39;s possible to <a href="https://www.elastic.co/guide/en/logstash/current/_how_to_write_a_logstash_filter_plugin.html">code your own filter plugin</a> in Ruby
+<p>It’s possible to <a href="https://www.elastic.co/guide/en/logstash/current/_how_to_write_a_logstash_filter_plugin.html">code your own filter plugin</a> in Ruby
 but what to do if you already have the filter implemented in some other programming language and want to reuse it in Logstash?</p>
 
-<p>In this case it&#39;s easier to communicate with this external filter from Logstash. This article demonstrates the simplest way of incorporating external
+<p>In this case it’s easier to communicate with this external filter from Logstash. This article demonstrates the simplest way of incorporating external
 applications into the Logstash pipeline:</p>
 
 <ol>
-<li>Logstash launches external program and delivers the input data to it through command line arguments and stdin</li>
-<li>External program writes results to stdout in any format understood by Logstash filters (e.g., JSON)</li>
-<li>Logstash parses output of the external program and continues to handle it in the pipeline</li>
+  <li>Logstash launches external program and delivers the input data to it through command line arguments and stdin</li>
+  <li>External program writes results to stdout in any format understood by Logstash filters (e.g., JSON)</li>
+  <li>Logstash parses output of the external program and continues to handle it in the pipeline</li>
 </ol>
 
-<p>It&#39;s needless to say that it is not the very best approach in terms of performance.
+<p>It’s needless to say that it is not the very best approach in terms of performance.
 E.g., if startup time of the external application is significant, you may consider
 to launch this application once (as a daemon/service) and communicate with it using <a href="http://en.wikipedia.org/wiki/%C3%98MQ">ØMQ</a> or other high-performance message queue.</p>
 
 <p>Detailed explanation and usage example are stated below.</p>
+
 
     
     
