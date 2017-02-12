@@ -6,13 +6,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+  <script src="/public/lib/leaflet-ajax/dist/leaflet.ajax.min.js"></script>
+  <script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v0.0.2/Leaflet.fullscreen.min.js'></script>
+  <link href='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v0.0.2/leaflet.fullscreen.css' rel='stylesheet' />
+  <script src="/public/lib/leaflet-gpx/gpx.js"></script>
+  
 
 
 
 <!-- Facebook tags -->
-<meta property="og:title" content="About me">
-<meta property="og:type" content="article">
-<meta property="og:url" content="http://localhost:4000/about//">
+<meta property="og:title" content="Home">
+<meta property="og:type" content="website">
+<meta property="og:url" content="http://localhost:4000/page3//">
 <meta property="og:image" content="http://localhost:4000/public/images/me_hires.png">
 <meta property="og:description" content="">
 <meta property="og:site_name" content="Del Bao">
@@ -29,7 +36,7 @@
 
   <title>
     
-      About me &middot; Del Bao
+      Del Bao &middot; Sapere aude!
     
   </title>
 
@@ -210,32 +217,94 @@
       </div>
 
       <div class="container content">
-        <img src="/public/images/placeholder_image.jpg"
-   alt="placeholder"
-/>
+        <div class="posts">
+  
+  <article class="post">
+    <h1 class="post-title">
+      <a href="/2016/02/06/Logstash-filter-external-script.html">
+        How to incorporate external utility scripts into Logstash Pipeline
+      </a>
+    </h1>
 
-<h2>About me</h2>
+    <time datetime="2016-02-06T00:00:00+02:00" class="post-date">06 Feb 2016</time>
 
-<ul>
-<li>Lorem ipsum </li>
-<li>Keywords: Linux, MeeGo, agile, open source, free software, philosophy, history, eLearning</li>
-<li><a href="/public/pdf/put-my-cv-here.pdf">My brief CV</a> (outdated!)</li>
-</ul>
+    <h3 id="overview">Overview</h3>
 
-<h2>My profiles in social media</h2>
+<p><a href="https://www.elastic.co/products/logstash">Logstash</a> is a great tool to process the logs and extract valuable data from them. There are many useful Logstash
+<a href="https://www.elastic.co/guide/en/logstash/current/filter-plugins.html">filter plugins</a> which make it easy to process the raw log data. However, sometimes
+external utilities are required to process the data in a more complicated way than existing filter plugins can.</p>
 
-<a href="">
-          <img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_viewmy_160x25.png" width="160" height="25" border="0" alt="View Del Bao's profile on LinkedIn">
-    </a>
-<a href="https://twitter.com/delbao1" class="twitter-follow-button" data-show-count="false">Follow @delbao1</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<p>It’s possible to <a href="https://www.elastic.co/guide/en/logstash/current/_how_to_write_a_logstash_filter_plugin.html">code your own filter plugin</a> in Ruby
+but what to do if you already have the filter implemented in some other programming language and want to reuse it in Logstash?</p>
 
-<h2> Sources of this blog </h2>
+<p>In this case it’s easier to communicate with this external filter from Logstash. This article demonstrates the simplest way of incorporating external
+applications into the Logstash pipeline:</p>
 
-This blog is done with <a href="https://jekyllrb.com/">Jekyll</a>  – a simple, blog-aware, static site generator.  Feel free to use its <a href="https://github.com/delbao/delbao.github.io">sources</a> as a starting point to
-start your own blog.  My Jekyll-related posts are tagged with <a href="/tag/jekyll/">#jekyll</a> hash tag.
+<ol>
+  <li>Logstash launches external program and delivers the input data to it through command line arguments and stdin</li>
+  <li>External program writes results to stdout in any format understood by Logstash filters (e.g., JSON)</li>
+  <li>Logstash parses output of the external program and continues to handle it in the pipeline</li>
+</ol>
 
-<br/>
+<p>It’s needless to say that it is not the very best approach in terms of performance.
+E.g., if startup time of the external application is significant, you may consider
+to launch this application once (as a daemon/service) and communicate with it using <a href="http://en.wikipedia.org/wiki/%C3%98MQ">ØMQ</a> or other high-performance message queue.</p>
+
+<p>Detailed explanation and usage example are stated below.</p>
+
+
+    
+    
+    
+    <p><a class="btn btn-sm btn-primary" href="/2016/02/06/Logstash-filter-external-script.html/#read-more" role="button">Read more <i class="fa fa-arrow-circle-right"></i></a>
+    </p>
+    
+
+    
+
+
+
+
+
+
+
+<a href="/tag/elasticsearch">#elasticsearch</a>
+
+<a href="/tag/logstash">#logstash</a>
+
+<a href="/tag/ruby">#ruby</a>
+
+
+
+
+
+  </article>
+  
+</div>
+
+<div class="pagination">
+  
+    <span class="pagination-item older">Older</span>
+  
+  
+    <a class="pagination-item newer" href="/page2">Newer</a>
+  
+</div>
+
+<!-- Analytics begin -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-67139587-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- Analytics end -->
+
+
+
 
 
 <!-- Analytics begin -->

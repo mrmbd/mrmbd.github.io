@@ -1,7 +1,7 @@
 # Permalinks
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
-permalink: "/:title/"
+#permalink: "/:title/"
 
 highlighter: rouge
 
@@ -37,7 +37,7 @@ exclude: ["transfer.sh", README.md]
 title:               Del Bao
 tagline:             Sapere aude!
 url:                 ""
-paginate_l:           4
+paginate: 4
 baseurl:             ""
 
 paginate_langs:      ["en"]
