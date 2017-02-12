@@ -106,6 +106,10 @@
       
     
       
+    
+      
+    
+      
         
       
     
@@ -161,25 +165,25 @@
         <div class="post">
   <h1 class="post-title">How to incorporate external utility scripts into Logstash Pipeline</h1>
   <span class="post-date">06 Feb 2016</span>
-  <h3 id="overview">Overview</h3>
+  <h3>Overview</h3>
 
 <p><a href="https://www.elastic.co/products/logstash">Logstash</a> is a great tool to process the logs and extract valuable data from them. There are many useful Logstash
 <a href="https://www.elastic.co/guide/en/logstash/current/filter-plugins.html">filter plugins</a> which make it easy to process the raw log data. However, sometimes
 external utilities are required to process the data in a more complicated way than existing filter plugins can.</p>
 
-<p>It’s possible to <a href="https://www.elastic.co/guide/en/logstash/current/_how_to_write_a_logstash_filter_plugin.html">code your own filter plugin</a> in Ruby
+<p>It&#39;s possible to <a href="https://www.elastic.co/guide/en/logstash/current/_how_to_write_a_logstash_filter_plugin.html">code your own filter plugin</a> in Ruby
 but what to do if you already have the filter implemented in some other programming language and want to reuse it in Logstash?</p>
 
-<p>In this case it’s easier to communicate with this external filter from Logstash. This article demonstrates the simplest way of incorporating external
+<p>In this case it&#39;s easier to communicate with this external filter from Logstash. This article demonstrates the simplest way of incorporating external
 applications into the Logstash pipeline:</p>
 
 <ol>
-  <li>Logstash launches external program and delivers the input data to it through command line arguments and stdin</li>
-  <li>External program writes results to stdout in any format understood by Logstash filters (e.g., JSON)</li>
-  <li>Logstash parses output of the external program and continues to handle it in the pipeline</li>
+<li>Logstash launches external program and delivers the input data to it through command line arguments and stdin</li>
+<li>External program writes results to stdout in any format understood by Logstash filters (e.g., JSON)</li>
+<li>Logstash parses output of the external program and continues to handle it in the pipeline</li>
 </ol>
 
-<p>It’s needless to say that it is not the very best approach in terms of performance.
+<p>It&#39;s needless to say that it is not the very best approach in terms of performance.
 E.g., if startup time of the external application is significant, you may consider
 to launch this application once (as a daemon/service) and communicate with it using <a href="http://en.wikipedia.org/wiki/%C3%98MQ">ØMQ</a> or other high-performance message queue.</p>
 
@@ -187,7 +191,7 @@ to launch this application once (as a daemon/service) and communicate with it us
 
 <a class="anchor" id="read-more"></a>
 
-<h2 id="launching-external-program">Launching external program</h2>
+<h2>Launching external program</h2>
 
 <p>We will use <a href="https://www.elastic.co/guide/en/logstash/current/plugins-filters-ruby.html">ruby filter</a> in order to launch external application and capture its output:</p>
 
@@ -216,14 +220,14 @@ to launch this application once (as a daemon/service) and communicate with it us
 <p>Note:</p>
 
 <ul>
-  <li>External application <code class="highlighter-rouge">/opt/bin/my_filter.py</code> is launched only if <code class="highlighter-rouge">file_path</code> field is not empty.  This field shall be extracted earlier in the filter pipeline. It’s value (<code class="highlighter-rouge">#{file_path}</code>) is used in
+<li>External application <code>/opt/bin/my_filter.py</code> is launched only if <code>file_path</code> field is not empty.  This field shall be extracted earlier in the filter pipeline. It&#39;s value (<code>#{file_path}</code>) is used in
 the command line to launch external filter.</li>
-  <li>stdin handle is accessible for our tiny ruby script and it can be used to send more data to the external program (<code class="highlighter-rouge">/opt/bin/my_filter.py</code>).</li>
-  <li>If application stderr is not empty, filter is not considered to be successful and stderr content is recorded into <code class="highlighter-rouge">ext_script_err_msg</code> field.</li>
-  <li>If processing was successful,  output of the external program is recorded into <code class="highlighter-rouge">process_result</code> filed and <code class="highlighter-rouge">file_path</code> field is removed</li>
+<li>stdin handle is accessible for our tiny ruby script and it can be used to send more data to the external program (<code>/opt/bin/my_filter.py</code>).</li>
+<li>If application stderr is not empty, filter is not considered to be successful and stderr content is recorded into <code>ext_script_err_msg</code> field.</li>
+<li>If processing was successful,  output of the external program is recorded into <code>process_result</code> filed and <code>file_path</code> field is removed</li>
 </ul>
 
-<h3 id="parsing-output-of-the-external-program-json">Parsing output of the external program (JSON)</h3>
+<h3>Parsing output of the external program (JSON)</h3>
 
 <p>The easiest way to deliver the data back to Logstash is to use one of the structured data formats understood by Logstash filters: <a href="https://www.elastic.co/guide/en/logstash/current/plugins-filters-json.html">JSON</a>,
 <a href="https://www.elastic.co/guide/en/logstash/current/plugins-filters-xml.html">XML</a> or more old-fashioned <a href="https://www.elastic.co/guide/en/logstash/current/plugins-filters-kv.html">key-value (kv)</a>.</p>
@@ -240,22 +244,22 @@ the command line to launch external filter.</li>
 <p>Note:</p>
 
 <ul>
-  <li>Field <code class="highlighter-rouge">process_result</code> holds the output of the external application and is supposed to be in JSON format.</li>
-  <li>If parsing was successful JSON fields are becoming event fields and intermediate field <code class="highlighter-rouge">process_result</code> is removed.</li>
+<li>Field <code>process_result</code> holds the output of the external application and is supposed to be in JSON format.</li>
+<li>If parsing was successful JSON fields are becoming event fields and intermediate field <code>process_result</code> is removed.</li>
 </ul>
 
-<h3 id="several-words-about-exec-output-plugin">Several words about exec output plugin</h3>
+<h3>Several words about exec output plugin</h3>
 
 <p>If you only need to launch external utility upon any matched Logstash event, you may consider to use simpler approach
 – <a href="https://www.elastic.co/guide/en/logstash/current/plugins-outputs-exec.html">exec output plugin</a>.</p>
 
 <p>If you liked this post, you can
-<a href="https://twitter.com/intent/tweet?url=http://localhost:4000/Logstash-filter-external-script/&amp;text=How to incorporate external utility scripts into Logstash Pipeline&amp;via=delbao1" target="_blank">
+<a href="https://twitter.com/intent/tweet?url=http://localhost:4000/Logstash-filter-external-script/&text=How to incorporate external utility scripts into Logstash Pipeline&via=delbao1"
+   target="_blank">
   share it with your followers</a>
 or
 <a href="https://twitter.com/delbao1">
   follow me on Twitter</a>!</p>
-
 
 </div>
 
