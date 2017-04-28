@@ -1,0 +1,53 @@
+Write a simple .asmx Web service
+
+Start Visual Studio .NET or Visual Studio 2005.
+Create a new Active Server Pages (ASP) .NET Web service project. Name the Web service MathService and point the location to an appropriate Web server that is running ASP.NET if necessary.
+Change the name of the Solution file to
+MathService for consistency.
+Change the name of the default Web service that is created from Service1.asmx to MathService.asmx.
+Click Click here to switch to code view in the designer environment to switch to code view.
+
+Change the name of the class from Public Class Service1 to Public Class MathService.
+Define methods that encapsulate the functionality of your service. Each method that will be exposed from the service must be flagged with a WebMethod attribute in front of it. Without this attribute, the method will not be exposed from the service.
+
+NOTE: Not every method needs to have the WebMethod attribute. It is useful to hide some implementation details called by public Web service methods or for the case in which the WebService class is also used in local applications. A local application can use any public class, but only WebMethod methods will be remotely accessible as Web services.
+
+Add the following method to the MathServices class that you just created:
+<WebMethod()> Public Function Add(a As Integer, b As Integer) As Integer
+   Return(a + b)
+End Function
+
+<WebMethod()> Public Function Subtract(A As System.Single, B As System.Single) As System.Single
+       Return A - B
+End Function
+
+<WebMethod()> Public Function Multiply(A As System.Single, B As System.Single) As System.Single
+       Return A * B
+End Function
+
+<WebMethod()> Public Function Divide(A As System.Single, B As System.Single) As System.Single
+If B = 0
+Return -1
+End If
+Return Convert.ToSingle(A / B)
+End Function
+Click Build on the Build menu to build the Web service.
+Browse to the MathService.asmx Web service page to test the Web service. If you set the local computer to host the page, the URL is http://localhost/MathService/MathService.asmx.
+
+The ASP.NET runtime returns a Web Service Help Page that describes the Web service. This page also enables you to test different Web service methods.
+Consume a Web service
+
+Start Visual Studio .NET or Visual Studio 2005.
+Create a new Console Application project.
+Add a reference for the MathService Web Service to the new console application.
+
+This step creates a proxy class on the client computer. After the proxy class exists, you can create objects based on the class. Each method call that is made with the object then goes out to the uniform resource identifier (URI) of the Web service (usually as a SOAP request). 
+On the Project menu, click Add Web Reference.
+In the Add Web Reference dialog box, type the URL for the Web service in the Address text box and press ENTER. If you set the local computer to host the Web service, the URL is http://localhost/MathService/MathService.asmx.
+Click Add Reference.
+Expand the Web References section of Solution Explorer and note the namespace that was used.
+Create an instance of the proxy object that was created. Place this code in the Main procedure of the Module1 module:
+Dim myMathService As localhost.MathService = New localhost.MathService()
+Invoke a method on the proxy object created in the previous step:
+Console.Write("2 + 4 = {0}", myMathService.Add(2,4))
+Close and save the project.

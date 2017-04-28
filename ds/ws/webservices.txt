@@ -1,0 +1,63 @@
+Step 1: Create project
+
+Open Netbeans >> Select File >> New Project >> Java Web: Web Application:
+webservice_java_1
+Click Next >> Enter Project name: ‘HelloWorldWebService’:
+webservice_java_2
+Click Next >> Select Server:
+webservice_java_3
+Click Finish
+Step 2: Create WebService
+
+Right click on the project ‘HelloWorldWebService’ >> New >> Web Service:
+Enter Web service name: SayHelloService
+Enter Package: com.prgguru.example
+webservice_java_4
+Click Finish
+Step 3: Add/Update web method
+
+I just modified the name of webmethod from hello to sayHello:
+
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package com.prgguru.example;
+ 
+import javax.jws.WebService;
+import javax.jws.WebMethod;
+import javax.jws.WebParam;
+ 
+/**
+ *
+ * @author Udhay
+ */
+@WebService(serviceName = "SayHelloService")
+public class SayHelloService {
+ 
+    /** This is a sample web service operation */
+    @WebMethod(operationName = "hello")
+    public String hello(@WebParam(name = "name") String txt) {
+         float rupee = Float.parseFloat(txt);
+         float dollar= rupee*70;
+         String a="R"+Float.toString(dollar);
+         return a;
+         
+    }
+}
+Step 4: Clean and build the application
+
+Right click on the project, select ‘Clean and Build’.
+webservice_java_5
+Step 5: Deploy the application
+
+Right click on the project, select ‘Deploy’.
+webservice_java_6
+Step 6: Test the webservice
+
+Right click on the web service ‘SayHelloService’ and select ‘Test Web Service’.
+webservice_java_7
+It will open up the browser where the service we created can be tested:
+webservice_java_8
+Enter the name in the textbox and hit ‘hello’ button, you could see the response from the server as shown below:
+webservice_java_9

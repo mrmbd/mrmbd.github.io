@@ -1,0 +1,18 @@
+set path=C:\Program Files\Java\jdk1.7.0_60\bin
+//compile SampleServer.java
+//compile SampleServerImpl.java
+//compile SampleClient.java
+
+//start rmi registry
+start rmiregistry
+
+//create stubs and drivers using the following
+rmic SampleServerImpl
+
+//run the server
+java –Djava.security.policy=policy.all SampleServerImpl
+
+//run the client
+java –Djava.security.policy=policy.all SampleClient
+
+//if it gives an error retype"-" for -D
