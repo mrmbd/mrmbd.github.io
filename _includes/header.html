@@ -1,30 +1,54 @@
-<!-- HEADER -->
+<!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top"><span class="logo-x">HepChk+</span></a>
+            </div>
 
-<div id="header_wrap" class="outer">
-    <header class="inner">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#services">Services</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#approach">Approach</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#team">Team</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
 
-      <a id="cart_banner" href="http://francesca-kee.artistwebsites.com/"> Shop </a>
-      <h1 id="project_title">{{ site.title | default: site.github.repository_name }}</h1>
-      <h2 id="project_tagline">- {{ site.description | default: site.github.project_tagline }}</h2>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-lead-in">Get your test done now!</div>
+                <div class="intro-heading">Be Hepatitis Free</div>
+                <a href="#services" class="page-scroll btn btn-xl">Test Now</a>
+            </div>
+        </div>
     </header>
-        <nav class="navbar navbar-inverse">
-          <div class="container page-padding padd-rem">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-            </div>
-            <div class="collapse navbar-collapse padd-rem" id="myNavbar">
-              <ul class="nav navbar-nav">
-                <li><a href="#header_wrap">Home</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#awards">Awards</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#blog">Blog</a></li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-</div>
+<!--
+        {% for page in site.pages %}
+          {% if page.title %}<a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>{% endif %}
+        {% endfor %}
+ -->

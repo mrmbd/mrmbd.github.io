@@ -1,5 +1,63 @@
-title: Fine Art
-description: By Francesca Kee
-show_downloads: true
-google_analytics:
-theme: jekyll-theme-slate
+url: ""
+baseurl: ""
+
+# Site settings
+title: HepChk+
+email: Example.email.com
+description: "We at hepcheck+ are group of dedicated professionals, One stop service for all your Hepatitis related problems. "
+
+
+# Team names, titles and social links
+people:
+- name: Dhaval Dave
+  pic: 1
+  position: Developer
+  social:
+    - title: twitter
+      url: #
+    - title: facebook
+      url: #
+    - title: linkedin
+      url: #
+
+- name: Mihir Dave
+  pic: 2
+  position: Designer
+  social:
+    - title: twitter
+      url: #
+    - title: facebook
+      url: #
+    - title: stack-overflow
+      url: #
+
+- name: Sanjana Devadiga
+  pic: 3
+  position: Developer
+  social:
+    - title: twitter
+      url: #
+    - title: facebook
+      url: #
+    - title: google-plus
+      url: #
+
+# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+social:
+  - title: twitter
+    url: #
+  - title: facebook
+    url: #
+  - title: stack-overflow
+    url: #
+  - title: github
+    url: #
+
+# Postal address (add as many lines as necessary)
+address:
+  - line: Vidyavardhini College, K.T. Marg
+  - line: Vasai Road (W) - 401202
+
+# Build settings
+markdown: kramdown
+permalink: pretty
