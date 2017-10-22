@@ -5,12 +5,12 @@
   <meta charset='utf-8'>
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
   <meta name="viewport" content="width=device-width,maximum-scale=2">
-  <meta name="description" content="Fine Art : By Francesca Kee">
-
+  <meta name="description" content="Francesca Kee Fine Art : ">
+  <title> Francesca Kee Fine Art </title>
   <link rel="stylesheet" type="text/css" media="screen" href="/assets/css/style.css?v=">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="/assets/css/blueimp-gallery.min.css">
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 
@@ -32,8 +32,8 @@
     <header class="inner">
 
       <a id="cart_banner" href="http://francesca-kee.artistwebsites.com/"> Shop </a>
-      <h1 id="project_title">Fine Art</h1>
-      <h2 id="project_tagline">- By Francesca Kee</h2>
+      <h1 id="project_title">Francesca Kee Fine Art</h1>
+      <h2 id="project_tagline"></h2>
     </header>
         <nav class="navbar navbar-inverse">
           <div class="container page-padding padd-rem">
@@ -46,11 +46,9 @@
             </div>
             <div class="collapse navbar-collapse padd-rem" id="myNavbar">
               <ul class="nav navbar-nav">
-                <li><a href="#header_wrap">Home</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#awards">Awards</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#blog">Blog</a></li>
+                <li><a href="/" class="myactive">Home</a></li>
+                <li><a href="/#gallery">Gallery</a></li>
+                <li><a href="/about/" class="">About</a></li>
               </ul>
             </div>
           </div>
@@ -62,43 +60,315 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <h2 id="gallery"> Gallery </h2>
-<div id="links">
-    <a href="/assets/images/1-autumn-dreams-francesca-kee.jpg" title="1-autumn-dreams-francesca-kee" data-gallery>
-        <img src="/assets/images/thumb/1-autumn-dreams-francesca-kee.jpg" alt="1-autumn-dreams-francesca-kee">
-    </a>
-    <a href="/assets/images/a-cup-of-coffee-francesca-kee.jpg" title="a-cup-of-coffee-francesca-kee" data-gallery>
-        <img src="/assets/images/thumb/a-cup-of-coffee-francesca-kee.jpg" alt="a-cup-of-coffee-francesca-kee">
-    </a>
-    <a href="/assets/images/a-girl-francesca-kee.jpg" title="a-girl-francesca-kee" data-gallery>
-        <img src="/assets/images/thumb/a-girl-francesca-kee.jpg" alt="a-girl-francesca-kee">
-    </a>
-    <a href="/assets/images/alstroemeria-francesca-kee.jpg" title="alstroemeria-francesca-kee" data-gallery>
-        <img src="/assets/images/thumb/alstroemeria-francesca-kee.jpg" alt="alstroemeria-francesca-kee">
-    </a>
-    <a href="/assets/images/ballet-francesca-kee.jpg" title="ballet-francesca-kee" data-gallery>
-        <img src="/assets/images/thumb/ballet-francesca-kee.jpg" alt="ballet-francesca-kee">
-    </a>
-    <a href="/assets/images/buffaloes-francesca-kee.jpg" title="buffaloes-francesca-kee" data-gallery>
-        <img src="/assets/images/thumb/buffaloes-francesca-kee.jpg" alt="buffaloes-francesca-kee">
-    </a>
-    <a href="/assets/images/cathedral-rock-francesca-kee.jpg" title="cathedral-rock-francesca-kee" data-gallery>
-        <img src="/assets/images/thumb/cathedral-rock-francesca-kee.jpg" alt="cathedral-rock-francesca-kee">
-    </a>
-    <a href="/assets/images/champagne-rose-francesca-kee.jpg" title="champagne-rose-francesca-kee" data-gallery>
-        <img src="/assets/images/thumb/champagne-rose-francesca-kee.jpg" alt="champagne-rose-francesca-kee">
-    </a>
-    <a href="/assets/images/classical-and-modern-francesca-kee.jpg" title="classical-and-modern-francesca-kee" data-gallery>
-        <img src="/assets/images/thumb/classical-and-modern-francesca-kee.jpg" alt="classical-and-modern-francesca-kee">
-    </a>
-    <a href="/assets/images/clear-creek-in-golden-colorado-francesca-kee.jpg" title="clear-creek-in-golden-colorado-francesca-kee" data-gallery>
-        <img src="/assets/images/thumb/clear-creek-in-golden-colorado-francesca-kee.jpg" alt="clear-creek-in-golden-colorado-francesca-kee">
-    </a>
+
+<!-- The Gallery as inline carousel, can be positioned anywhere on the page -->
+<div id="blueimp-gallery-carousel" class="blueimp-gallery blueimp-gallery-carousel">
+    <div class="slides"></div>
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+</div>
+
+<div id="carousel-links" style="display: none">
+  
+  <a href="/assets/images/SAM_1314.jpg" title="SAM_1314" data-gallery>
+      <img src="/assets/images/thumb/SAM_1314.jpg" alt="SAM_1314">
+  </a>
+  
+  <a href="/assets/images/collie-francesca-kee.jpg" title="collie francesca kee" data-gallery>
+      <img src="/assets/images/thumb/collie-francesca-kee.jpg" alt="collie francesca kee">
+  </a>
+  
+  <a href="/assets/images/classical-and-modern-francesca-kee.jpg" title="classical and modern francesca kee" data-gallery>
+      <img src="/assets/images/thumb/classical-and-modern-francesca-kee.jpg" alt="classical and modern francesca kee">
+  </a>
+  
+  <a href="/assets/images/champagne-rose-francesca-kee.jpg" title="champagne rose francesca kee" data-gallery>
+      <img src="/assets/images/thumb/champagne-rose-francesca-kee.jpg" alt="champagne rose francesca kee">
+  </a>
+  
 </div>
 
 
-<h2 id="awards">Awards</h2>
-<h2 id="about">About</h2>
-<h2 id="blog">Blog</h2>
+
+<div id="links">
+    
+    <a href="/assets/images/1-autumn-dreams-francesca-kee.jpg" title="1 autumn dreams francesca kee" data-gallery>
+        <img src="/assets/images/thumb/1-autumn-dreams-francesca-kee.jpg" alt="1 autumn dreams francesca kee">
+    </a>
+    
+    <a href="/assets/images/a-cup-of-coffee-francesca-kee.jpg" title="a cup of coffee francesca kee" data-gallery>
+        <img src="/assets/images/thumb/a-cup-of-coffee-francesca-kee.jpg" alt="a cup of coffee francesca kee">
+    </a>
+    
+    <a href="/assets/images/a-girl-francesca-kee.jpg" title="a girl francesca kee" data-gallery>
+        <img src="/assets/images/thumb/a-girl-francesca-kee.jpg" alt="a girl francesca kee">
+    </a>
+    
+    <a href="/assets/images/alstroemeria-francesca-kee.jpg" title="alstroemeria francesca kee" data-gallery>
+        <img src="/assets/images/thumb/alstroemeria-francesca-kee.jpg" alt="alstroemeria francesca kee">
+    </a>
+    
+    <a href="/assets/images/ballet-francesca-kee.jpg" title="ballet francesca kee" data-gallery>
+        <img src="/assets/images/thumb/ballet-francesca-kee.jpg" alt="ballet francesca kee">
+    </a>
+    
+    <a href="/assets/images/buffaloes-francesca-kee.jpg" title="buffaloes francesca kee" data-gallery>
+        <img src="/assets/images/thumb/buffaloes-francesca-kee.jpg" alt="buffaloes francesca kee">
+    </a>
+    
+    <a href="/assets/images/cathedral-rock-francesca-kee.jpg" title="cathedral rock francesca kee" data-gallery>
+        <img src="/assets/images/thumb/cathedral-rock-francesca-kee.jpg" alt="cathedral rock francesca kee">
+    </a>
+    
+    <a href="/assets/images/champagne-rose-francesca-kee.jpg" title="champagne rose francesca kee" data-gallery>
+        <img src="/assets/images/thumb/champagne-rose-francesca-kee.jpg" alt="champagne rose francesca kee">
+    </a>
+    
+    <a href="/assets/images/classical-and-modern-francesca-kee.jpg" title="classical and modern francesca kee" data-gallery>
+        <img src="/assets/images/thumb/classical-and-modern-francesca-kee.jpg" alt="classical and modern francesca kee">
+    </a>
+    
+    <a href="/assets/images/clear-creek-in-golden-colorado-francesca-kee.jpg" title="clear creek in golden colorado francesca kee" data-gallery>
+        <img src="/assets/images/thumb/clear-creek-in-golden-colorado-francesca-kee.jpg" alt="clear creek in golden colorado francesca kee">
+    </a>
+    
+    <a href="/assets/images/collie-francesca-kee.jpg" title="collie francesca kee" data-gallery>
+        <img src="/assets/images/thumb/collie-francesca-kee.jpg" alt="collie francesca kee">
+    </a>
+    
+    <a href="/assets/images/CowHeadSplash_n.jpg" title="CowHeadSplash_n" data-gallery>
+        <img src="/assets/images/thumb/CowHeadSplash_n.jpg" alt="CowHeadSplash_n">
+    </a>
+    
+    <a href="/assets/images/evening-at-sausalito-francesca-kee.jpg" title="evening at sausalito francesca kee" data-gallery>
+        <img src="/assets/images/thumb/evening-at-sausalito-francesca-kee.jpg" alt="evening at sausalito francesca kee">
+    </a>
+    
+    <a href="/assets/images/fall-colors-francesca-kee.jpg" title="fall colors francesca kee" data-gallery>
+        <img src="/assets/images/thumb/fall-colors-francesca-kee.jpg" alt="fall colors francesca kee">
+    </a>
+    
+    <a href="/assets/images/flat-iron-colorado-francesca-kee.jpg" title="flat iron colorado francesca kee" data-gallery>
+        <img src="/assets/images/thumb/flat-iron-colorado-francesca-kee.jpg" alt="flat iron colorado francesca kee">
+    </a>
+    
+    <a href="/assets/images/florid-francesca-kee.jpg" title="florid francesca kee" data-gallery>
+        <img src="/assets/images/thumb/florid-francesca-kee.jpg" alt="florid francesca kee">
+    </a>
+    
+    <a href="/assets/images/flower-love-francesca-kee.jpg" title="flower love francesca kee" data-gallery>
+        <img src="/assets/images/thumb/flower-love-francesca-kee.jpg" alt="flower love francesca kee">
+    </a>
+    
+    <a href="/assets/images/flower-of-love-francesca-kee.jpg" title="flower of love francesca kee" data-gallery>
+        <img src="/assets/images/thumb/flower-of-love-francesca-kee.jpg" alt="flower of love francesca kee">
+    </a>
+    
+    <a href="/assets/images/francesca-francesca-kee.jpg" title="francesca francesca kee" data-gallery>
+        <img src="/assets/images/thumb/francesca-francesca-kee.jpg" alt="francesca francesca kee">
+    </a>
+    
+    <a href="/assets/images/girl-reading-with-e-book-francesca-kee.jpg" title="girl reading with e book francesca kee" data-gallery>
+        <img src="/assets/images/thumb/girl-reading-with-e-book-francesca-kee.jpg" alt="girl reading with e book francesca kee">
+    </a>
+    
+    <a href="/assets/images/golden-gate-bridge-francesca-kee.jpg" title="golden gate bridge francesca kee" data-gallery>
+        <img src="/assets/images/thumb/golden-gate-bridge-francesca-kee.jpg" alt="golden gate bridge francesca kee">
+    </a>
+    
+    <a href="/assets/images/good-morning-rose-francesca-kee.jpg" title="good morning rose francesca kee" data-gallery>
+        <img src="/assets/images/thumb/good-morning-rose-francesca-kee.jpg" alt="good morning rose francesca kee">
+    </a>
+    
+    <a href="/assets/images/grand-canyon-south-rim-2-francesca-kee.jpg" title="grand canyon south rim 2 francesca kee" data-gallery>
+        <img src="/assets/images/thumb/grand-canyon-south-rim-2-francesca-kee.jpg" alt="grand canyon south rim 2 francesca kee">
+    </a>
+    
+    <a href="/assets/images/grand-canyon-sun-light-francesca-kee.jpg" title="grand canyon sun light francesca kee" data-gallery>
+        <img src="/assets/images/thumb/grand-canyon-sun-light-francesca-kee.jpg" alt="grand canyon sun light francesca kee">
+    </a>
+    
+    <a href="/assets/images/great-wheel-sunset-francesca-kee.jpg" title="great wheel sunset francesca kee" data-gallery>
+        <img src="/assets/images/thumb/great-wheel-sunset-francesca-kee.jpg" alt="great wheel sunset francesca kee">
+    </a>
+    
+    <a href="/assets/images/green-lake-seattle-francesca-kee.jpg" title="green lake seattle francesca kee" data-gallery>
+        <img src="/assets/images/thumb/green-lake-seattle-francesca-kee.jpg" alt="green lake seattle francesca kee">
+    </a>
+    
+    <a href="/assets/images/half-moon-bay-francesca-kee.jpg" title="half moon bay francesca kee" data-gallery>
+        <img src="/assets/images/thumb/half-moon-bay-francesca-kee.jpg" alt="half moon bay francesca kee">
+    </a>
+    
+    <a href="/assets/images/hay-field-francesca-kee.jpg" title="hay field francesca kee" data-gallery>
+        <img src="/assets/images/thumb/hay-field-francesca-kee.jpg" alt="hay field francesca kee">
+    </a>
+    
+    <a href="/assets/images/irises-francesca-kee.jpg" title="irises francesca kee" data-gallery>
+        <img src="/assets/images/thumb/irises-francesca-kee.jpg" alt="irises francesca kee">
+    </a>
+    
+    <a href="/assets/images/koi-fish-francesca-kee.jpg" title="koi fish francesca kee" data-gallery>
+        <img src="/assets/images/thumb/koi-fish-francesca-kee.jpg" alt="koi fish francesca kee">
+    </a>
+    
+    <a href="/assets/images/lady-with-the-blue-hat-francesca-kee.jpg" title="lady with the blue hat francesca kee" data-gallery>
+        <img src="/assets/images/thumb/lady-with-the-blue-hat-francesca-kee.jpg" alt="lady with the blue hat francesca kee">
+    </a>
+    
+    <a href="/assets/images/lemon-francesca-kee.jpg" title="lemon francesca kee" data-gallery>
+        <img src="/assets/images/thumb/lemon-francesca-kee.jpg" alt="lemon francesca kee">
+    </a>
+    
+    <a href="/assets/images/little-flower-francesca-kee.jpg" title="little flower francesca kee" data-gallery>
+        <img src="/assets/images/thumb/little-flower-francesca-kee.jpg" alt="little flower francesca kee">
+    </a>
+    
+    <a href="/assets/images/little-red-dress-francesca-kee.jpg" title="little red dress francesca kee" data-gallery>
+        <img src="/assets/images/thumb/little-red-dress-francesca-kee.jpg" alt="little red dress francesca kee">
+    </a>
+    
+    <a href="/assets/images/orange-lily-francesca-kee.jpg" title="orange lily francesca kee" data-gallery>
+        <img src="/assets/images/thumb/orange-lily-francesca-kee.jpg" alt="orange lily francesca kee">
+    </a>
+    
+    <a href="/assets/images/pacific-coast-hghway-1-francesca-kee.jpg" title="pacific coast hghway 1 francesca kee" data-gallery>
+        <img src="/assets/images/thumb/pacific-coast-hghway-1-francesca-kee.jpg" alt="pacific coast hghway 1 francesca kee">
+    </a>
+    
+    <a href="/assets/images/peach-blossom-francesca-kee.jpg" title="peach blossom francesca kee" data-gallery>
+        <img src="/assets/images/thumb/peach-blossom-francesca-kee.jpg" alt="peach blossom francesca kee">
+    </a>
+    
+    <a href="/assets/images/peaches-and-grapes-francesca-kee.jpg" title="peaches and grapes francesca kee" data-gallery>
+        <img src="/assets/images/thumb/peaches-and-grapes-francesca-kee.jpg" alt="peaches and grapes francesca kee">
+    </a>
+    
+    <a href="/assets/images/peaches-francesca-kee.jpg" title="peaches francesca kee" data-gallery>
+        <img src="/assets/images/thumb/peaches-francesca-kee.jpg" alt="peaches francesca kee">
+    </a>
+    
+    <a href="/assets/images/pomeranian-smile-francesca-kee.jpg" title="pomeranian smile francesca kee" data-gallery>
+        <img src="/assets/images/thumb/pomeranian-smile-francesca-kee.jpg" alt="pomeranian smile francesca kee">
+    </a>
+    
+    <a href="/assets/images/rose-and-green-vase-francesca-kee.jpg" title="rose and green vase francesca kee" data-gallery>
+        <img src="/assets/images/thumb/rose-and-green-vase-francesca-kee.jpg" alt="rose and green vase francesca kee">
+    </a>
+    
+    <a href="/assets/images/rose-francesca-kee.jpg" title="rose francesca kee" data-gallery>
+        <img src="/assets/images/thumb/rose-francesca-kee.jpg" alt="rose francesca kee">
+    </a>
+    
+    <a href="/assets/images/roses-and-chinese-vase-francesca-kee.jpg" title="roses and chinese vase francesca kee" data-gallery>
+        <img src="/assets/images/thumb/roses-and-chinese-vase-francesca-kee.jpg" alt="roses and chinese vase francesca kee">
+    </a>
+    
+    <a href="/assets/images/sailing-francesca-kee.jpg" title="sailing francesca kee" data-gallery>
+        <img src="/assets/images/thumb/sailing-francesca-kee.jpg" alt="sailing francesca kee">
+    </a>
+    
+    <a href="/assets/images/SAM_1314.jpg" title="SAM_1314" data-gallery>
+        <img src="/assets/images/thumb/SAM_1314.jpg" alt="SAM_1314">
+    </a>
+    
+    <a href="/assets/images/santa-fe-steer-skull-francesca-kee.jpg" title="santa fe steer skull francesca kee" data-gallery>
+        <img src="/assets/images/thumb/santa-fe-steer-skull-francesca-kee.jpg" alt="santa fe steer skull francesca kee">
+    </a>
+    
+    <a href="/assets/images/sausalito-sf-francesca-kee.jpg" title="sausalito sf francesca kee" data-gallery>
+        <img src="/assets/images/thumb/sausalito-sf-francesca-kee.jpg" alt="sausalito sf francesca kee">
+    </a>
+    
+    <a href="/assets/images/seattle-city-view-in-autumn-francesca-kee.jpg" title="seattle city view in autumn francesca kee" data-gallery>
+        <img src="/assets/images/thumb/seattle-city-view-in-autumn-francesca-kee.jpg" alt="seattle city view in autumn francesca kee">
+    </a>
+    
+    <a href="/assets/images/seattle-pier-63-francesca-kee.jpg" title="seattle pier 63 francesca kee" data-gallery>
+        <img src="/assets/images/thumb/seattle-pier-63-francesca-kee.jpg" alt="seattle pier 63 francesca kee">
+    </a>
+    
+    <a href="/assets/images/sloans-lake-fishing-francesca-kee.jpg" title="sloans lake fishing francesca kee" data-gallery>
+        <img src="/assets/images/thumb/sloans-lake-fishing-francesca-kee.jpg" alt="sloans lake fishing francesca kee">
+    </a>
+    
+    <a href="/assets/images/sloans-lake-francesca-kee.jpg" title="sloans lake francesca kee" data-gallery>
+        <img src="/assets/images/thumb/sloans-lake-francesca-kee.jpg" alt="sloans lake francesca kee">
+    </a>
+    
+    <a href="/assets/images/south-rim-grand-canyon-francesca-kee.jpg" title="south rim grand canyon francesca kee" data-gallery>
+        <img src="/assets/images/thumb/south-rim-grand-canyon-francesca-kee.jpg" alt="south rim grand canyon francesca kee">
+    </a>
+    
+    <a href="/assets/images/space-needle-at-night-francesca-kee.jpg" title="space needle at night francesca kee" data-gallery>
+        <img src="/assets/images/thumb/space-needle-at-night-francesca-kee.jpg" alt="space needle at night francesca kee">
+    </a>
+    
+    <a href="/assets/images/spicy-chili-francesca-kee.jpg" title="spicy chili francesca kee" data-gallery>
+        <img src="/assets/images/thumb/spicy-chili-francesca-kee.jpg" alt="spicy chili francesca kee">
+    </a>
+    
+    <a href="/assets/images/strawberry-francesca-kee.jpg" title="strawberry francesca kee" data-gallery>
+        <img src="/assets/images/thumb/strawberry-francesca-kee.jpg" alt="strawberry francesca kee">
+    </a>
+    
+    <a href="/assets/images/summertime-siesta-francesca-kee.jpg" title="summertime siesta francesca kee" data-gallery>
+        <img src="/assets/images/thumb/summertime-siesta-francesca-kee.jpg" alt="summertime siesta francesca kee">
+    </a>
+    
+    <a href="/assets/images/sunflower-francesca-kee.jpg" title="sunflower francesca kee" data-gallery>
+        <img src="/assets/images/thumb/sunflower-francesca-kee.jpg" alt="sunflower francesca kee">
+    </a>
+    
+    <a href="/assets/images/sunset-at-half-moon-bay-francesca-kee.jpg" title="sunset at half moon bay francesca kee" data-gallery>
+        <img src="/assets/images/thumb/sunset-at-half-moon-bay-francesca-kee.jpg" alt="sunset at half moon bay francesca kee">
+    </a>
+    
+    <a href="/assets/images/sunset-at-san-francisco-bay-francesca-kee.jpg" title="sunset at san francisco bay francesca kee" data-gallery>
+        <img src="/assets/images/thumb/sunset-at-san-francisco-bay-francesca-kee.jpg" alt="sunset at san francisco bay francesca kee">
+    </a>
+    
+    <a href="/assets/images/sunset-at-taipei-francesca-kee.jpg" title="sunset at taipei francesca kee" data-gallery>
+        <img src="/assets/images/thumb/sunset-at-taipei-francesca-kee.jpg" alt="sunset at taipei francesca kee">
+    </a>
+    
+    <a href="/assets/images/sunset-in-colorado-francesca-kee.jpg" title="sunset in colorado francesca kee" data-gallery>
+        <img src="/assets/images/thumb/sunset-in-colorado-francesca-kee.jpg" alt="sunset in colorado francesca kee">
+    </a>
+    
+    <a href="/assets/images/taos-pueblo-church-francesca-kee.jpg" title="taos pueblo church francesca kee" data-gallery>
+        <img src="/assets/images/thumb/taos-pueblo-church-francesca-kee.jpg" alt="taos pueblo church francesca kee">
+    </a>
+    
+    <a href="/assets/images/the-beauty-of-sausalito-francesca-kee.jpg" title="the beauty of sausalito francesca kee" data-gallery>
+        <img src="/assets/images/thumb/the-beauty-of-sausalito-francesca-kee.jpg" alt="the beauty of sausalito francesca kee">
+    </a>
+    
+    <a href="/assets/images/the-boat-francesca-kee.jpg" title="the boat francesca kee" data-gallery>
+        <img src="/assets/images/thumb/the-boat-francesca-kee.jpg" alt="the boat francesca kee">
+    </a>
+    
+    <a href="/assets/images/the-rose-francesca-kee.jpg" title="the rose francesca kee" data-gallery>
+        <img src="/assets/images/thumb/the-rose-francesca-kee.jpg" alt="the rose francesca kee">
+    </a>
+    
+    <a href="/assets/images/twilight-francesca-kee.jpg" title="twilight francesca kee" data-gallery>
+        <img src="/assets/images/thumb/twilight-francesca-kee.jpg" alt="twilight francesca kee">
+    </a>
+    
+    <a href="/assets/images/waiting-for-someone-francesca-kee.jpg" title="waiting for someone francesca kee" data-gallery>
+        <img src="/assets/images/thumb/waiting-for-someone-francesca-kee.jpg" alt="waiting for someone francesca kee">
+    </a>
+    
+    <a href="/assets/images/zaanse-schans-windmills-francesca-kee.jpg" title="zaanse schans windmills francesca kee" data-gallery>
+        <img src="/assets/images/thumb/zaanse-schans-windmills-francesca-kee.jpg" alt="zaanse schans windmills francesca kee">
+    </a>
+    
+</div>
+
 
       </section>
     </div>
@@ -107,7 +377,8 @@
 <div id="footer_wrap" class="outer">
   <footer class="inner">
     
-    <p> Copyright © 2013-2015 by Francesca Kee Fine Art. All rights reserved. </p>
+    <p><a href="https://www.facebook.com/francesca.kee"><i class="fa fa-facebook icons" aria-hidden="true"></i></a><a href="http://www.linkedin.com/in/francescakee"><i class="fa fa-linkedin icons" aria-hidden="true"></i></a><a href="mailto:fineart@francescakee.com"><i class="fa fa-envelope icons" aria-hidden="true"></i></a><a href="https://twitter.com/francescakee"><i class="fa fa-twitter icons" aria-hidden="true"></i></a></p>
+    <p> Copyright © 2013-2015 by Francesca Kee Fine Art. All rights reserved.</p>
       <!-- scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -124,6 +395,13 @@
     $('#blueimp-gallery').on('closed', function (event) {
         $("body").css('overflow','auto');
     });
+    blueimp.Gallery(
+        document.getElementById('carousel-links').getElementsByTagName('a'),
+        {
+            container: '#blueimp-gallery-carousel',
+            carousel: true
+        }
+    );
     </script>
   </footer>
 </div>

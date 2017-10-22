@@ -5,7 +5,7 @@
 
       <a id="cart_banner" href="http://francesca-kee.artistwebsites.com/"> Shop </a>
       <h1 id="project_title">{{ site.title | default: site.github.repository_name }}</h1>
-      <h2 id="project_tagline">- {{ site.description | default: site.github.project_tagline }}</h2>
+      <h2 id="project_tagline">{{ site.description | default: site.github.project_tagline }}</h2>
     </header>
         <nav class="navbar navbar-inverse">
           <div class="container page-padding padd-rem">
@@ -18,11 +18,9 @@
             </div>
             <div class="collapse navbar-collapse padd-rem" id="myNavbar">
               <ul class="nav navbar-nav">
-                <li><a href="#header_wrap">Home</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#awards">Awards</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#blog">Blog</a></li>
+                <li><a href="/" class="{% if page.permalink == '/' %}myactive{% endif %}">Home</a></li>
+                <li><a href="/#gallery">Gallery</a></li>
+                <li><a href="/about/" class="{% if page.permalink == '/about/' %}myactive{% endif %}">About</a></li>
               </ul>
             </div>
           </div>
