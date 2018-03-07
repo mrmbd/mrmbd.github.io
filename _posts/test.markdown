@@ -1,0 +1,15 @@
+---
+title: Test
+subtitle: Test Solution
+layout: default
+modal-id: 2
+date: 2014-07-18
+img: dreams.png
+thumbnail: dreams-thumbnail.png
+alt: image-alt
+project-date: April 2014
+client: Start Bootstrap
+category: Web Development
+description: This is a random description in the _posts markdown file.
+
+---
