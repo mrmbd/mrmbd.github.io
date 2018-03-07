@@ -30,10 +30,10 @@
         <meta name="theme-color" content="#ffffff">
     </head>
 
-    <body id="page-top" class="index">   
+    <body id="page-top" class="index">
         <!-- Navigation -->
         <div class="preload" id="loader-wrapper">
-            <img src="/img/logo-animated.svg">
+            <img src="/img/logo-animated_opt.svg">
         </div>
         <div id="main-page">
         <nav class="navbar navbar-default navbar-fixed-top">
@@ -88,7 +88,7 @@
                 </div>
             </div>
         </div>
-  
+
         <!-- Services Section -->
         <section id="services">
             <div class="container">
@@ -136,7 +136,7 @@
                     </div>
                 </div>
                 <div class="row centered-box">
-                
+
                     <div class="col-md-4 col-sm-6 portfolio-item wow fadeInUp" data-wow-duration="2s">
                         <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
                             <div class="portfolio-hover">
@@ -171,7 +171,7 @@
                         <h3>Diplomacy</h3>
                     </div>
                     <div class='col-xs-4'>
-                        <img src='/img/Shield.png'/>
+                        <img src='/img/shield.png'/>
                     </div>
                     <div class="col-xs-4 right  wow slideInRight" data-wow-duration="2s">
                         <h3>Virtuosity</h3>
@@ -287,7 +287,7 @@
                     @ADMIN: Social Media Links
                     <div class="col-md-4">
                         <ul class="list-inline social-buttons">
-                            <li><a href="http://twitter.com/slick9115"><i class="fa fa-twitter"></i></a></li>   
+                            <li><a href="http://twitter.com/slick9115"><i class="fa fa-twitter"></i></a></li>
                         </ul>
                     </div>
                     -->
@@ -305,7 +305,7 @@
         </footer>
 
         <!-- Portfolio Modals -->
-     
+
         <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-content">
                 <div class="close-modal" data-dismiss="modal">
@@ -355,16 +355,56 @@
         <!-- Plugin JavaScript -->
         <script src="../js/wow.js"></script>
         <script>new WOW().init();</script>
-        <script src="../js/jquery.easing.min.js"></script>
-        <script src="../js/classie.js"></script>
-        <script src="../js/cbpAnimatedHeader.js"></script>
+        <script src="../js/jquery.easing.min_opt.js"></script>
+        <script src="../js/classie_opt.js"></script>
+        <script type="text/javascript">
+          // inlining the small js file for better performance ref ../js/cbpAnimatedHeader.js
+          var cbpAnimatedHeader = (function() {
+
+          	var docElem = document.documentElement,
+          		header = document.querySelector( '.navbar-fixed-top' ),
+          		didScroll = false,
+          		changeHeaderOn = 100;
+
+          	function init() {
+          		window.addEventListener( 'scroll', function( event ) {
+          			if( !didScroll ) {
+          				didScroll = true;
+          				setTimeout( scrollPage, 250 );
+          			}
+          		}, false );
+          	}
+
+          	function scrollPage() {
+          		var sy = scrollY();
+          		if ( sy >= changeHeaderOn ) {
+          			classie.add( header, 'navbar-shrink' );
+          		}
+          		else {
+          			classie.remove( header, 'navbar-shrink' );
+          		}
+          		didScroll = false;
+          	}
+
+          	function scrollY() {
+          		return window.pageYOffset || docElem.scrollTop;
+          	}
+
+          	init();
+
+          })();
+        </script>
 
         <!-- Contact Form JavaScript -->
-        <script src="../js/jqBootstrapValidation.js"></script>
-        <script src="../js/contact_me.js"></script>
-        
+        <script src="../js/jqBootstrapValidation_opt.js"></script>
+        <script src="../js/contact_me_opt.js"></script>
+
         <!-- Custom Theme JavaScript -->
-        <script src="../js/agency.js"></script>
+        <script type="text/javascript">
+            // inlining the small js file for better performance ref ../js/agency.js
+            $(function(){$('a.page-scroll').bind('click',function(event){var $anchor=$(this);$('html, body').stop().animate({scrollTop:$($anchor.attr('href')).offset().top},1500,'easeInOutExpo');event.preventDefault();});});$('body').scrollspy({target:'.navbar-fixed-top'})
+            $('.navbar-collapse ul li a').click(function(){$('.navbar-toggle:visible').click();});$('div.modal').on('show.bs.modal',function(){var modal=this;var hash=modal.id;window.location.hash=hash;window.onhashchange=function(){if(!location.hash){$(modal).modal('hide');}}});
+        </script>
 
         <script src="../js/particles.min.js"></script>
         <script src="../js/main.js"></script>

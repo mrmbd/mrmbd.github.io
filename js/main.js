@@ -3,7 +3,7 @@ $(function() {
 		$('#loader-wrapper').removeClass('preload');
 		$('#main-page').addClass('loaded');
 		initializeParticles();
-	}, 9000);
+	}, 7000);
 });
 
 
