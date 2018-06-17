@@ -587,44 +587,23 @@ webpackJsonp([41, 71], {
                 var s = h.simulationForm.serializeArray();
                 $.ajax({
                     url: window.location.pathname,
-                    data: s,
+                    data: '',
                     beforeSend: function() {
-                        App.$loading.show()
-                    },
-                    success: function(o) {
-                        e({
-                            installment: c.round(o.simulation.averagePayment),
-                            interestRate: o.simulation.interestRate,
-                            loanAmount: o.filters.loanAmount,
-                            price: o.filters.price,
-                            downPayment: o.filters.downPayment,
-                            tenure: o.filters.tenure,
-                            tenureType: o.filters.tenureType,
-                            financingStatus: o.filters.financingStatus
-                        }),
-                        a({
-                            price: o.filters.price,
-                            downPayment: o.filters.downPayment,
-                            tenure: o.filters.tenure,
-                            tenureType: o.filters.tenureType,
-                            financingStatus: o.filters.financingStatus,
-                            housingType: o.filters.housingType,
-                            propertySize: o.filters.propertySize,
-                            isTakeOver: !1
-                        }, t),
-                        n && i(o.filters, o.tenureTypeOptions)
-                    },
-                    error: function() {
-                        var e = h.simulationForm.data("error")
-                          , n = '<div class="alert alert-warning">' + e + "</div>";
-                        h.simulationForm.prepend(n)
-                    },
-                    complete: function() {
+                        App.$loading.show(),
                         h.simulationPriceInput.maskMoney(v),
                         h.simulationPriceInput.maskMoney("mask", h.simulationPriceInput.val()),
                         h.simulationDownPaymentInput.maskMoney(v),
                         h.simulationDownPaymentInput.maskMoney("mask", h.simulationDownPaymentInput.val()),
-                        App.$loading.hide()
+                        setTimeout(function(){ App.$loading.hide() }, 1000)
+                    },
+                    success: function(o) {
+
+                    },
+                    error: function() {
+
+                    },
+                    complete: function() {
+
                     }
                 })
             }
@@ -1992,6 +1971,7 @@ webpackJsonp([41, 71], {
         }
     }
 }, [1130]);
+
 
 
 
