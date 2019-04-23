@@ -27,3 +27,7 @@
      appearance: none;
      margin: 0;
  }
+
+#header, .disp-non {
+  display: none;
+}

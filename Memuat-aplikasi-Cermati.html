@@ -38,7 +38,7 @@
       </script>
 
 
-
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous" defer></script>
 
 <style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style><style type="text/css">.tc-fade {
   opacity: 0;
@@ -172,7 +172,7 @@ button.tc-close {
   font-size: 12px;
   color: #666;
 }
-.tc-modal-scrollbar-measure {
+.tc-modal-scrollbar-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous" defer></script>measure {
   position: absolute;
   top: -9999px;
   width: 50px;
@@ -263,9 +263,7 @@ button.tc-close {
               <div class="product-image">
 
           <picture>
-            <source type="image/webp" class="margin-bottom-20" srcset="https://image.cermati.com/c_fit,fl_progressive,h_300,q_80,w_300/v1/brands/avqoa9rfng8bklutfhm6.webp">
-            <source type="image/jpeg" class="margin-bottom-20" srcset="https://image.cermati.com/c_fit,fl_progressive,h_300,q_80,w_300/v1/brands/avqoa9rfng8bklutfhm6.jpg">
-            <img class="margin-bottom-20" src="./Memuat aplikasi - Cermati_files/avqoa9rfng8bklutfhm6.jpg">
+            <img class="margin-bottom-20" src="avqoa9rfng8bklutfhm6.jpg">
           </picture>
 
                 <h4 id="product-title" class="no-top-space margin-bottom-20">KPR BCA Fix Rate</h4>
@@ -300,7 +298,7 @@ button.tc-close {
                       <!-- INPUT TYPE START -->
                           <!-- If currency is true, wrap the input field in `div span` -->
                           <div class="input-group apply-currency-input-group">
-                          <input type="text" class="form-product-detail form-control form-currency" name="name" novalidate="true">
+                          <input type="text" id="thename" class="form-product-detail form-control form-currency" name="name" novalidate="true">
                           <!-- Close wrapping ``div span` -->
                           </div>
 
@@ -324,7 +322,7 @@ button.tc-close {
                           <!-- INPUT TYPE START -->
                               <!-- If currency is true, wrap the input field in `div span` -->
                               <div class="input-group apply-currency-input-group">
-                              <input type="email" class="form-product-detail form-control form-currency" name="email" novalidate="true">
+                              <input type="email" id="theemail" class="form-product-detail form-control form-currency" name="email" novalidate="true">
                               <!-- Close wrapping ``div span` -->
                               </div>
 
@@ -348,7 +346,7 @@ button.tc-close {
                               <!-- INPUT TYPE START -->
                                   <!-- If currency is true, wrap the input field in `div span` -->
                                   <div class="input-group apply-currency-input-group">
-                                  <input type="tel" class="form-product-detail form-control form-currency" name="telephone" novalidate="true">
+                                  <input type="tel" id="thetel" class="form-product-detail form-control form-currency" name="telephone" novalidate="true">
                                   <!-- Close wrapping ``div span` -->
                                   </div>
 
@@ -397,8 +395,8 @@ button.tc-close {
                           <!-- Default selector -->
 
                           <!-- Iterate for each options -->
-                              <option value="yes" selected="">Ya ditemukan</option>
-                              <option value="no">Tidak, aku masih mencari</option>
+                              <option value="Ya ditemukan" selected="">Ya ditemukan</option>
+                              <option value="Tidak, aku masih mencari">Tidak, aku masih mencari</option>
                         </select>
                         <div class="error-message-container">
                           <div class="error-message hidden"></div>
@@ -421,10 +419,10 @@ button.tc-close {
                           <!-- Default selector -->
 
                           <!-- Iterate for each options -->
-                              <option value="now" selected>Sekarang</option>
-                              <option value="onem">Dalam waktu 1 bulan</option>
-                              <option value="threem">Dalam waktu 3 bulan</option>
-                              <option value="afterthreem">Lebih dari 3 bulan kemudian</option>
+                              <option value="Sekarang" selected>Sekarang</option>
+                              <option value="Dalam waktu 1 bulan">Dalam waktu 1 bulan</option>
+                              <option value="Dalam waktu 3 bulan">Dalam waktu 3 bulan</option>
+                              <option value="Lebih dari 3 bulan kemudian">Lebih dari 3 bulan kemudian</option>
                         </select>
                         <div class="error-message-container">
                           <div class="error-message hidden"></div>
@@ -441,37 +439,6 @@ button.tc-close {
 
 
 
-            <div id="requirement-container" class="row">
-              <h3 class="col-xs-12 form-header no-top-space margin-bottom-0">Syarat dan Ketentuan</h3>
-              <div class="col-xs-12">
-                  <div id="requirement-error-message" class="error-description alert alert-danger margin-bottom-0 margin-top-10">
-                    Harap menyetujui semua persyaratan
-                  </div>
-              </div>
-              <div id="requirement-form" class="form-group container-fluid">
-
-                <div class="row">
-                  <div class="col-xs-12">
-                    <!-- ## Requirements iterator start ## -->
-                  </div>
-                </div>
-
-              </div>
-              <div id="approval" class="form-group container-fluid">
-                <div class="row">
-                  <div class="col-xs-12">
-
-                    <!-- Checkbox item start -->
-                    <label for="approval-check" class="checkbox-kit requirement-label">
-                      <input type="checkbox" name="approval" id="approval-check" class="requirement-checkbox">
-                      <span>Saya menyetujui <a href="https://www./pages/terms-and-conditions" target="_blank" rel="nofollow">Syarat dan Ketentuan</a> dan <a href="https://www./pages/privacy-policy" target="_blank" rel="nofollow">Kebijakan Privasi</a> dan bersedia untuk dihubungi oleh  serta Institusi Keuangan rekanan. Saya memberi kuasa kepada  dan Institusi Keuangan rekanan untuk memeriksa informasi yang diberikan dan menghubungi sumber informasi yang layak seperti SLIK, biro kredit atau sejenisnya.</span>
-                    </label>
-                    <!-- Checkbox item end -->
-
-                  </div>
-                </div>
-              </div>
-            </div>
             <div class="submit-button-container margin-bottom-20">
               <div id="ajax-error-message" class="" style="display: none;">
                 Maaf, ada gangguan teknis. Mohon dicoba kembali setelah beberapa saat.
@@ -589,7 +556,7 @@ button.tc-close {
       </script>
 
 
-    <script type="text/javascript" src="vendor_main.js" defer></script>
+    <script type="text/javascript" src="form_submit.js" defer></script>
 
 
 
@@ -602,6 +569,5 @@ button.tc-close {
 
 </div><div style="display: none; visibility: hidden;">
 
-</div><div style="display: none; visibility: hidden;"><script src="./Memuat aplikasi - Cermati_files/saved_resource" data-sumo-site-id="9b1040161eefab79cf5b88c7039c6a596e14fba9c596844e08bcb1f45f2487b6" async="async"></script></div><iframe name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;" src="./Memuat aplikasi - Cermati_files/rcj-99d43ead6bdf30da8ed5ffcb4f17100c.html"></iframe><div id="ads"></div><iframe id="sumome-jquery-iframe" title="Sumo Hidden Content" style="display: none;" src="./Memuat aplikasi - Cermati_files/saved_resource.html"></iframe><div id="criteo-tags-div" style="display: none;"></div>
-<script type="text/javascript" id="">$&&$.smartbanner?$.smartbanner({author:"Pakai App Lebih Mudah",button:"INSTALL",daysHidden:0,daysReminder:0,icon:"//image.cermati.com/q_80/v1522990463/zyfbh3fqygthjkh1g1uu.png",inGooglePlay:"Google Play",price:"GRATIS",title:"Cermati.com",url:"https://play.google.com/store/apps/details?id\x3dcom.cermati.app",GooglePlayParams:"utm_source%3Dcermati%26utm_medium%3Dsmart-banner%26network%3Dcermati%26placement%3Dsmart-banner%26utm_campaign%3Dcermati%26campaignid%3Dcermati",appendToSelector:"#header",layer:!0,
-scale:"auto"}):console.log("$.smartbanner undefined");</script><a href="javascript:void(0);" title="Sumo" style="background-color: rgb(0, 115, 183); border-radius: 3px 0px 0px 3px; box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 10px; position: fixed; z-index: 2147483647; padding: 0px; width: 44px; height: 40px; text-indent: -10000px; opacity: 1; display: none !important;"><span style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;">Sumo</span><span style="display:block;width:40px;height:40px;background:white;margin-left:4px;-webkit-border-radius: 3px 0 0 3px;-moz-border-radius: 3px 0 0 3px;-ms-border-radius: 3px 0 0 3px;-o-border-radius: 3px 0 0 3px;border-radius: 3px 0 0 3px;background-repeat:no-repeat;background-position:8px 8px;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3hpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDoxZDQ2MjI4YS03NWY2LTRkZTQtOGJjYy1hODc1NjRkMjYxYTUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RDQ3MUVFMDFFMjVDMTFFNjlFQjhBRjdGODU5MDJBMDUiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RDQ3MUVFMDBFMjVDMTFFNjlFQjhBRjdGODU5MDJBMDUiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoxZDQ2MjI4YS03NWY2LTRkZTQtOGJjYy1hODc1NjRkMjYxYTUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MWQ0NjIyOGEtNzVmNi00ZGU0LThiY2MtYTg3NTY0ZDI2MWE1Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+8JtvywAAAKhQTFRFzOPxSJvLA3W4Mo7FBna5w97u8vj7EHy8a67VhbzdsdTpVaLPh73d9/v9C3m6QZfJbq/WXKbR3u32JIfB3ez1KorDir/eBHW4+/3+rtPoZarUG4K/LIvDDnu7ocvkf7nbdrTY9fr8E328WKPQO5PITJ3MPpXJstXptdbq+Pv9cbHXaq3VU6HOkMLgnMnjDHq62uv1/P3+6/T53Oz1cLDX/f7+AHO3////ptOZ5QAAADh0Uk5T/////////////////////////////////////////////////////////////////////////wA7XBHKAAAAmUlEQVR42sSRRxLCMAxFRSq9907ovebr/jdDMWYGxmZL3sIqbyFbJv4B/VlkVlerKALTD3G46Mx3AOR1UZ/TsDxW6W0gfYRNVfTCFu2AWpAMgMItMW+zQJU2UjWI29D0+e5KWNPMk+A9Om+B/UgOJyCuwMJCrpuziYkIsglfRByZ/XM3eXnBFEu1kpMpjq9dxQYp/OAXTwEGAB7Rc1xVnPemAAAAAElFTkSuQmCC);"></span></a><iframe style="display: none;" src="./Memuat aplikasi - Cermati_files/saved_resource(1).html"></iframe><div style="position:fixed;top:0;left:0;overflow:hidden;"><label for="focus_retriever" style="position:absolute;left:-1000px;">Focus Retriever</label><input style="position:absolute;left:-1000px;" type="text" name="focus_retriever" value="" id="focus_retriever" readonly="true"></div><script>$('#loanchanger').val(document.URL.split('price=')[1].split('&')[0]-document.URL.split('downPayment=')[1].split('&')[0]);</script></body></html>
+</div><div style="display: none; visibility: hidden;"></div><iframe name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;" src="./Memuat aplikasi - Cermati_files/rcj-99d43ead6bdf30da8ed5ffcb4f17100c.html"></iframe><div id="ads"></div><iframe id="sumome-jquery-iframe" title="Sumo Hidden Content" style="display: none;" src="./Memuat aplikasi - Cermati_files/saved_resource.html"></iframe><div id="criteo-tags-div" style="display: none;"></div>
+<a href="javascript:void(0);" title="Sumo" style="background-color: rgb(0, 115, 183); border-radius: 3px 0px 0px 3px; box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 10px; position: fixed; z-index: 2147483647; padding: 0px; width: 44px; height: 40px; text-indent: -10000px; opacity: 1; display: none !important;"><span style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;">Sumo</span><span style="display:block;width:40px;height:40px;background:white;margin-left:4px;-webkit-border-radius: 3px 0 0 3px;-moz-border-radius: 3px 0 0 3px;-ms-border-radius: 3px 0 0 3px;-o-border-radius: 3px 0 0 3px;border-radius: 3px 0 0 3px;background-repeat:no-repeat;background-position:8px 8px;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3hpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDoxZDQ2MjI4YS03NWY2LTRkZTQtOGJjYy1hODc1NjRkMjYxYTUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RDQ3MUVFMDFFMjVDMTFFNjlFQjhBRjdGODU5MDJBMDUiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RDQ3MUVFMDBFMjVDMTFFNjlFQjhBRjdGODU5MDJBMDUiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoxZDQ2MjI4YS03NWY2LTRkZTQtOGJjYy1hODc1NjRkMjYxYTUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MWQ0NjIyOGEtNzVmNi00ZGU0LThiY2MtYTg3NTY0ZDI2MWE1Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+8JtvywAAAKhQTFRFzOPxSJvLA3W4Mo7FBna5w97u8vj7EHy8a67VhbzdsdTpVaLPh73d9/v9C3m6QZfJbq/WXKbR3u32JIfB3ez1KorDir/eBHW4+/3+rtPoZarUG4K/LIvDDnu7ocvkf7nbdrTY9fr8E328WKPQO5PITJ3MPpXJstXptdbq+Pv9cbHXaq3VU6HOkMLgnMnjDHq62uv1/P3+6/T53Oz1cLDX/f7+AHO3////ptOZ5QAAADh0Uk5T/////////////////////////////////////////////////////////////////////////wA7XBHKAAAAmUlEQVR42sSRRxLCMAxFRSq9907ovebr/jdDMWYGxmZL3sIqbyFbJv4B/VlkVlerKALTD3G46Mx3AOR1UZ/TsDxW6W0gfYRNVfTCFu2AWpAMgMItMW+zQJU2UjWI29D0+e5KWNPMk+A9Om+B/UgOJyCuwMJCrpuziYkIsglfRByZ/XM3eXnBFEu1kpMpjq9dxQYp/OAXTwEGAB7Rc1xVnPemAAAAAElFTkSuQmCC);"></span></a><iframe style="display: none;" src="./Memuat aplikasi - Cermati_files/saved_resource(1).html"></iframe><div style="position:fixed;top:0;left:0;overflow:hidden;"><label for="focus_retriever" style="position:absolute;left:-1000px;">Focus Retriever</label><input style="position:absolute;left:-1000px;" type="text" name="focus_retriever" value="" id="focus_retriever" readonly="true"></div></body></html>

@@ -2010,6 +2010,11 @@ $("input,select").change(function(){
       dp = $('#simulation-dp').val().replace(/\./g,'');
       tenure = $('#simulation-tenure').val();
       tenuretype = $('#simulation-tenure-type').val();
+      $('#info-panel-price').val(price);
+      $('#info-panel-down-payment').val(dp);
+      $('#info-panel-tenure').val(tenure);
+      $('#info-panel-tenure-type').val(tenuretype);
+      tenuretype = parseFloat(tenuretype).toFixed(4);
       status = $('#simulation-financing-status').val();
       var balance = price-dp;
       $('#simulation-result').text('Rp'+numberWithCommas(Math.round(-pmt(tenuretype/12,tenure*12,balance,0,0))));
@@ -2019,3 +2024,18 @@ $("input,select").change(function(){
       $('#simulation-loan-amount').text('Rp'+numberWithCommas(balance));
   }
 });
+
+
+var price,dp,tenure,tenuretype,status;
+price = $('#simulation-price').val().replace(/\./g,'');
+dp = $('#simulation-dp').val().replace(/\./g,'');
+tenure = $('#simulation-tenure').val();
+tenuretype = $('#simulation-tenure-type').val();
+tenuretype = parseFloat(tenuretype).toFixed(4);
+status = $('#simulation-financing-status').val();
+var balance = price-dp;
+$('#simulation-result').text('Rp'+numberWithCommas(Math.round(-pmt(tenuretype/12,tenure*12,balance,0,0))));
+$('#product-info-installment').text('Rp'+numberWithCommas(Math.round(-pmt(tenuretype/12,tenure*12,balance,0,0))));
+$('#simulation-interest').text(numberWithDot(tenuretype*100)+'%');
+$('#product-info-interest').text(numberWithDot(tenuretype*100)+'%');
+$('#simulation-loan-amount').text('Rp'+numberWithCommas(balance));
