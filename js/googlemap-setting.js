@@ -1,11 +1,11 @@
 var map;
       var peta = document.getElementById('maps');
 
-      var myLat = '-7.452278',
-		myLng = '112.708992',
+      var myLat = '38.740074',
+		myLng = '-77.1939579',
 		myMarkerx = 'images/cd-icon-location.png';
-	
-	
+
+
 		var latitude = myLat,
 			longitude = myLng,
 			markerx = myMarkerx,
@@ -33,7 +33,7 @@ var map;
 				featureType: "poi",
 				elementType: "labels",
 				stylers: [
-					{visibility: "off"}
+					{visibility: "on"}
 				]
 			},
 			{
@@ -49,7 +49,7 @@ var map;
 				featureType: "road.local",
 				elementType: "labels.icon",
 				stylers: [
-					{visibility: "off"}
+					{visibility: "on"}
 				]
 			},
 			{
@@ -189,6 +189,7 @@ var map;
 					{ saturation: saturation_value }
 				]
 			}
+
 		];
 
 		function CustomZoomControl(controlDiv, map) {
@@ -206,7 +207,7 @@ var map;
 				map.setZoom(map.getZoom()-1)
 			});
 		}
-	
+
       	function initMap() {
 
 	      	//set google map options
@@ -227,10 +228,10 @@ var map;
 
 	        //add a custom marker to the map
 			var marker = new google.maps.Marker({
-				position: new google.maps.LatLng(latitude, longitude),
+				position: {lat: 38.740074, lng: -77.1939579},
 				map: map,
 				visible: true,
-				icon: marker_url,
+				icon: marker_url
 			});
 
 			var zoomControlDiv = document.createElement('div');
