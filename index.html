@@ -33,12 +33,93 @@
 	Custom Stylesheet
 	=============================================== -->
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
+<style>
+          body {
+            margin: 0;
+          }
 
+          #loader-wrapper {
+            display: flex;
+            background-color: #2b5f1e;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            max-height: 100%;
+            box-sizing: border-box;
+            position: fixed;
+            width: 100%;
+            z-index: 99999999999;
+            opacity: 1;
+            animation: fadeOutAndRemove 3s forwards;
+            animation-delay: 5s;
+          }
+
+          #loader-wrapper img {
+            width: 60%;
+            max-width: 550px;
+            vertical-align: middle;
+            display: block;
+            margin: 0 auto;
+            border: 0;
+            box-sizing: border-box;
+          }
+
+          #loader-wrapper h2 {
+            font-family: 'Merriweather', serif;
+            font-weight: 100;
+            display: block;
+            box-sizing: border-box;
+            color: #f4d036;
+            font-size: 29px;
+            letter-spacing: 1px;
+            text-align: center;
+            text-transform: uppercase;
+          }
+
+          .fadeIn {
+            opacity: 0;
+            animation: fadeIn 0s forwards;
+            animation-delay: 8s;
+          }
+
+					.responsive-wrap {
+						width: 100%;
+					}
+
+          @keyframes fadeIn {
+            0% {
+              display: none;
+            }
+            100% {
+              display: block;
+            }
+          }
+
+          @keyframes fadeOutAndRemove {
+            0% {
+              opacity: 1;
+            }
+            100% {
+              opacity: 0;
+              display: none;
+            }
+          }
+
+          @media (max-width: 560px) {
+            #loader-wrapper h2 {
+              font-size: 21px;
+            }
+          }
+        </style>
     <script src="js/vendor/modernizr.min.js"></script>
 </head>
 
 <body>
-
+<div class="preload" id="loader-wrapper">
+          <div class="responsive-wrap">
+              <img src="images/Dominion-SVG.svg">              
+          </div>
+        </div>
 	<!-- LOAD PAGE -->
 	<div class="animationload">
 		<div class="loader"></div>
