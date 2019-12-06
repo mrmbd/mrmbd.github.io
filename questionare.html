@@ -1,0 +1,256 @@
+---
+layout: quiz
+title: Questionare
+---
+<div class="container-fluid">
+  <div class="marg-top-xxxl">
+    <div id="title">
+      <h1 class="text-center">Bereken jouw schadevergoeding</h1>
+      <div class="row marg-top-xl">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+          <p class="text-center descriptor">
+            Bereken via deze tool aan de hand van een aantal vragen snel en gemakkelijk jouw schadevergoeding.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="disp-non" id="title2">
+      <h1 class="text-center">Jouw eindresultaat</h1>
+      <div class="row marg-top-xl">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+          <h3 class="super-big"><sup>€</sup>1.200</h3>
+          <p class="text-center descriptor">
+            Deze berekening is een indicatie en biedt geen garanties, voor een exacte berekening kan u beroep doen op het advocatenkantoor.
+          </p>
+        </div>
+      </div>
+    </div>
+  <div class="row">
+    <div class="active col-xs-12" id="intro">
+<div>
+  <a class="orange-btn hero__cta cta btn" id="quiz-start">Start jouw berekening{% include arrow-right.html %}</a>
+</div>
+    </div>
+
+
+    <div class="col-xs-12 disp-non" id="intro2">
+<div>
+  <a class="orange-btn hero__cta cta btn" id="quiz-end" href="contact.html">Contacteer het advocatenkantoor{% include arrow-right.html %}</a>
+</div>
+    </div>
+
+    <div id="data" class="carousel slide question" data-ride="carousel">
+
+      <div class="disp-non col-xs-12" id="q1" data-heading="VRAAG 1" data-progress="0">
+        <h1 class="quiz-qn-font orange text-center">Verbleef u in het ziekenhuis en/of was u thuis op dokterattest?</h1>
+        <div class="text-center">
+          <button type="button" class="quiz-btn btn btn-outline-primary btn-lg" data-value="1" data-forward="2"><img class="preimage" src="/assets/images/icons/yesicon.png" alt="Yes">Ja<img class="arr-icon" src="/assets/images/icons/icon-right-arrow.svg" alt="right"></button>
+          <button type="button" class="quiz-btn btn btn-outline-primary btn-lg" data-value="2" data-forward="12"><img class="preimage" src="/assets/images/icons/noicon.png" alt="No">Neen<img class="arr-icon" src="/assets/images/icons/icon-right-arrow.svg" alt="right"></button>
+         </div>
+      <br><br>
+      </div>
+
+      <div class="disp-non col-xs-12" id="q2" data-heading="VRAAG 1.1" data-progress="5">
+        <h1 class="quiz-qn-font orange text-center">Hoeveel dagen was u in het ziekenhuis?</h1>
+        <div class="text-center">
+          <input type="number" class="quiz-btn btn btn-outline-primary btn-lg" min="0" data-value="1" data-forward="3" placeholder="dagen">
+          </div>
+      <br><br>
+      </div>
+
+      <div class="disp-non col-xs-12" id="q3" data-heading="VRAAG 1.2" data-progress="10">
+        <h1 class="quiz-qn-font orange text-center">Hoeveel dagen was u thuis op doktersvoorschrift?</h1>
+        <div class="text-center">
+          <input type="number" class="quiz-btn btn btn-outline-primary btn-lg" min="0" data-value="1" data-forward="4" placeholder="dagen">
+          </div>
+      <br><br>
+      </div>
+
+      <div class="disp-non col-xs-12" id="q4" data-heading="VRAAG 1.3" data-progress="15">
+        <h1 class="quiz-qn-font orange text-center">Hoeveel kinderen wonen bij u?</h1>
+        <div class="text-center">
+          <input type="number" class="quiz-btn btn btn-outline-primary btn-lg" min="0" data-value="1" data-forward="5" placeholder="kinderen">
+          </div>
+      <br><br>
+      </div>
+
+      <div class="disp-non col-xs-12" id="q5" data-heading="VRAAG 1.4" data-progress="20">
+        <h1 class="quiz-qn-font orange text-center">Hoeveel inkomen liep u mis door uw ongeschikheid? Geef uw totaal netto-inkomensverlies in.</h1>
+        <div class="text-center">
+          <input type="number" class="quiz-btn btn btn-outline-primary btn-lg" min="0" data-value="1" data-forward="6" placeholder="in €">
+          </div>
+      <br><br>
+      </div>
+
+      <div class="disp-non col-xs-12" id="q6" data-heading="VRAAG 2" data-progress="25">
+        <h1 class="quiz-qn-font orange text-center">Geslacht?</h1>
+        <div class="text-center">
+          <button type="button" class="quiz-btn btn btn-outline-primary btn-lg" data-value="1" data-forward="7">Male<img class="arr-icon" src="/assets/images/icons/icon-right-arrow.svg" alt="right"></button>
+          <button type="button" class="quiz-btn btn btn-outline-primary btn-lg" data-value="2" data-forward="7">Female<img class="arr-icon" src="/assets/images/icons/icon-right-arrow.svg" alt="right"></button>
+          <button type="button" class="quiz-btn btn btn-outline-primary btn-lg" data-value="3" data-forward="7">Others<img class="arr-icon" src="/assets/images/icons/icon-right-arrow.svg" alt="right"></button>
+         </div>
+      <br><br>
+      </div>
+
+      <div class="disp-non col-xs-12" id="q7" data-heading="VRAAG 2" data-progress="30">
+        <h1 class="quiz-qn-font orange text-center">Bent u student?</h1>
+        <div class="text-center">
+          <button type="button" class="quiz-btn btn btn-outline-primary btn-lg" data-value="1" data-forward="8"><img class="preimage" src="/assets/images/icons/yesicon.png" alt="Yes">Ja<img class="arr-icon" src="/assets/images/icons/icon-right-arrow.svg" alt="right"></button>
+          <button type="button" class="quiz-btn btn btn-outline-primary btn-lg" data-value="2" data-forward="12"><img class="preimage" src="/assets/images/icons/noicon.png" alt="No">Neen<img class="arr-icon" src="/assets/images/icons/icon-right-arrow.svg" alt="right"></button>
+         </div>
+      <br><br>
+      </div>
+
+      <div class="disp-non col-xs-12" id="q8" data-heading="VRAAG 2.1" data-progress="35">
+        <h1 class="quiz-qn-font orange text-center">Hoeveel dagen heeft u de les gemist en/of niet kunnen studeren?</h1>
+        <div class="text-center">
+          <input type="number" class="quiz-btn btn btn-outline-primary btn-lg" min="0" data-value="1" data-forward="9" placeholder="dagen">
+         </div>
+      <br><br>
+      </div>
+
+      <div class="disp-non col-xs-12" id="q9" data-heading="VRAAG 2.2" data-progress="40">
+        <h1 class="quiz-qn-font orange text-center">Verloor u een studiejaar door uw schadegeval?</h1>
+        <div class="text-center">
+          <button type="button" class="quiz-btn btn btn-outline-primary btn-lg" data-value="1" data-forward="10"><img class="preimage" src="/assets/images/icons/yesicon.png" alt="Yes">Ja<img class="arr-icon" src="/assets/images/icons/icon-right-arrow.svg" alt="right"></button>
+          <button type="button" class="quiz-btn btn btn-outline-primary btn-lg" data-value="2" data-forward="11"><img class="preimage" src="/assets/images/icons/noicon.png" alt="No">Neen<img class="arr-icon" src="/assets/images/icons/icon-right-arrow.svg" alt="right"></button>
+         </div>
+      <br><br>
+      </div>
+
+      <div class="disp-non col-xs-12" id="q10" data-heading="VRAAG 2.2.1" data-progress="45">
+        <h1 class="quiz-qn-font orange text-center">Hoeveel studiejaren verloor u?</h1>
+        <div class="text-center">
+          <input type="number" class="quiz-btn btn btn-outline-primary btn-lg" min="0" data-value="1" data-forward="11" placeholder="jaar">
+         </div>
+      <br><br>
+      </div>
+
+      <div class="disp-non col-xs-12" id="q11" data-heading="VRAAG 2.3" data-progress="50">
+        <h1 class="quiz-qn-font orange text-center">Wat is de huurprijs van uw studentenkot per maand?</h1>
+        <div class="text-center">
+          <input type="number" class="quiz-btn btn btn-outline-primary btn-lg" min="0" data-value="1" data-forward="12" placeholder="in €">
+         </div>
+      <br><br>
+      </div>
+
+      <div class="disp-non col-xs-12" id="q12" data-heading="VRAAG 3" data-progress="55">
+        <h1 class="quiz-qn-font orange text-center">Heeft u schade aan een voertuig?</h1>
+        <div class="text-center">
+          <button type="button" class="quiz-btn btn btn-outline-primary btn-lg" data-value="1" data-forward="13"><img class="preimage" src="/assets/images/icons/yesicon.png" alt="Yes">Ja<img class="arr-icon" src="/assets/images/icons/icon-right-arrow.svg" alt="right"></button>
+          <button type="button" class="quiz-btn btn btn-outline-primary btn-lg" data-value="2" data-forward="18"><img class="preimage" src="/assets/images/icons/noicon.png" alt="No">Neen<img class="arr-icon" src="/assets/images/icons/icon-right-arrow.svg" alt="right"></button>
+         </div>
+      <br><br>
+      </div>
+
+      <div class="disp-non col-xs-12" id="q13" data-heading="VRAAG 3.1" data-progress="60">
+        <p class="text-center descriptor">Indien uw wagen totaalverlies is, voert u als bedrag in de waarde van uw wagen op moment van het ongeval, min de restwaarde (deze bedragen vindt u eventueel op het expertiseverslag van de verzekering) Indien uw wagen hersteld is, geeft u de herstelwaarde in. Indien u het voertuig voor uw profesionele activiteit gebruikt, mag de BTW van van herstelfactuur, of de aankoopfactuur van de wagen bij totaalverlies niet worden meegerekend.</p>
+        <div class="text-center">
+          <input type="number" class="quiz-btn btn btn-outline-primary btn-lg" min="0" data-value="1" data-forward="14" placeholder="in €">
+         </div>
+      <br><br>
+      </div>
+
+      <div class="disp-non col-xs-12" id="q14" data-heading="VRAAG 3.2" data-progress="65">
+        <h1 class="quiz-qn-font orange text-center">Takelkosten, als het voertuig professioneel werd gebruikt, factuur van de takeldienst zonder BTW</h1>
+        <div class="text-center">
+          <input type="number" class="quiz-btn btn btn-outline-primary btn-lg" min="0" data-value="1" data-forward="15" placeholder="in €">
+         </div>
+      <br><br>
+      </div>
+
+      <div class="disp-non col-xs-12" id="q15" data-heading="VRAAG 3.3" data-progress="70">
+        <h1 class="quiz-qn-font orange text-center">dagen zonder voertuig</h1>
+        <div class="text-center">
+          <input type="number" class="quiz-btn btn btn-outline-primary btn-lg" min="0" data-value="1" data-forward="16" placeholder="dagen">
+         </div>
+      <br><br>
+      </div>
+
+      <div class="disp-non col-xs-12" id="q16" data-heading="VRAAG 3.4" data-progress="75">
+        <h1 class="quiz-qn-font orange text-center">met welk voertuig had een verkeersongeval?</h1>
+        <p class="text-center descriptor">
+          Selecteer een van onderstaande
+        </p>
+        <div class="text-center">
+          <select class="quiz-btn btn btn-outline-primary btn-lg" data-value="1" data-forward="17" placeholder="Selecteer uw voertuig uit deze lijst">
+            <option value="50">Mobilhome</option>
+            <option value="20">Personenwagen</option>
+            <option value="40">Lichte vrachtwagen</option>
+            <option value="60">Taxi</option>
+          </select>
+         </div>
+      <br><br>
+      </div>
+
+      <div class="disp-non col-xs-12" id="q17" data-heading="VRAAG 3.5" data-progress="80">
+        <h1 class="quiz-qn-font orange text-center">Hoeveel in the total kostte uw vervangwagen? BTW kan niet worden meegerekend als het voertuig professioneel werd gebruikt</h1>
+        <div class="text-center">
+          <input type="number" class="quiz-btn btn btn-outline-primary btn-lg" min="0" data-value="1" data-forward="18" placeholder="in €">
+         </div>
+      <br><br>
+      </div>
+
+      <div class="disp-non col-xs-12" id="q18" data-heading="VRAAG 4" data-progress="85">
+        <h1 class="quiz-qn-font orange text-center">Kleding schade?</h1>
+        <div class="text-center">
+          <button type="button" class="quiz-btn btn btn-outline-primary btn-lg" data-value="375" data-forward="19"><img class="preimage" src="/assets/images/icons/yesicon.png" alt="Yes">Ja<img class="arr-icon" src="/assets/images/icons/icon-right-arrow.svg" alt="right"></button>
+          <button type="button" class="quiz-btn btn btn-outline-primary btn-lg" data-value="0" data-forward="19"><img class="preimage" src="/assets/images/icons/noicon.png" alt="No">Neen<img class="arr-icon" src="/assets/images/icons/icon-right-arrow.svg" alt="right"></button>
+         </div>
+      <br><br>
+      </div>
+
+      <div class="disp-non col-xs-12" id="q19" data-heading="VRAAG 5" data-progress="90">
+        <h1 class="quiz-qn-font orange text-center">Overige schade?</h1>
+        <div class="container text-right">
+          <div><span><img src="/assets/images/icons/tick.png" alt="tick"><label for="M">dokterskosten en andere medische kosten</label></span><input type="number" class="quiz-btn btn btn-outline-primary btn-lg qbs" min="0" data-value="1" data-forward="20" placeholder="in €" id="M"></div>
+          <div><span><img src="/assets/images/icons/tick.png" alt="tick"><label for="F">apotheekkosten</label></span><input type="number" class="quiz-btn btn btn-outline-primary btn-lg qbs" min="0" data-value="1" data-forward="20" placeholder="in €" id="F"></div>
+          <div><span><img src="/assets/images/icons/tick.png" alt="tick"><label for="H">kost hulpmiddelen (krukken, rolstoel, etc.) en thuisverzorging</label></span><input type="number" class="quiz-btn btn btn-outline-primary btn-lg qbs" min="0" data-value="1" data-forward="20" placeholder="in €" id="H"></div>
+          <div><span><img src="/assets/images/icons/tick.png" alt="tick"><label for="MS">andere materiële schade dan kledij en voertuigschade</label></span><input type="number" class="quiz-btn btn btn-outline-primary btn-lg qbs" min="0" data-value="1" data-forward="20" placeholder="in €" id="MS"></div>
+         </div>
+      <br><br>
+      </div>
+
+      <div class="disp-non col-xs-12" id="q20" data-heading="VRAAG 6" data-progress="95">
+        <p class="text-center descriptor">
+          Hoe zwaar was de morele schade die u leed door het schadegeval? Ter indicatie, licht= een metaal ongemak dat eerder snel voorbijgaand is; gemiddeld= een mental ongemak dat enige tijd neemt om te verwerken; zwaar= een moreel ongemak dat afneemt, maar steeds aanwezig blijft
+        </p>
+        <div class="text-center">
+          <select class="quiz-btn btn btn-outline-primary btn-lg" data-value="1" data-forward="21" placeholder="Selecteer uw voertuig uit deze lijst">
+            <option value="500">Licht</option>
+            <option value="1000">Gemiddeld</option>
+            <option value="2000">Zwaar</option>
+          </select>
+         </div>
+      <br><br>
+      </div>
+
+    <p class="orange quiz-count" id="count"></p>
+      <!-- Left and right controls -->
+      <div class="container-fluid marg-top-xxl">
+        <div class="disp-non row" id="controls">
+          <div class="col-md-3 inline-blk">
+          <a class="text-center orange-btn hero__cta cta btn" id="prev"><img class="arr-icon-left" src="/assets/images/icons/icon-left-arrow.svg" alt="left">Vorige</a>
+          </div>
+        <div class="col-md-6 inline-blk">
+          <div class="circle-holder">
+              <div class="circles circles-1">{% include circle.html %}</div>
+              <div class="circles circles-2">{% include circle.html %}</div>
+              <div class="circles circles-3">{% include circle.html %}</div>
+          </div>
+        <div class="progress row" style="height:5px">
+          <div class="progress-bar" style="width:0%;height:5px"></div>
+        </div>
+        </div>
+        <div class="col-md-3 inline-blk">
+        <a class="disabled text-center orange-btn hero__cta cta btn" id="next">Volgende{% include arrow-right.html %}</a>
+        </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
