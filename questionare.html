@@ -37,7 +37,7 @@ title: Questionare
 
     <div class="col-xs-12 disp-non" id="intro2">
 <div>
-  <a class="orange-btn hero__cta cta btn" id="quiz-end" href="contact.html">Contacteer het advocatenkantoor{% include arrow-right.html %}</a>
+  <a class="orange-btn hero__cta cta btn" id="quiz-end" href="/">Contacteer het advocatenkantoor{% include arrow-right.html %}</a>
 </div>
     </div>
 
@@ -53,9 +53,11 @@ title: Questionare
       </div>
 
       <div class="disp-non col-xs-12" id="q2" data-heading="VRAAG 1.1" data-progress="5">
-        <h1 class="quiz-qn-font orange text-center">Hoeveel dagen was u in het ziekenhuis?</h1>
+        <h1 class="quiz-qn-font orange text-center">Aantal dagen</h1>
         <div class="text-center">
-          <input type="number" class="quiz-btn btn btn-outline-primary btn-lg" min="0" data-value="1" data-forward="3" placeholder="dagen">
+          <input type="number" class="quiz-btn btn btn-outline-primary btn-lg" min="0" data-value="1" data-forward="5" placeholder="Hoeveel dagen was u in het ziekenhuis?" id="d1">
+          <input type="number" class="quiz-btn btn btn-outline-primary btn-lg" min="0" data-value="1" data-forward="5" placeholder="Hoeveel dagen was u thuis op doktersvoorschrift?" id="d2">
+          <input type="number" class="quiz-btn btn btn-outline-primary btn-lg" min="0" data-value="1" data-forward="5" placeholder="Hoeveel kinderen wonen bij u?" id="Y">
           </div>
       <br><br>
       </div>
@@ -76,7 +78,7 @@ title: Questionare
       <br><br>
       </div>
 
-      <div class="disp-non col-xs-12" id="q5" data-heading="VRAAG 1.4" data-progress="20">
+      <div class="disp-non col-xs-12" id="q5" data-heading="VRAAG 1.2" data-progress="20">
         <h1 class="quiz-qn-font orange text-center">Hoeveel inkomen liep u mis door uw ongeschikheid? Geef uw totaal netto-inkomensverlies in.</h1>
         <div class="text-center">
           <input type="number" class="quiz-btn btn btn-outline-primary btn-lg" min="0" data-value="1" data-forward="6" placeholder="in €">
@@ -85,11 +87,11 @@ title: Questionare
       </div>
 
       <div class="disp-non col-xs-12" id="q6" data-heading="VRAAG 2" data-progress="25">
-        <h1 class="quiz-qn-font orange text-center">Geslacht?</h1>
+        <h1 class="quiz-qn-font orange text-center">Wat is uw geslacht?</h1>
         <div class="text-center">
-          <button type="button" class="quiz-btn btn btn-outline-primary btn-lg" data-value="1" data-forward="7">Male<img class="arr-icon" src="/assets/images/icons/icon-right-arrow.svg" alt="right"></button>
-          <button type="button" class="quiz-btn btn btn-outline-primary btn-lg" data-value="2" data-forward="7">Female<img class="arr-icon" src="/assets/images/icons/icon-right-arrow.svg" alt="right"></button>
-          <button type="button" class="quiz-btn btn btn-outline-primary btn-lg" data-value="3" data-forward="7">Others<img class="arr-icon" src="/assets/images/icons/icon-right-arrow.svg" alt="right"></button>
+          <button type="button" class="quiz-btn btn btn-outline-primary btn-lg sml-btn" data-value="1" data-forward="7">M</button>
+          <button type="button" class="quiz-btn btn btn-outline-primary btn-lg sml-btn" data-value="2" data-forward="7">V</button>
+          <button type="button" class="quiz-btn btn btn-outline-primary btn-lg sml-btn" data-value="3" data-forward="7">X</button>
          </div>
       <br><br>
       </div>
@@ -146,6 +148,7 @@ title: Questionare
       </div>
 
       <div class="disp-non col-xs-12" id="q13" data-heading="VRAAG 3.1" data-progress="60">
+        <h1 class="quiz-qn-font orange text-center">Autoschade</h1>
         <p class="text-center descriptor">Indien uw wagen totaalverlies is, voert u als bedrag in de waarde van uw wagen op moment van het ongeval, min de restwaarde (deze bedragen vindt u eventueel op het expertiseverslag van de verzekering) Indien uw wagen hersteld is, geeft u de herstelwaarde in. Indien u het voertuig voor uw profesionele activiteit gebruikt, mag de BTW van van herstelfactuur, of de aankoopfactuur van de wagen bij totaalverlies niet worden meegerekend.</p>
         <div class="text-center">
           <input type="number" class="quiz-btn btn btn-outline-primary btn-lg" min="0" data-value="1" data-forward="14" placeholder="in €">

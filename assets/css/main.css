@@ -63,7 +63,7 @@ width: 60%;
 }
 
 @media (max-width: 991px){
-  .nav-item {
+  #navbarSupportedContent .nav-item {
     border-bottom: 1px solid;
     border-color: #dedede;
   }
@@ -229,10 +229,10 @@ width: 60%;
   }
 }
 
-.navbar-light .navbar-nav .nav-link:hover {
+#navbarSupportedContent .navbar-nav .nav-link:hover {
     color: #081b33;
 }
-.navbar-light .navbar-nav .nav-link:focus {
+#navbarSupportedContent .navbar-nav .nav-link:focus {
   color: #081b33;
   outline: none;
 }

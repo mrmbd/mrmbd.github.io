@@ -581,8 +581,20 @@ input[type="checkbox"]:focus {
 }
 
 .carousel .descriptor {
-  max-width: 300px;
+  width: 90%;
+  max-width: none;
   font-size: 18px;
+  margin-top: 20px;
+}
+
+.sml-btn {
+  display: inline-block !important;
+width: 30% !important;
+max-width: 130px !important;
+height: 120px !important;
+margin-left: 50px !important;
+margin-right: 50px !important;
+text-align: center !important;
 }
 
 @media screen and (min-width: 768px) {
@@ -628,8 +640,9 @@ input[type="checkbox"]:focus {
       font-size: 28px;
     }
     .carousel .descriptor {
-      max-width: 700px;
+      max-width: 70%;
       font-size: 25px;
+      margin-top: 30px;
     }
 }
 .quiz-count {
@@ -980,10 +993,27 @@ h3.super-big {
   .text-right span {
       position: relative;
   }
+
+  .text-right span img {
+      display: none
+  }
+  .text-right span label {
+    display: block;
+    margin-left: 0;
+    text-align: center;
+  }
+  .qbs {
+    display: block
+  }
   h3.super-big {
       font-size: 50px;
   }
   .super-big sup {
     font-size: 25px;
   }
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: #e94d45;
+    outline: none;
 }

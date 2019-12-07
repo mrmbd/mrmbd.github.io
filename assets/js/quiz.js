@@ -96,7 +96,11 @@ $("#next").click(function() {
       }
     }
     if ($('.active').attr('id') == 'q2') {
-        d1 = parseInt($(".active .selected").val());
+        d1 = parseInt($("#d1").val());
+        d2 = parseInt($("#d2").val());
+        d3 = d1 + d2;
+        P = (34*d1)+(17*d2);
+        Y = parseInt($("#Y").val());
     }
     if ($('.active').attr('id') == 'q3') {
         d2 = parseInt($(".active .selected").val());
@@ -118,7 +122,7 @@ $("#next").click(function() {
         }
     }
     if ($('.active').attr('id') == 'q7') {
-      if ($(".active").data("value") == "2") {
+      if ($(".active .selected").data("value") == "2") {
         STU = 0;
       }
     }
@@ -126,7 +130,7 @@ $("#next").click(function() {
         d4 = parseInt($(".active .selected").val());
     }
     if ($('.active').attr('id') == 'q9') {
-      if ($(".active").data("value") == "2") {
+      if ($(".active .selected").data("value") == "2") {
         L = 0;
       }
     }
@@ -138,7 +142,7 @@ $("#next").click(function() {
         STU = (15 * d4) + (2500 * L) + (d3 * K/30);
     }
     if ($('.active').attr('id') == 'q12') {
-      if ($(".active").data("value") == "2") {
+      if ($(".active .selected").data("value") == "2") {
         VS = 0;
       }
     }
@@ -212,5 +216,20 @@ $("#next").click(function() {
       $("#controls").addClass("disp-non");
       $(".super-big").html('<sup>€</sup>'+new Intl.NumberFormat('de-DE').format(S));
     }
+
+    console.clear();
+    console.log('S = '+S);
+    console.log('P = '+P);
+    console.log('HU = '+HU);
+    console.log('ECO = '+ECO);
+    console.log('M = '+M);
+    console.log('F = '+F);
+    console.log('H = '+H);
+    console.log('STU = '+STU);
+    console.log('MS = '+MS);
+    console.log('VS = '+VS);
+    console.log('KS = '+KS);
+    console.log('MD = '+MD);
+
   }
 });
