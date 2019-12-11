@@ -733,6 +733,10 @@ text-align: center !important;
     font-style: italic;
     font-size: 1.4rem;
     padding: 8px 25px;
+  -webkit-user-select: auto;
+    -moz-user-select: auto;
+    -ms-user-select: auto;
+    user-select: auto;
 }
 
 .preimage {
