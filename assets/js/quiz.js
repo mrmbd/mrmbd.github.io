@@ -37,6 +37,22 @@ $(':input[type="number"]').on("input", function() {
     }
 });
 
+$('select').on('change', function() {
+var x = true;
+  $('.active select').each(function( index ) {
+    if ($( this ).val() == "") {
+      x = false;
+    }
+  });
+    if($(this).val() != "" && x) {
+      $(this).addClass('selected');
+      $("#next").removeClass("disabled");
+    } else {
+      $(this).parent().children().removeClass('selected');
+      $("#next").addClass("disabled");
+    }
+});
+
 $("#prev").click(function() {
   if ($('.active').attr('id') == 'q1') {
     $("#title").removeClass("disp-non");
