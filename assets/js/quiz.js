@@ -18,40 +18,51 @@ $( ".quiz-btn" ).click(function() {
     $(this).parent().children().removeClass('selected');
     $(this).addClass('selected');
     $("#next").removeClass("disabled");
+    if ($(this).is("button")) {
+      setTimeout(function(){ next() }, 250);
+    }
   }
 });
 
 $(':input[type="number"]').on("input", function() {
+  input(this);
+});
+
+function input(element) {
   var x = true;
   $('.active :input[type="number"]').each(function( index ) {
     if ($( this ).val() == "") {
       x = false;
     }
   });
-    if($(this).val() != "" && x) {
-      $(this).addClass('selected');
+    if($(element).val() != "" && x) {
+      $(element).addClass('selected');
       $("#next").removeClass("disabled");
     } else {
-      $(this).parent().children().removeClass('selected');
+      $(element).parent().children().removeClass('selected');
       $("#next").addClass("disabled");
     }
-});
+}
 
 $('select').on('change', function() {
-var x = true;
-  $('.active select').each(function( index ) {
-    if ($( this ).val() == "") {
-      x = false;
-    }
-  });
-    if($(this).val() != "" && x) {
-      $(this).addClass('selected');
-      $("#next").removeClass("disabled");
-    } else {
-      $(this).parent().children().removeClass('selected');
-      $("#next").addClass("disabled");
-    }
+  select(this);
 });
+
+function select(element) {
+  var x = true;
+    $('.active select').each(function( index ) {
+      if ($( this ).val() == "") {
+        x = false;
+      }
+    });
+      if($(element).val() != "" && x) {
+        $(element).addClass('selected');
+        $("#next").removeClass("disabled");
+      } else {
+        $(element).parent().children().removeClass('selected');
+        $("#next").addClass("disabled");
+      }
+}
 
 $("#prev").click(function() {
   if ($('.active').attr('id') == 'q1') {
@@ -98,6 +109,10 @@ $("#prev").click(function() {
 });
 
 $("#next").click(function() {
+  next();
+});
+
+function next() {
   if (!$("#next").hasClass("disabled")) {
     var current = $(".active").attr('id').replace('q','');
     var increment = $(".active .selected").data("forward");
@@ -202,6 +217,12 @@ $("#next").click(function() {
         $("#next").removeClass("disabled");
       } else {
         $("#next").addClass("disabled");
+        if ($('.active .quiz-btn' ).first().is('input')) {
+          input($('.active .quiz-btn' ).first());
+        }
+        if ($('.active .quiz-btn' ).first().is('select')) {
+          select($('.active .quiz-btn' ).first());
+        }
       }
       $(".progress-bar").css("width",$("#q"+increment).data("progress")+"%");
       if (parseInt($("#q"+increment).data("progress")) > 24) {
@@ -248,4 +269,4 @@ $("#next").click(function() {
     console.log('MD = '+MD);
 
   }
-});
+}
