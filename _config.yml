@@ -1,12 +1,3 @@
-
-exclude:
-  - "/vendor/"
-  - "Gemfile"
-  - "Gemfile.lock"
-  - "README.md"
-  - "LICENSE.md"
-  - "*.gemspec"
-
 keep_files:
   - "CNAME"
   - ".git"
