@@ -1,18 +1,41 @@
 <!-- footer Start -->
-<footer>
-  <div class="container">
+<footer class="page-footer font-small blue pt-4">
+  <div class="container text-center text-md-left">
     <div class="row">
-      <div class="col-md-12">
-        <div class="footer-manu">
-          <ul>
-            <li><a href="#">Email Us</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Cookies</a></li>
-            <li><a href="#">Privacy</a></li>
-            <li><a href="#">Terms &amp; Conditions</a></li>
-          </ul>
+      <div class="col-md-3 col-md-offset-9 text-right time">
+        <p>time in bombay &nbsp; <span id="bombay">20:57</span></p>
+        <p>time in belgium &nbsp; <span id="belgium">20:57</span></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 col-sm-6">
+        <div class="row">
+          <div class="col-md-4 col-sm-4 text-uppercase"><a href="#">Instagram</a></div>
+          <div class="col-md-4 col-sm-4 text-uppercase"><a href="#">Email Us</a></div>
+          <div class="col-md-4 col-sm-4 text-uppercase"><a href="#">FAQ</a></div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-0"></div>
+      <div class="col-md-4 col-sm-6">
+        <div class="row">
+          <div class="col-md-3 col-sm-3"><a href="#">Cookies</a></div>
+          <div class="col-md-3 col-sm-3"><a href="#">Privacy</a></div>
+          <div class="col-md-6 col-sm-6"><a href="#">Terms &amp; Conditions</a></div>
         </div>
       </div>
     </div>
   </div>
 </footer>
+
+<script>
+function startTime() {
+  var options = { hour12: false };
+  var date = new Date();
+  var belgium = date.toLocaleString("en-GB", {timeZone: "Europe/Brussels"}, options);
+  var bombay = date.toLocaleString("en-GB", {timeZone: "Asia/Kolkata"}, options);
+  document.getElementById('belgium').innerHTML = belgium.substr(12,5);
+  document.getElementById('bombay').innerHTML = bombay.substr(12,5);
+  var t = setTimeout(startTime, 30000);
+}
+startTime()
+</script>
