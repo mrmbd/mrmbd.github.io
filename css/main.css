@@ -173,8 +173,7 @@ footer a:hover, footer a:focus {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display:         flex;
-  flex-wrap: wrap;
+  display: flex;
 }
 .testimonial.row > [class*='col-'] {
   display: flex;
@@ -213,18 +212,9 @@ footer a:hover, footer a:focus {
   .tagline .line3 {
     font-size: 35px;
   }
-  .testimonial {
-    margin: 0 -15px;
-  }
-  .testimonial.row {
-    display: block !important;
-  }
-  .testimonial.row > [class*='col-'] {
-    display: block !important;
-  }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
 
   .glue-right {
     padding-right: 0;
@@ -233,5 +223,15 @@ footer a:hover, footer a:focus {
   .glue-left {
     padding-right: 0;
     padding-left: 0;
+  }
+
+  .testimonial {
+    margin: 0 -15px;
+  }
+  .testimonial.row {
+    display: block !important;
+  }
+  .testimonial.row > [class*='col-'] {
+    display: block !important;
   }
 }
