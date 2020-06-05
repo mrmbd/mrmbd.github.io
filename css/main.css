@@ -14,6 +14,10 @@ body {
     font-weight: 700
 }
 
+.logo img {
+  height: 60px;
+}
+
 .bay {
   letter-spacing: 6px
 }
@@ -31,8 +35,8 @@ body {
 
 .navbar-nav>li>a {
   line-height: 60px;
-  color: #656565 !important;
-  font-size: 20px;
+  color: #1a1818 !important;
+  font-size: 28px;
   padding: 20px;
 }
 
@@ -61,10 +65,13 @@ body {
 
 .tagline {
   font-size: 60px;
-  margin: 50px 0;
-  color: #6b7b7c
+  margin: 70px 0 50px 0;
+  color: #1a1818
 }
 
+.tagline .line {
+  padding-left: 15px;
+}
 .tagline .line1 {
   padding-left: 30px;
   position: relative;
@@ -89,11 +96,16 @@ body {
   font-size: 50px;
 }
 
+
+.tagline .line4 {
+  font-size: 50px;
+  font-style: italic;
+}
+
 footer {
-  background-color: #c5d8c9;
   padding-top: 90px;
   padding-bottom: 30px;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 footer a {
@@ -102,9 +114,10 @@ footer a {
 }
 
 footer a, footer p {
-    color: #404950;
-    font-weight: 600;
-    letter-spacing: 2px;
+  font-size: 12px;
+  color: #1a1818;
+  font-weight: 400;
+  letter-spacing: 2px;
 }
 
 footer a:hover, footer a:focus {
@@ -184,19 +197,93 @@ footer a:hover, footer a:focus {
   text-align: center;
   margin: 0 auto;
   display: block;
-  width: 200px;
-  padding: 20px 0;
-  background-color: #6c7b7c;
-  color: #fff;
+  width: 280px;
+  padding: 18px 0;
+  color: #1a1818;
   letter-spacing: 1px;
-  font-size: 20px;
+  font-size: 45px;
+  font-style: italic;
+  border: 1px solid #707070;
 }
 
 .text-cta a:hover, .text-cta a:focus {
-    color: #fff;
+    color: #1a1818;
     text-decoration: none;
 }
 
+.services {
+  margin: 50px 0 100px;
+}
+
+.services p {
+  font-size: 25px;
+}
+
+.ruler {
+  border-color: #707070;
+}
+
+.text-ps {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.text-ps p {
+  font-style: italic;
+  font-size: 25px;
+}
+
+.marg-top {
+  margin-top: 50px;
+}
+
+.carousel-item {
+    position: relative;
+    display: none;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    transition: -webkit-transform .6s ease;
+    transition: transform .6s ease;
+    transition: transform .6s ease,-webkit-transform .6s ease;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+}
+
+.carousel-caption span.title {
+    color: #1a1818;
+    font-weight: 100;
+    text-shadow: none;
+    text-align: left;
+}
+
+.carousel-caption span.number {
+    color: #1a1818;
+    font-weight: 100;
+    text-shadow: none;
+    text-align: right;
+}
+
+.contacts p {
+  font-size: 25px;
+}
+
+a, a:hover, a.focus {
+  color: #1a1818;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .carousel-caption {
+      right: 5%;
+      left: 5%;
+      padding-bottom: 10px;
+      font-size: 25px;
+  }
+}
 @media (max-width: 767px) {
   .navbar-nav>li>a {
     line-height: 30px;
@@ -205,12 +292,17 @@ footer a:hover, footer a:focus {
   footer p {
       text-align: center !important;
   }
-  .tagline .line1, .tagline .line2 {
+  .tagline .line, .tagline .line1, .tagline .line2 {
     padding-left: 0;
     font-size: 50px;
   }
-  .tagline .line3 {
+  .tagline .line3, .tagline .line4 {
     font-size: 35px;
+  }
+  .carousel-caption {
+      right: 5%;
+      left: 5%;
+      padding-bottom: 10px;
   }
 }
 
