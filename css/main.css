@@ -4,6 +4,7 @@
 
 body {
   font-family: 'Lato', sans-serif;
+  font-size: 1.2rem;
 }
 
 .logo {
@@ -276,12 +277,60 @@ a, a:hover, a.focus {
   text-decoration: none;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.two-col {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.two-col-image {
+  align-self: center;
+}
+
+.two-col-image img {
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.5s;
+  background-color: rgb(219 145 149 / 50%);
+}
+.two-col-image img:hover {
+  padding: 20px;
+  width: calc( 100% - 20px );
+}
+
+.two-col-text {
+  align-self: center;
+}
+
+.two-col-text {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+  color: #1F2249;
+}
+
+.two-col-text h2 {
+  font-weight: 700;
+  color: #DB9195;
+  font-size: 3em;
+}
+
 @media (min-width: 768px) {
   .carousel-caption {
       right: 5%;
       left: 5%;
       padding-bottom: 10px;
       font-size: 25px;
+  }
+
+  .padd-left {
+    padding-left: 50px;
+  }
+  .padd-right {
+    padding-right: 50px;
   }
 }
 @media (max-width: 767px) {
