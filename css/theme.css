@@ -259,6 +259,9 @@ li:before {
   font-weight: 700;
   font-size: 46px;
 }
+.h2.large {
+  font-size: 54px;
+}
 a:hover {
   color: inherit !important;
   text-decoration: none;
@@ -276,15 +279,64 @@ a:hover {
   color: #1F2249;
   font-weight: 700;
 }
+.block-full img {
+  width: 50px
+}
+.block-full h3.bigger {
+  font-size: 46px;
+  font-weight: 700;
+  color: #1f2249;
+}
+.block-full p {
+  padding-left: 70px;
+    padding-top: 5px;
+}
 .block p {
   padding-left: 45px;
   max-width: 500px;
+}
+.block2 p {
+  padding-left: 20px;
+  max-width: 500px;
+}
+.border-right {
+    border-right: 1px solid #707070!important;
+}
+.dark-para {
+  color: #1F2249 !important;
+}
+.bigger-para {
+  color: #1F2249;
+  font-size: 22px;
+}
+.top-para {
+  padding-left: 20px !important;
+  max-width: none !important;
+  display: inline-block;
+}
+.normalise {
+  font-style: normal !important;
+    color: #1F2249 !important;
+    border-bottom: 1px solid #1F2249 !important;
+}
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    height: 1px !important;
+    background: #707070;
+    width: 50%;
 }
 p {
 color: #1F224999
 }
 p a {
 color: #1F224999
+}
+h4 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #1f2249;
 }
 
 .emphasis {
