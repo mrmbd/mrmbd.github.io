@@ -9,10 +9,10 @@
               <nav class="nav-menu-container w-nav-menu">
                   <div class="nav-items-container">
                       <div class="nav-links-container">
-                          <a href="/what" aria-current="page" class="nav-menu-link white w-nav-link w--current">What</a>
-                          <a href="/about" class="nav-menu-link white w-nav-link">About</a>
-                          <a href="/invest" class="nav-menu-link white w-nav-link">Invest</a>
-                          <a href="/contact" class="nav-menu-link white w-nav-link">Contact</a>
+                          <a href="/what" aria-current="page" class="nav-menu-link white w-nav-link {% if page.permalink == '/what/' %}w--current{% endif %}">What</a>
+                          <a href="/about" class="nav-menu-link white w-nav-link {% if page.permalink == '/about/' %}w--current{% endif %}">About</a>
+                          <a href="/invest" class="nav-menu-link white w-nav-link {% if page.permalink == '/invest/' %}w--current{% endif %}">Invest</a>
+                          <a href="/contact" class="nav-menu-link white w-nav-link {% if page.permalink == '/contact/' %}w--current{% endif %}">Contact</a>
                       </div>
                   </div>
               </nav>
