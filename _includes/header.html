@@ -1,5 +1,5 @@
 <!-- Header Start -->
-<header class="marg-bottom-xxl">
+<header class="{% if page.permalink != '/' %}marg-bottom-xxl{% else %}marg-bottom{% endif %}">
   <div class="header-purple">
       <div class="header w-nav">
           <div class="container">
@@ -12,7 +12,7 @@
                           <a href="/what" aria-current="page" class="nav-menu-link white w-nav-link {% if page.permalink == '/what/' %}w--current{% endif %}">What</a>
                           <a href="/about" class="nav-menu-link white w-nav-link {% if page.permalink == '/about/' %}w--current{% endif %}">About</a>
                           <a href="/invest" class="nav-menu-link white w-nav-link {% if page.permalink == '/invest/' %}w--current{% endif %}">Invest</a>
-                          <a href="/contact" class="nav-menu-link white w-nav-link {% if page.permalink == '/contact/' %}w--current{% endif %}">Contact</a>
+                          <a href="/contact" class="nav-menu-link white box-nav w-nav-link">Contact</a>
                       </div>
                   </div>
               </nav>
