@@ -452,6 +452,33 @@ h4 {
   margin: 0 auto;
   display: block;
 }
+.footer-nav {
+  display: block;
+}
+.contact-h1 {
+  color: #1f2249;
+  font-size: 33px;
+  font-weight: 400;
+  letter-spacing:.6px;
+}
+.contact-h1 .line {
+  font-size: 126px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #db9095;
+  padding-right: 20px;
+}
+.contacts h2, .contacts a, .contacts span {
+  font-size: 33px;
+  font-weight: 400;
+  letter-spacing:.6px;
+  display: inline-block;
+}
+.contact-colored {
+  color: #DB9195 !important;
+  border-bottom: 0;
+  padding-left: 20px;
+}
 @media (min-width: 1400px) {
   .container {
     width: 90%;
@@ -461,4 +488,133 @@ h4 {
     padding-right: 64px;
     padding-left: 64px;
   }
+}
+
+.arrow-container {
+  width: 300px;
+}
+
+@media (min-width: 768px) {
+  .mobile-only {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .desktop-only {
+    display: none;
+  }
+  .hero-card h1{
+    font-size: 48px;
+  }
+  h1 {
+    font-size: 48px !important;
+  }
+  .h2 {
+    font-size: 30px;
+  }
+  .block h3 {
+    font-size: 21px;
+  }
+  .block p {
+    font-size: 17px;
+    padding-right: 45px;
+    line-height: 25px;
+  }
+  .marg-bottom-mobile {
+    margin-bottom: 50px;
+  }
+  .mobile-para-font {
+    font-size: 20px !important;
+  }
+  .arrow-container {
+    width: 241px;
+  }
+  .mobile-para-center {
+    text-align: center !important;
+    margin: 0 auto;
+  }
+  .padd-left {
+    padding-left: 15px;
+  }
+  .two-col-text h2 {
+    font-size: 30px;
+    padding-bottom: 0;
+    width: 50%;
+    text-align: center;
+    align-self: center;
+  }
+  .two-col-text ul {
+    padding-bottom: 0;
+    width: 50%;
+    align-self: center;
+    padding-left: 20px;
+    font-size: 17px;
+  }
+  .all-visible{
+    padding-top: 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .all-hidden {
+    padding-top: 25px;
+  }
+  .footer-nav {
+    display: inline-block;
+  }
+  .mobile-float-right {
+    float: right;
+  }
+  .bigger-para {
+    font-size: 20px;
+    word-spacing: 1px;
+  }
+  .sph3 {
+    font-size: 30px;
+  }
+  .border-right {
+    border-right: 0 !important;
+  }
+  .block2 p {
+    padding-left: 5px;
+    padding-top: 0;
+  }
+  .mobile-icon-fix img {
+    width: 50px;
+  }
+  .top-para {
+    width: calc( 100% - 50px );
+    vertical-align: middle;
+  }
+  .h2.large {
+    font-size: 30px;
+  }
+  .block-full h3.medium {
+    font-size: 30px;
+    margin-top: 0;
+  }
+  .contact-h1 .line {
+    display: block;
+    height: auto;
+    line-height: normal;
+    width: auto;
+    font-size: 70px;
+  }
+  .contact-h1 {
+    font-size: 20px !important;
+  }
+  .contacts h2, .contacts a, .contacts span {
+    font-size: 20px;
+  }
+  .contacts a, .contacts span {
+   width: calc( 100% - 140px );
+   vertical-align: text-top;
+ }
+ .page-footer {
+   position: relative !important;
+    width: auto !important;
+ }
+
 }
