@@ -95,6 +95,9 @@ html {
 .marg-bottom-xl {
   margin-bottom: 100px !important;
 }
+.marg-bottom-xl-10 {
+  margin-bottom: 110px !important;
+}
 .marg-bottom-xxl {
   margin-bottom: 150px !important;
 }
@@ -273,20 +276,18 @@ li:before {
 }
 .hero-card .two-col-text{
   color: #fff;
+  max-width: 620px;
+  margin: 0 auto;
 }
 .hero-card h1{
   color: #fff;
   margin-bottom: 25px;
-  margin-left: 25px;
   font-weight: 500;
   letter-spacing: .5px;
-  max-width: 600px;
   line-height: normal;
   font-size: 56px;
 }
 .hero-card p{
-  max-width: 600px;
-  margin-left: 25px;
   line-height: normal;
   color: #fff;
 }
@@ -535,6 +536,9 @@ h4 {
   }
   .marg-bottom-mobile-xl {
     margin-bottom: 100px
+  }
+  .marg-bottom-mobile-xl-10 {
+    margin-bottom: 110px;
   }
   .mobile-para-font {
     font-size: 20px !important;
