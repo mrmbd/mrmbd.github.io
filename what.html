@@ -6,9 +6,32 @@ permalink: /what/
 <div class="container">
   <h2 class="h2 marg-bottom">Websites & stores</h2>
   <div class="row marg-bottom-xl">
-    <div class="col-md-10">
+    <div class="col-md-6 marg-bottom-mobile">
       <p class="bigger-para">Online brands thrive because of unique products and a clear vision. But also because they are well built, robust and beautiful digital interfaces.</p><br>
       <p class="bigger-para"> We do everything from simple websites to international multi language and multi currency e-commerce.</p>
+    </div>
+    <div class="col-md-6 icons-animation">
+      <div class="row">
+        <div class="col-3"></div>
+        <div class="col-2">
+          <img class="front-icon" src="/img/What/homepage.svg" alt="homepage" width="50">
+          <img class="back-icon" src="/img/What/hearts.svg" alt="hears" width="50">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-5"></div>
+        <div class="col-2">
+          <img class="front-icon" src="/img/What/shopping cart.svg" alt="shopping cart" width="50">
+          <img class="back-icon" src="/img/What/plus.svg" alt="hears" width="50">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-7"></div>
+        <div class="col-2">
+          <img class="front-icon" src="/img/What/shopping bag.svg" alt="shopping bag" width="50">
+          <img class="back-icon" src="/img/What/moneybag.svg" alt="hears" width="50">
+        </div>
+      </div>
     </div>
   </div>
   <div class="row">
@@ -146,3 +169,12 @@ permalink: /what/
 {% include upper-bottom.html %}
             <h2 class="display color-white h2 text-center container-cta-about-2">Excited?</h2>
 {% include lower-bottom.html %}
+<script>
+  $(window).scroll(function(){
+    if($(document).scrollTop() > 110) {
+      $('.back-icon').css('top',-55);
+    } else {
+      $('.back-icon').css('top',-$(document).scrollTop()/2);
+    }
+  });
+</script>

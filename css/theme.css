@@ -31,7 +31,7 @@ html {
 }
 .nav-menu-link.white:hover::after{
   width: 15px;
-  height: 15px;
+  height: 16px;
   background-color: #DB9195;
 }
 .box-nav {
@@ -489,6 +489,22 @@ h4 {
 .two-col-image {
   padding-left: 0;
   padding-right: 0;
+}
+.icons-animation .col-2{
+  background-color: #fff;
+  position: relative;
+}
+.front-icon {
+  display: block;
+  margin: 0 auto;
+  background-color: #fff;
+}
+.back-icon {
+  position: absolute;
+  left: calc( 50% - 25px );
+  top: 0;
+  height: 100%;
+  z-index: -1;
 }
 @media (min-width: 1400px) {
   .container {
