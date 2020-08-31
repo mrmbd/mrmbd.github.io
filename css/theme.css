@@ -533,6 +533,9 @@ h4 {
   .marg-bottom-mobile {
     margin-bottom: 50px;
   }
+  .marg-bottom-mobile-xl {
+    margin-bottom: 100px
+  }
   .mobile-para-font {
     font-size: 20px !important;
   }
@@ -652,8 +655,15 @@ h4 {
 }
 
 .overlay a img {
-  padding-top: 14px;
+  padding-top: 31px;
   padding-left: 24px;
+}
+.logo {
+  width: 124px;
+}
+.logo-container {
+  width: 100px;
+  top: 13px;
 }
 
 .overlay a span {
