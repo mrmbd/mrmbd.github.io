@@ -11,6 +11,23 @@ html {
   color: #fff;
   background: #db9195;
 }
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: initial;
+  -webkit-text-fill-color: #fff;
+  -webkit-box-shadow: 0 0 0px 1000px #1f2249 inset;
+  transition: background-color 5000s ease-in-out 0s;
+  border-style: solid;
+  border-width: 0 0 1px;
+  border-color: #000 #000 hsla(0,0%,100%,.2);
+}
 .nav-menu-link.white{
   position: relative;
 }
@@ -573,7 +590,6 @@ h4 {
     font-size: 30px;
     padding-bottom: 0;
     width: 50%;
-    text-align: center;
     align-self: center;
   }
   .two-col-text ul {
@@ -581,6 +597,9 @@ h4 {
     width: 50%;
     align-self: center;
     padding-left: 20px;
+    font-size: 17px;
+  }
+  .two-col-text p {
     font-size: 17px;
   }
   .all-visible{
@@ -593,6 +612,14 @@ h4 {
   }
   .all-hidden {
     padding-top: 25px;
+    opacity: 1;
+    display: block;
+  }
+  .two-col-image .caption, .two-col-image:hover:after {
+    display: none;
+  }
+  .two-col-image:hover ~ .two-col-text .all-visible {
+    display: flex;
   }
   .footer-nav {
     display: inline-block;
@@ -661,10 +688,13 @@ h4 {
   position: fixed;
   z-index: 1001;
   top: 0;
-  left: 100%;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
   background-color: #fff;
   overflow-x: hidden;
   transition: 0.5s;
+  transition: all 500ms cubic-bezier(.65,.82,.56,1) 100ms;
 }
 
 .overlay-content {
@@ -733,6 +763,15 @@ h4 {
     font-weight: 100;
     display: inline-block;
     padding: 0;
+  }
+  .block .more-detail {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+  }
+  .two-col-image {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 

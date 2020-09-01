@@ -27,11 +27,15 @@
 
     <script type="text/javascript">
       $('.openNav').on('click', function() {
-        $('#myNav').css("left", "0%");
+        //$('#myNav').css("left", "0%");
+        $('#myNav').css("visibility", "visible");
+        $('#myNav').css("opacity", "1");
       });
 
       $('#closeNav').on('click', function() {
-        $('#myNav').css("left", "100%");
+        //$('#myNav').css("left", "100%");
+        $('#myNav').css("opacity", "0");
+        $('#myNav').css("visibility", "hidden");
       });
     </script>
     </body>
