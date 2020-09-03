@@ -11,9 +11,17 @@ $('#closeNav').on('click', function() {
 });
 
 $(window).scroll(function(){
-  if($(document).scrollTop() > 110) {
-    $('.back-icon').css('top',-55);
+  if ($(window).width() < 426) {
+    if($(document).scrollTop() > 160) {
+      $('.back-icon').css('top',-40);
+    } else {
+      $('.back-icon').css('top',-$(document).scrollTop()/4);
+    }
   } else {
-    $('.back-icon').css('top',-$(document).scrollTop()/2);
+    if($(document).scrollTop() > 110) {
+      $('.back-icon').css('top',-55);
+    } else {
+      $('.back-icon').css('top',-$(document).scrollTop()/2);
+    }
   }
 });
