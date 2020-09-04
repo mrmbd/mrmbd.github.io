@@ -7,7 +7,7 @@ keep_files:
 # Site settings
 title: Bombay Studio
 subtitle: "Bombay Studio"
-description: "Agency with profound focus on international ecomm. We help you launch and scale. We also invest"
+description: "Agency with profound focus on international growth. We help you launch and scale. We also invest."
 url: "" # the base hostname & protocol for your site
 # baseurl: "/the/subpath/of/your/site" # Set this value to "" if you want your site to be root
 baseurl: ""
