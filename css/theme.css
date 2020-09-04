@@ -536,12 +536,15 @@ h4 {
 }
 
 .arrow-container {
-  width: 300px;
+  width: 217px;
 }
 
 @media (min-width: 992px) {
   .mobile-only {
     display: none;
+  }
+  .d-padding {
+    padding-left: 45px;
   }
 }
 @media (max-width: 991px) {
