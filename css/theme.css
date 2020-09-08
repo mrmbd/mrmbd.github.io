@@ -477,6 +477,9 @@ h4 {
   margin: 0 auto;
   display: block;
 }
+.no-marg {
+  margin: 0 !important;
+}
 .footer-nav {
   display: block;
 }
@@ -539,7 +542,7 @@ h4 {
 }
 
 .arrow-container {
-  width: 255px;
+  width: 207px;
 }
 
 @media (min-width: 992px) {

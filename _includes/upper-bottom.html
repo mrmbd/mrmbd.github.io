@@ -8,9 +8,9 @@
               <nav class="nav-menu-container w-nav-menu desktop-only">
                   <div class="nav-items-container">
                       <div class="nav-links-container">
-                          <a href="/what" aria-current="page" class="nav-menu-link white w-nav-link">What we do</a>
-                          <a href="/about" class="nav-menu-link white w-nav-link">About us</a>
-                          <a href="/invest" class="nav-menu-link white w-nav-link">Investments</a>
+                          <a href="/what" aria-current="page" class="nav-menu-link white w-nav-link {% if page.permalink == '/what/' %}w--current{% endif %}">What we do</a>
+                          <a href="/about" class="nav-menu-link white w-nav-link {% if page.permalink == '/about/' %}w--current{% endif %}">About us</a>
+                          <a href="/invest" class="nav-menu-link white w-nav-link {% if page.permalink == '/invest/' %}w--current{% endif %}">Investments</a>
                           <a href="/contact" class="nav-menu-link white w-nav-link box-nav-2">Contact us</a>
                       </div>
                   </div>
