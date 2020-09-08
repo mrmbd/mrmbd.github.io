@@ -524,6 +524,9 @@ h4 {
   height: 100%;
   z-index: -1;
 }
+.pleft {
+  padding-left: 40px;
+}
 @media (min-width: 1400px) {
   .container {
     width: 90%;
