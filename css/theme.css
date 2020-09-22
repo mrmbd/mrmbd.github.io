@@ -782,6 +782,9 @@ h4 {
   .fix-height {
     height: auto;
   }
+  .box-nav-2 {
+    background: transparent !important;
+  }
 }
 
 @media screen and (max-width: 479px) {
