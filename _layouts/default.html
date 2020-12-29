@@ -6,24 +6,15 @@
 
   </head>
   <body>
-    <div class="transparent-card">
 
-
-
-
+    {% if page.permalink == '/' %}{% include splash.html %}{% endif %}
     {% include header.html %}
-
-
-    {{ content }}
-
-
-
-
-
-
-
-
+    <div class="main">
+      {{ content }}
     </div>
+
+    {% include footer.html %}
+
 
     </body>
 </html>
