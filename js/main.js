@@ -10,3 +10,17 @@ $( ".navbar-toggler" ).click(function() {
     $(".drawer-menu").addClass("drawn");
   }
 });
+
+//slider button click
+$( document ).ready(function() {
+  $( ".slick-next.slick-arrow" ).click(function() {
+    $(this).addClass("imageRot").one('webkitAnimationEnd mozAnimationEnd oAnimationEnd msAnimationEnd animationend', function () {
+        $(this).removeClass("imageRot");
+    });
+  });
+  $( ".slick-prev.slick-arrow" ).click(function() {
+    $(this).addClass("imageRotReverse").one('webkitAnimationEnd mozAnimationEnd oAnimationEnd msAnimationEnd animationend', function () {
+        $(this).removeClass("imageRotReverse");      
+    });
+  });
+});
