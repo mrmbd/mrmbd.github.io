@@ -1,1 +1,44 @@
 <!-- footer Start -->
+<footer class="footer">
+  <div class="container">
+    <div class="flex-box justify-between">
+      <div class="flex-center footer-col">
+        <div class="footer-col-text">
+          <h2 class="h2-footer white">Exited?</h2>
+        </div>
+      </div>
+      <div class="flex-center footer-col footer-overlay-box">
+        <div class="footer-col-form">
+          <h2 class="text-center"><a class="btn btn-default btn-center" href="#contact-form">Let’s connect <span class="arrow-space">{% include icon-arrow.html %}</span></a></h2>
+          <form id="contact-form" class="footer-contact-form" action="index.html" method="post">
+            <div class="">
+              <label for="name">What’s your name?</label>
+              <input type="text" name="name" value="" placeholder="Jane Doe">
+              <label for="email">Where can we reach you?</label>
+              <input type="email" name="email" value="" placeholder="Hello@yourdomain.be">
+              <label for="tele">Or would you rather get a phone call?</label>
+              <input type="tel" name="tele" value="" placeholder="+32 xxx xx xx xx">
+              <label for="message">What do you want to talk about?</label>
+              <textarea name="name" rows="8" cols="80" placeholder="Got an epic idea, a challenge that keeps you up at night? Or do you just want to hang out and discuss the latest tech and digital developments?"></textarea>
+            </div>
+            <div class="">
+              <button type="submit" class="btn btn-footer" href="#">Send message <span class="arrow-space">{% include icon-arrow.html %}</span></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="footer-sub flex-box justify-between">
+      <div class="footer-sub-left flex-center">
+        <a class="btn btn-default" href="#">{% include icon-b.html %} <span class="plus-space">{% include icon-plus.html %}</span></a>
+        <a class="rel btn-underline" href="/services">Services</a>
+        <a class="rel btn-underline"  href="#">Investments</a>
+        <a class="rel btn-underline"  href="#">Contact</a>
+      </div>
+      <div class="footer-sub-right flex-center">
+        <a href="#">Cookies</a>
+        <a href="#">Privacy</a>
+      </div>
+    </div>
+  </div>
+</footer>
