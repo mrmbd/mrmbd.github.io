@@ -5,7 +5,7 @@
     {% include head.html %}
 
   </head>
-  <body>
+  <body class="{% if page.permalink == '/contact' %}contact-page{% elsif page.permalink == '/investments' %}invest-page{% endif %}">
 
     {% if page.permalink == '/' %}{% include splash.html %}{% endif %}
     {% include header.html %}

@@ -52,6 +52,9 @@ body {
 .white {
   color: #fff !important;
 }
+.blue {
+  color: #1F2249 !important;
+}
 .flex-box {
     display: flex;
     height: 100%;
@@ -240,6 +243,9 @@ nav.right-nav.flex-box {
     overflow: hidden;
     max-height: 100vh;
 }
+.hero-white {
+  background-color: #fff;
+}
 .hero .flex-center {
     width: 100%;
 }
@@ -274,6 +280,11 @@ nav.right-nav.flex-box {
 .btn-center {
   display: table;
   margin: 0 auto;
+}
+.btn-right {
+  display: table;
+  margin-left: auto;
+  margin-right: 0;
 }
 .btn-default .plus-space {
   vertical-align: unset;
@@ -344,6 +355,9 @@ nav.right-nav.flex-box {
   height: 100%;
   width: 100%;
   padding: 5px;
+}
+.smol-footer {
+    height: auto !important;
 }
 .scroll {
     color: #db9195;
@@ -461,6 +475,10 @@ nav.right-nav.flex-box {
 .two-col-small {
     width: calc( 40% - 60px );
     max-width: 287px;
+}
+.two-col-small img {
+  width: 100%;
+  display: block;
 }
 .two-col-big img {
     width: 95%;
@@ -595,6 +613,10 @@ nav.right-nav.flex-box {
     flex-direction: column;
     justify-content: space-between;
 }
+.footer-img {
+    width: 100%;
+    display: block;
+}
 label {
     display: block;
     font-weight: 300;
@@ -714,4 +736,240 @@ input::-ms-input-placeholder, textarea::-ms-input-placeholder { /* Microsoft Edg
   .h2-sub-9 {
       left: 600px;
   }
+}
+
+.contact-page .hero {
+    z-index: -1;
+}
+.contact-page .hero-heading {
+    max-width: 994px;
+}
+.contact-page .footer {
+    margin-top: 0;
+    background-color: transparent;
+    height: calc( 100vh + 469px );
+}
+.contact-page .h2-footer {
+    font-size: 48px;
+    font-weight: 300;
+    font-family: ubuntu, sans-serif;
+}
+.footer-contact-row {
+    margin-top: 92px;
+    margin-bottom: 209px;
+}
+.no-form {
+    display: block;
+    color: #DB9195;
+    font-weight: 300;
+    font-size: 32px;
+    max-width: 389px;
+    margin-bottom: 24px;
+    position: relative;
+}
+.no-form::after {
+    content: "";
+    width: 200px;
+    height: 1px;
+    background-color: #DB9195;
+    position: absolute;
+    bottom: -5px;
+    right: -110px;
+}
+.bg-blue {
+    background-color: #1F2249;
+    height: 186px;
+}
+
+.hero-invest {
+    background-image: url("/img/invest/Placement Area@2x.png");
+    background-position: center;
+    background-size: cover;
+}
+.hero-invest .hero-heading {
+    max-width: 590px;
+}
+.two-col-smol img {
+    display: block;
+    width: 100%;
+}
+.h2-sub-10 {
+    left: 690px;
+}
+@media (max-width: 1240px) {
+  .h2-sub-10 {
+      left: 440px;
+  }
+}
+.invest-page .two-col-smol {
+  max-width: 489px;
+}
+.h2-sub-11 {
+    left: 650px;
+}
+@media (max-width: 1250px) {
+  .h2-sub-11 {
+      left: 394px;
+  }
+}
+.invest-page h2.hero-heading {
+    color: #1F2249;
+    font-size: 48px;
+    font-family: ubuntu, sans-serif;
+    font-weight: 300;
+    line-height: 1.5;
+    position: relative;
+    display: inline-block;
+}
+.invest-page h2.hero-heading::after {
+    content: "";
+    width: 200px;
+    height: 1px;
+    background-color: #1f2249;
+    position: absolute;
+    bottom: -10px;
+    right: -150px;
+}
+.invest-page .scroll .arrow {
+  stroke: #ffffff;
+}
+.h2-sub-12 {
+  left: 360px;
+}
+.hero-team {
+    background-image: url("/img/team/Placement Area@2x.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.page-heading {
+    color: #1F2249;
+    font-size: 48px;
+    font-family: ubuntu, sans-serif;
+    font-weight: 300;
+    line-height: 1.5;
+    position: relative;
+    display: inline-block;
+}
+.update-box {
+    margin-top: 72px;
+}
+.update-box label {
+    color: #1F2249;
+    font-weight: 500;
+    font-size: 24px;
+    display: inline-block;
+    cursor: pointer;
+}
+.update-box input {
+    width: 250px;
+    display: inline-block;
+    margin: 0;
+    font-size: 24px;
+}
+
+.update-box input::placeholder {
+  color: #1F2249; /* Firefox */
+  opacity: 1;
+}
+
+.update-box input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color: #1F2249;
+ opacity: 1;
+}
+
+.update-box input::-ms-input-placeholder { /* Microsoft Edge */
+ color: #1F2249;
+ opacity: 1;
+}
+.update-box button {
+    background-color: transparent;
+    border: 0;
+    display: inline-block;
+    height: 48px;
+    width: 48px;
+    vertical-align: super;
+    cursor: pointer;
+}
+.update-box .arrow-space {
+    height: 48px;
+    width: 48px;
+}
+.update-box .svg-arrow {
+    height: 48px;
+    width: 48px;
+    transform: rotate(0deg);
+    margin-left: -10px;
+}
+.update-box .svg-arrow .arrow {
+    stroke: #ffffff;
+}
+.update-box-content {
+    display: table;
+    margin-left: auto;
+    position: relative;
+}
+.update-box-content::after {
+    content: "";
+    width: 300px;
+    height: 1px;
+    background-color: #1f2249;
+    position: absolute;
+    bottom: 5px;
+    right: calc( 50% - 150px );
+}
+.policy {
+    padding-top: 223px;
+}
+.policy h1 {
+    color: #db9195;
+    font-size: 96px;
+    font-family: arvo, serif;
+    margin: 0;
+    position: relative;
+    margin-bottom: 128px;
+}
+.policy h1 span {
+    color: #1f2249;
+    font-size: 48px;
+    font-family: ubuntu, sans-serif;
+    font-weight: 300;
+    position: absolute;
+    left: 300px;
+    bottom: -50px;
+}
+.policy h1 span::after {
+  content: "";
+  width: 200px;
+  height: 1px;
+  background-color: #1f2249;
+  position: absolute;
+  bottom: -10px;
+  right: -75px;
+}
+.policy p {
+    margin-bottom: 64px;
+    color: #1F2249;
+    font-size: 24px;
+    font-weight: 300;
+    max-width: 691px;
+    line-height: 1.5;
+}
+.policy-content {
+  width: 100%;
+  max-width: 691px;
+  margin: 0 auto;
+}
+.policy-content h2 {
+    color: #1F2249;
+    margin: 0;
+    margin-bottom: 24px;
+    font-size: 32px;
+}
+.policy-content p {
+    margin-bottom: 24px;
+    color: #1F2249;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+    max-width: none;
 }
