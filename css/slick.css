@@ -402,3 +402,64 @@
     width: 75px !important;
   }
 }
+
+@media (max-width: 991px) {
+  .slick-initialized .slick-slide.flex-box {
+    flex-wrap: wrap;
+  }
+  .slick-prev, .slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: calc( 20% - 24px);
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    width: 16px;
+    height: 32px;
+    background-color: transparent;
+    border-radius: 0;
+    padding: 0;
+    transition: 0.4s ease;
+}
+.slick-next {
+    right: -20px;
+}
+.slick-prev {
+    left: -20px;
+}
+.clients-carousel .slick-prev {
+    left: 10px;
+    z-index: 1;
+}
+.clients-carousel .slick-next {
+    right: 10px;
+    z-index: 1;
+}
+.clients-carousel .slick-prev, .clients-carousel .slick-next {
+  top: calc( 50% - 24px);
+}
+.slick-next:before {
+    content: url(/img/Pijl-blk.svg);
+}
+.slick-prev:before {
+    content: url(/img/Pijl-blk.svg);
+}
+
+.project-info {
+    width: 85px;
+    height: 85px;
+    right: 0;
+    padding-top: 10px;
+    font-size: 8px;
+    top: calc( 50% - 40px );
+}
+}

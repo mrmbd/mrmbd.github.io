@@ -11,8 +11,8 @@
             breakpoint: 992,
             settings: {
                 slidesToShow: 1,
-                slidesToScroll: 1,
-                arrows: false
+                infinite: true,
+                slidesToScroll: 1
             }
         }]
     });
@@ -26,8 +26,8 @@
             breakpoint: 992,
             settings: {
                 slidesToShow: 1,
-                slidesToScroll: 1,
-                arrows: false
+                infinite: true,
+                slidesToScroll: 1
             }
         }]
     });
