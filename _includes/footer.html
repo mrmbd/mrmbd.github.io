@@ -1,5 +1,5 @@
 <!-- footer Start -->
-<footer class="no-m footer {% if page.permalink == '/cookies' or  page.permalink == '/privacy' %}smol-footer{% endif %}">
+<footer class="footer {% if page.permalink == '/cookies' or  page.permalink == '/privacy' %}smol-footer{% endif %}">
   {% unless page.permalink == '/cookies' or  page.permalink == '/privacy' %}
   <div class="container">
     <div class="flex-box justify-between">
@@ -15,7 +15,7 @@
       </div>
       <div class="flex-center footer-col footer-overlay-box">
         <div class="footer-col-form">
-          <h2 class="text-center"><a class="btn btn-default btn-center" href="#contact-form">Let’s connect <span class="arrow-space">{% include icon-arrow.html %}</span></a></h2>
+          <h2 class="text-center" id="accordion"><a class="btn btn-default btn-center" href="#contact-form" id="open-form">Let’s connect <span class="arrow-space">{% include icon-arrow.html %}</span></a></h2>
           <form id="contact-form" class="footer-contact-form" action="index.html" method="post">
             <div class="">
               <label for="name">What’s your name?</label>
@@ -28,7 +28,7 @@
               <textarea name="name" rows="8" cols="80" placeholder="Got an epic idea, a challenge that keeps you up at night? Or do you just want to hang out and discuss the latest tech and digital developments?"></textarea>
             </div>
             <div class="">
-              <button type="submit" class="btn btn-footer" href="#">Send message <span class="arrow-space">{% include icon-arrow.html %}</span></button>
+              <button type="submit" class="btn btn-footer btn-m-smol" href="#">Send message <span class="arrow-space">{% include icon-arrow.html %}</span></button>
             </div>
           </form>
         </div>
@@ -43,11 +43,14 @@
     <div class="footer-sub flex-box justify-between">
       <div class="footer-sub-left flex-center">
         <a class="btn btn-default" href="/">{% include icon-b.html %} <span class="plus-space">{% include icon-plus.html %}</span></a>
-        <a class="rel btn-underline" href="/services">Services</a>
-        <a class="rel btn-underline"  href="/investments">Investments</a>
-        <a class="rel btn-underline"  href="/contact">Contact</a>
+        <a class="rel btn-underline no-m" href="/services">Services</a>
+        <a class="rel btn-underline no-m"  href="/investments">Investments</a>
+        <a class="rel btn-underline no-m"  href="/contact">Contact</a>
       </div>
       <div class="footer-sub-right flex-center">
+        <a class="rel btn-fat no-d" href="/services">Services</a>
+        <a class="rel btn-fat no-d"  href="/investments">Investments</a>
+        <a class="rel btn-fat no-d"  href="/contact">Contact</a>
         <a href="/cookies">Cookies</a>
         <a href="/privacy">Privacy</a>
       </div>
@@ -74,3 +77,19 @@
   </div>
   {% endif %}
 </footer>
+<script>
+var acc = document.getElementById("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+</script>

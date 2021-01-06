@@ -20,7 +20,16 @@ $( document ).ready(function() {
   });
   $( ".slick-prev.slick-arrow" ).click(function() {
     $(this).addClass("imageRotReverse").one('webkitAnimationEnd mozAnimationEnd oAnimationEnd msAnimationEnd animationend', function () {
-        $(this).removeClass("imageRotReverse");      
+        $(this).removeClass("imageRotReverse");
     });
+  });
+  $( "#open-form" ).click(function() {
+    $("#contact-form").toggleClass("opened");
+    $(this).toggleClass("clicked");
+    if ($(window).width() < 992) {
+    $('html, body').animate({
+        scrollTop: $("#contact-form").offset().top - 120
+    }, 400);
+    }
   });
 });
