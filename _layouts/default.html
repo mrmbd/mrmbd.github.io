@@ -5,23 +5,15 @@
     {% include head.html %}
 
   </head>
-  <body>
-    <div class="transparent-card">
 
-
-
-
+  <body class="{% if page.permalink == '/contact' %}contact-page{% elsif page.permalink == '/investments' %}invest-page{% endif %}">
+    <div id="swup" class="transition-fade">
+    {% if page.permalink == '/' %}{% include splash.html %}{% endif %}
     {% include header.html %}
-
-
-    {{ content }}
-
-
-
-
-
-
-
+    <div class="main">
+      {{ content }}
+    </div>
+    {% include footer.html %}
 
     </div>
 

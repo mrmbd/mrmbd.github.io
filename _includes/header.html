@@ -1,45 +1,25 @@
 <!-- Header Start -->
-<header class="{% if page.permalink != '/' %}marg-bottom{% else %}marg-bottom{% endif %}">
-  <div class="header-purple">
-      <div class="header w-nav">
-          <div class="container">
-              <a href="/" class="logo-container w-nav-brand">
-                  <img src="/img/bombay-studio-logo-filled-02.svg" alt="logo" class="logo purple"/>
-              </a>
-              <nav class="nav-menu-container w-nav-menu  desktop-only">
-                  <div class="nav-items-container">
-                      <div class="nav-links-container">
-                          <a href="/what" aria-current="page" class="nav-menu-link white w-nav-link {% if page.permalink == '/what/' %}w--current{% endif %}">What we do</a>
-                          <a href="/about" class="nav-menu-link white w-nav-link {% if page.permalink == '/about/' %}w--current{% endif %}">About us</a>
-                          <a href="/invest" class="nav-menu-link white w-nav-link {% if page.permalink == '/invest/' %}w--current{% endif %}">Investments</a>
-                          <a href="/contact" class="nav-menu-link white box-nav w-nav-link">Contact us</a>
-                      </div>
-                  </div>
-              </nav>
-              <div class="menu-mobile w-nav-button">
-                  <div class="close-menu">Close</div>
-                  <div class="hamburger-menu openNav">
-                      <div class="hamburger-menu-line top"></div>
-                      <div class="hamburger-menu-line center"></div>
-                      <div class="hamburger-menu-line bottom"></div>
-                  </div>
-              </div>
-          </div>
-      </div>
+<header class="header">
+  <div class="container flex-box justify-between">
+  <nav class="left-nav flex-box">
+    <a class="flex-center" href="/">{% include icon-bombay.html %}</a>
+  </nav>
+  <nav class="right-nav flex-box navbar-toggler">
+    <nav class="header-hamburger-menu flex-center">
+      <button type="button">
+        <span class="icon-bar bar1"></span>
+        <span class="icon-bar bar2"></span>
+      </button>
+    </nav>
+  </nav>
   </div>
-  <div id="myNav" class="overlay mobile-only" style="visibility:hidden;">
-    <a href="/">
-      <img src="/img/bombay-studio-logo-filled-02.svg" alt="" class="logo purple"/>
-    </a>
-    <a href="javascript:void(0)" class="closebtn" id="closeNav">Close<span>x</span></a>
-    <div class="overlay-content">
-      <a href="/what">What</a>
-      <a href="/about">About</a>
-      <a href="/invest">Invest</a>
-      <a href="/contact">Contact</a>
-    </div>
-    <div class="overlay-footer">
-      Drop us a line: <a href="mailto:hello@bombay-studio.com">hello@bombay-studio.com</a>
+  <div class="drawer-menu">
+    <div class="container flex-center">
+      <a href="/">Home <span class="drawer-small">is where heart is</span></a><span class="drawer-seperator">/</span>
+      <a href="/services">Services <span class="drawer-small">Our bread and butter</span></a><span class="drawer-seperator">/</span>
+      <a href="/investments">Investments <span class="drawer-small">Fun products</span></a><span class="drawer-seperator">/</span>
+      <a href="/team">Team <span class="drawer-small">The best in the business</span></a><span class="drawer-seperator">/</span>
+      <a href="/contact">Contact <span class="drawer-small">We are very chatty</span></a><span class="drawer-seperator">/</span>
     </div>
   </div>
-</header><!-- header close -->
+</header>
