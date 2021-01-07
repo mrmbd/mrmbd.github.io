@@ -4,7 +4,7 @@
   <div class="container">
     <div class="flex-box justify-between">
       <div class="flex-center footer-col">
-        <div class="footer-col-text">
+        <div class="footer-col-text rel">
           {% if page.permalink == '/contact' %}
           <h2 class="h2-footer blue">We can meet online or go get a coffee, your choice.</h2>
           <img class="footer-img" src="/img/contact/Map.svg" alt="">
@@ -15,27 +15,27 @@
       </div>
       <div class="flex-center footer-col footer-overlay-box">
         <div class="footer-col-form">
-          <h2 class="text-center" id="accordion"><a class="btn btn-default btn-center" href="#contact-form" id="open-form">Let’s connect <span class="arrow-space">{% include icon-arrow.html %}</span></a></h2>
-          <form id="contact-form" class="footer-contact-form" action="index.html" method="post">
+          <h2 class="text-center" id="accordion"><a class="btn btn-default btn-center {% if page.permalink == '/contact' %}clicked{% endif %}" href="#contact-form" id="open-form" data-no-swup>Let’s connect <span class="arrow-space">{% include icon-arrow.html %}</span></a></h2>
+          <form id="contact-form" class="footer-contact-form {% if page.permalink == '/contact' %}opened{% endif %}" action="index.html" method="post">
             <div class="">
               <label for="name">What’s your name?</label>
-              <input type="text" name="name" value="" placeholder="Jane Doe">
+              <input type="text" name="name" value="" placeholder="Jane Doe" id="name">
               <label for="email">Where can we reach you?</label>
-              <input type="email" name="email" value="" placeholder="Hello@yourdomain.be">
+              <input type="email" name="email" value="" placeholder="Hello@yourdomain.be" id="email">
               <label for="tele">Or would you rather get a phone call?</label>
-              <input type="tel" name="tele" value="" placeholder="+32 xxx xx xx xx">
+              <input type="tel" name="tele" value="" placeholder="+32 xxx xx xx xx" id="tele">
               <label for="message">What do you want to talk about?</label>
-              <textarea name="name" rows="8" cols="80" placeholder="Got an epic idea, a challenge that keeps you up at night? Or do you just want to hang out and discuss the latest tech and digital developments?"></textarea>
+              <textarea name="name" rows="8" cols="80" placeholder="Got an epic idea, a challenge that keeps you up at night? Or do you just want to hang out and discuss the latest tech and digital developments?" id="message"></textarea>
             </div>
             <div class="">
-              <button type="submit" class="btn btn-footer btn-m-smol" href="#">Send message <span class="arrow-space">{% include icon-arrow.html %}</span></button>
+              <button type="submit" class="btn btn-footer btn-m-smol" href="#" data-no-swup>Send message <span class="arrow-space">{% include icon-arrow.html %}</span></button>
             </div>
           </form>
         </div>
       </div>
     </div>
     {% if page.permalink == '/contact' %}
-    <div class="footer-contact-row">
+    <div class="footer-contact-row no-m">
       <span class="no-form">Not a fan of forms?<br> No problem, drop us a line</span>
       <a class="btn btn-default" href="mailto:hello@bombay-studio.com">hello@bombay-studio.com <span class="plus-space">{% include icon-plus.html %}</span></a>
     </div>
@@ -64,11 +64,14 @@
     <div class="footer-sub flex-box justify-between">
       <div class="footer-sub-left flex-center">
         <a class="btn btn-default" href="/">{% include icon-b.html %} <span class="plus-space">{% include icon-plus.html %}</span></a>
-        <a class="rel btn-underline" href="/services">Services</a>
-        <a class="rel btn-underline"  href="/investments">Investments</a>
-        <a class="rel btn-underline"  href="/contact">Contact</a>
+        <a class="rel btn-underline no-m" href="/services">Services</a>
+        <a class="rel btn-underline no-m"  href="/investments">Investments</a>
+        <a class="rel btn-underline no-m"  href="/contact">Contact</a>
       </div>
       <div class="footer-sub-right flex-center">
+        <a class="rel btn-fat no-d" href="/services">Services</a>
+        <a class="rel btn-fat no-d"  href="/investments">Investments</a>
+        <a class="rel btn-fat no-d"  href="/contact">Contact</a>
         <a href="/cookies">Cookies</a>
         <a href="/privacy">Privacy</a>
       </div>

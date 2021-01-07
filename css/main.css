@@ -15,6 +15,34 @@ body {
 .rel {
   position: relative !important;
 }
+/*
+.transition-fade {
+  transition-delay: 1s;
+  transition: 2.2s;
+  opacity: 1;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.transition-fade::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: #db9195;
+  right: -100vw;
+  top: 0;
+  transition: 1s ease;
+  z-index: 999;
+}
+
+html.is-animating .transition-fade {
+  opacity: 0;
+}
+html.is-animating .transition-fade::after {
+  right: 0;
+}
+*/
 .container {
     display: block;
     width: 100%;
@@ -246,6 +274,9 @@ nav.right-nav.flex-box {
 .hero-white {
   background-color: #fff;
 }
+.hero-offwhite {
+  background-color: #F8F8F9;
+}
 .hero .flex-center {
     width: 100%;
 }
@@ -287,7 +318,10 @@ nav.right-nav.flex-box {
   margin-right: 0;
 }
 .btn-default .plus-space {
-  vertical-align: unset;
+  margin-top: -4px;
+}
+.footer .btn-default .plus-space {
+  margin-top: -10px;
 }
 .btn-footer {
   background-color: #1f2249;
@@ -445,7 +479,7 @@ nav.right-nav.flex-box {
     font-size: 16px;
     font-weight: 300;
     color: #1F2249;
-    line-height: 1.5;
+    line-height: 1.4;
 }
 
 .two-col {
@@ -459,13 +493,13 @@ nav.right-nav.flex-box {
     font-size: 24px;
     color: #1F2249;
     font-weight: 300;
-    line-height: 1.5;
+    line-height: 1.4;
 }
 
 .projects-carousel {
   padding: 0 100px;
 }
-.projects-carousel .slick-active .two-col-big:hover img, .projects-carousel .slick-active .two-col-big:hover iframe {
+.projects-carousel .slick-active .two-col-big img, .projects-carousel .slick-active .two-col-big:hover iframe {
   width: 100%;
 }
 .two-col-big {
@@ -484,11 +518,13 @@ nav.right-nav.flex-box {
     width: 95%;
     display: block;
     transition: 0.4s ease;
+    transition-delay: .4s;
 }
 .two-col-small-text {
     font-size: 16px;
     color: #1F2249;
     font-weight: 300;
+    line-height: 1.4;
 }
 .two-col-small-header {
     font-size: 32px;
@@ -540,9 +576,14 @@ nav.right-nav.flex-box {
     top: calc( 50% - 80px );
     right: -40px;
     border-radius: 50%;
-    line-height: 1.5;
+    line-height: 1.4;
     font-weight: 700;
     padding-top: 15px;
+}
+
+.bg-box {
+  padding: 100px 0;
+  background-color: #F8F8F9;
 }
 
 
@@ -577,7 +618,7 @@ nav.right-nav.flex-box {
     width: 137px;
 }
 .clients-testimonial {
-    line-height: 1.5;
+    line-height: 1.4;
     font-size: 24px;
     font-weight: 300;
     color: #1F2249;
@@ -604,7 +645,7 @@ nav.right-nav.flex-box {
 }
 .footer-overlay-box {
   box-shadow: 0px 6px 18px #00000029;
-  background-color: #fff;
+  background-color: #F8F8F9;
 }
 .footer-contact-form {
     height: calc( 100vh - 82px );
@@ -614,8 +655,9 @@ nav.right-nav.flex-box {
     justify-content: space-between;
 }
 .footer-img {
-    width: 100%;
-    display: block;
+  position: absolute;
+  z-index: -1;
+  left: -200px;
 }
 label {
     display: block;
@@ -631,7 +673,7 @@ input, textarea {
     font-family: ubuntu, sans-serif;
     font-size: 16px;
     font-weight: 300;
-    line-height: 1.5;
+    line-height: 1.4;
     color: #1F2249;
 }
 input::placeholder, textarea::placeholder {
@@ -753,6 +795,8 @@ input::-ms-input-placeholder, textarea::-ms-input-placeholder { /* Microsoft Edg
     font-size: 48px;
     font-weight: 300;
     font-family: ubuntu, sans-serif;
+    margin-top: -250px;
+    margin-bottom: 54px;
 }
 .footer-contact-row {
     margin-top: 92px;
@@ -817,7 +861,7 @@ input::-ms-input-placeholder, textarea::-ms-input-placeholder { /* Microsoft Edg
     font-size: 48px;
     font-family: ubuntu, sans-serif;
     font-weight: 300;
-    line-height: 1.5;
+    line-height: 1.4;
     position: relative;
     display: inline-block;
 }
@@ -846,7 +890,7 @@ input::-ms-input-placeholder, textarea::-ms-input-placeholder { /* Microsoft Edg
     font-size: 48px;
     font-family: ubuntu, sans-serif;
     font-weight: 300;
-    line-height: 1.5;
+    line-height: 1.4;
     position: relative;
     display: inline-block;
 }
@@ -952,7 +996,7 @@ input::-ms-input-placeholder, textarea::-ms-input-placeholder { /* Microsoft Edg
     font-size: 24px;
     font-weight: 300;
     max-width: 691px;
-    line-height: 1.5;
+    line-height: 1.4;
 }
 .policy-content {
   width: 100%;
@@ -970,7 +1014,7 @@ input::-ms-input-placeholder, textarea::-ms-input-placeholder { /* Microsoft Edg
     color: #1F2249;
     font-size: 16px;
     font-weight: 300;
-    line-height: 1.5;
+    line-height: 1.4;
     max-width: none;
 }
 
@@ -1251,7 +1295,7 @@ input::-ms-input-placeholder, textarea::-ms-input-placeholder { /* Microsoft Edg
 .services-h2 {
     font-size: 32px !important;
     text-transform: uppercase;
-    line-height: 1.5;
+    line-height: 1.4;
 }
 .services-h2-sub {
     font-size: 16px !important;
@@ -1322,5 +1366,30 @@ input::-ms-input-placeholder, textarea::-ms-input-placeholder { /* Microsoft Edg
     height: 32px;
     width: 32px;
     margin-left: 25px;
+}
+.contact-page .footer {
+    height: auto;
+}
+button.btn.btn-footer.btn-m-smol {
+  border: 0;
+}
+.policy .container {
+    padding: 0 44px;
+}
+.policy h1 {
+    font-size: 48px;
+    text-align: center;
+    display: block;
+    margin-bottom: 88px;
+}
+.policy h1 span {
+    font-size: 24px;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    display: block;
+}
+.policy h1 span::after {
+    right: calc( 50% - 100px );
 }
 }
