@@ -16,16 +16,16 @@
       <div class="flex-center footer-col footer-overlay-box">
         <div class="footer-col-form">
           <h2 class="text-center" id="accordion"><a class="btn btn-default btn-center {% if page.permalink == '/contact' %}clicked{% endif %}" href="#contact-form" id="open-form" data-no-swup>Let’s connect <span class="arrow-space">{% include icon-arrow.html %}</span></a></h2>
-          <form id="contact-form" class="footer-contact-form {% if page.permalink == '/contact' %}opened{% endif %}" action="index.html" method="post">
+          <form id="contact-form" class="footer-contact-form {% if page.permalink == '/contact' %}opened{% endif %}" action="https://formspree.io/f/xyyblwnz" method="POST">
             <div class="">
               <label for="name">What’s your name?</label>
-              <input type="text" name="name" value="" placeholder="Jane Doe" id="name">
+              <input type="text" name="name" value="" placeholder="Jane Doe" id="name" required>
               <label for="email">Where can we reach you?</label>
-              <input type="email" name="email" value="" placeholder="Hello@yourdomain.be" id="email">
+              <input type="email" name="email" value="" placeholder="Hello@yourdomain.be" id="email" required>
               <label for="tele">Or would you rather get a phone call?</label>
               <input type="tel" name="tele" value="" placeholder="+32 xxx xx xx xx" id="tele">
               <label for="message">What do you want to talk about?</label>
-              <textarea name="name" rows="8" cols="80" placeholder="Got an epic idea, a challenge that keeps you up at night? Or do you just want to hang out and discuss the latest tech and digital developments?" id="message"></textarea>
+              <textarea name="message" rows="8" cols="80" placeholder="Got an epic idea, a challenge that keeps you up at night? Or do you just want to hang out and discuss the latest tech and digital developments?" id="message"></textarea>
             </div>
             <div class="">
               <button type="submit" class="btn btn-footer btn-m-smol" href="#" data-no-swup>Send message <span class="arrow-space">{% include icon-arrow.html %}</span></button>
@@ -80,6 +80,7 @@
   </div>
   {% endif %}
 </footer>
+{% unless  page.permalink == '/cookies' or  page.permalink == '/privacy' %}
 <script>
 var acc = document.getElementById("accordion");
 var i;
@@ -96,3 +97,4 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 </script>
+{% endunless %}

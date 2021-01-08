@@ -33,3 +33,22 @@ $( document ).ready(function() {
     }
   });
 });
+
+var images = [];
+
+function preload() {
+    for (var i = 0; i < arguments.length; i++) {
+        images[i] = new Image();
+        images[i].src = preload.arguments[encodeURIComponent(i)];
+    }
+}
+
+$(window).on('load', function(){
+    setTimeout(function () {
+      preload(
+          "/img/Services/Placement Area@2x.png",
+          "/img/team/Placement Area@2x.jpg",
+          "/img/invest/Placement Area@2x.png"
+      )
+    }, 4000);
+});

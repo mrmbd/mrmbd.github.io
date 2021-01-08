@@ -74,10 +74,11 @@ permalink: /team
   <div class="flex-box container">
     <div class="flex-center">
       <h2 class="hero-heading page-heading m-page-heading">Want to stay updated? We sent out a mini update every 3 months on how our businesses are doing and what we’ve learned the last few months.</h2>
-      <form class="update-box">
+      <form action="https://formspree.io/f/mgepwayy" method="POST" class="update-box">
         <div class="update-box-content">
           <label for="update">Update me please</label>
-          <input type="email" id="update" name="update" value="" placeholder="Your email">
+          <input type="hidden" name="name" value="default">
+          <input type="email" id="update" value="" placeholder="Your email" name="_replyto" required>
           <button type="submit" name="button"><span class="arrow-space">{% include icon-arrow.html %}</span></button>
         </div>
       </form>
