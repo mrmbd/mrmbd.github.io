@@ -879,7 +879,7 @@ input::-ms-input-placeholder, textarea::-ms-input-placeholder { /* Microsoft Edg
 }
 .bg-blue {
     background-color: #1F2249;
-    height: 186px;
+    height: 206px;
 }
 
 .hero-invest {
@@ -1279,7 +1279,7 @@ input::-ms-input-placeholder, textarea::-ms-input-placeholder { /* Microsoft Edg
     height: auto;
 }
 .footer-sub {
-    height: 180px;
+    height: 200px;
 }
 .footer-col-form h2 {
     padding: 0;
