@@ -1018,7 +1018,7 @@ input::-ms-input-placeholder, textarea::-ms-input-placeholder { /* Microsoft Edg
     bottom: 5px;
     right: calc( 50% - 150px );
 }
-.policy {
+.policy, .post {
     padding-top: 223px;
 }
 .policy h1 {
@@ -1028,6 +1028,14 @@ input::-ms-input-placeholder, textarea::-ms-input-placeholder { /* Microsoft Edg
     margin: 0;
     position: relative;
     margin-bottom: 128px;
+}
+.post h1 {
+    color: #db9195;
+    font-size: 96px;
+    font-family: arvo, serif;
+    margin: 0;
+    position: relative;
+    margin-bottom: 60px;
 }
 .policy h1 span {
     color: #1f2249;
@@ -1047,13 +1055,60 @@ input::-ms-input-placeholder, textarea::-ms-input-placeholder { /* Microsoft Edg
   bottom: -10px;
   right: -75px;
 }
-.policy p {
-    margin-bottom: 64px;
-    color: #1F2249;
-    font-size: 24px;
-    font-weight: 300;
-    max-width: 691px;
-    line-height: 1.4;
+.policy p, .post p {
+  margin-bottom: 64px;
+  color: #1F2249;
+  font-size: 24px;
+  font-weight: 300;
+  max-width: 691px;
+  line-height: 1.4;
+}
+.post h2 {
+  color: #1F2249;
+  margin: 0;
+  margin-bottom: 24px;
+  font-size: 32px;
+}
+.post h2 span {
+  color: #db9195;
+}
+.post p {
+  margin: 0 auto;
+  margin-bottom: 32px;
+}
+.post p img {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+.post ul {
+  list-style: none;
+  padding: 0;
+}
+.post-link {
+  display: inline-block;
+  margin-right: 10px;
+}
+.post-link a {
+    background-color: #28b76b;
+    padding: 0.6rem 1.25rem;
+    transition: all 0.4s ease-in-out;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 2px;
+}
+.post-link a:hover {
+  background-color: #db9195;
+}
+.post-link a svg {
+    height: 25px;
+    width: 30px;
+    padding-top: 4px;
+    margin-bottom: -4px;
+    transition: all 0.4s ease-in-out;
+}
+.post-link a:hover svg {
+  transform: rotateZ(90deg) translateX(2.5px) translateY(-2.5px);
 }
 .policy-content {
   width: 100%;
@@ -1430,10 +1485,16 @@ input::-ms-input-placeholder, textarea::-ms-input-placeholder { /* Microsoft Edg
 button.btn.btn-footer.btn-m-smol {
   border: 0;
 }
-.policy .container {
+.policy .container, .post .container {
     padding: 0 44px;
 }
 .policy h1 {
+    font-size: 48px;
+    text-align: center;
+    display: block;
+    margin-bottom: 88px;
+}
+.post h1 {
     font-size: 48px;
     text-align: center;
     display: block;

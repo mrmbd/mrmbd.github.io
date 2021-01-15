@@ -6,7 +6,7 @@
 
   </head>
 
-  <body class="{% if page.permalink == '/contact' %}contact-page{% elsif page.permalink == '/investments' %}invest-page{% endif %}">
+  <body class="blog">
     <svg id="fader"></svg>
     <style>
     #fader {
@@ -55,55 +55,42 @@
         fadeInPage();
       });
         </script>
-    <div id="swup" class="transition-fade">
-
-    {% if page.permalink == '/' %}
-
-    {% include splash.html %}
-    <script>
-    function setCookie(cname, cvalue, exdays) {
-        var d = new Date();
-        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-        var expires = "expires="+d.toUTCString();
-        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-      }
-
-      function getCookie(cname) {
-        var name = cname + "=";
-        var ca = document.cookie.split(';');
-        for(var i = 0; i < ca.length; i++) {
-          var c = ca[i];
-          while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-          }
-          if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-          }
-        }
-        return "";
-      }
-
-      function checkCookie() {
-        var welcome = getCookie("welcome");
-        if (welcome == "" || welcome == null) {
-          setCookie("welcome", "1", 30);
-        } else {
-          var element = document.getElementById("splash-id");
-          element.classList.add("no-d");
-        }
-      }
-      checkCookie();
-
-    </script>
-    {% endif %}
 
 
     {% include header.html %}
     <div class="main">
-      {{ content }}
+      <div class="post">
+        <div class="container">
+          {{ content }}
+        </div>
+      </div>
     </div>
-    {% include footer.html %}
 
-    </div>
+
+    <!-- footer Start -->
+    <footer class="footer smol-footer">
+      <div class="bg-blue flex-box" style="flex-direction: column-reverse;">
+        <div class="container">
+        <div class="footer-sub flex-box justify-between">
+          <div class="footer-sub-left flex-center">
+            <a class="btn btn-default" href="/">{% include icon-b.html %} <span class="plus-space">{% include icon-plus.html %}</span></a>
+            <a class="rel btn-underline no-m" href="/services">Services</a>
+            <a class="rel btn-underline no-m"  href="/investments">Investments</a>
+            <a class="rel btn-underline no-m"  href="/us-eu">US to EU</a>
+            <a class="rel btn-underline no-m"  href="/contact">Contact</a>
+          </div>
+          <div class="footer-sub-right flex-center">
+            <a class="rel btn-fat no-d" href="/services">Services</a>
+            <a class="rel btn-fat no-d"  href="/investments">Investments</a>
+            <a class="rel btn-fat no-d"  href="/us-eu">US to EU</a>
+            <a class="rel btn-fat no-d"  href="/contact">Contact</a>
+            <a href="/cookies">Cookies</a>
+            <a href="/privacy">Privacy</a>
+          </div>
+        </div>
+        </div>
+      </div>
+    </footer>
+
     </body>
 </html>

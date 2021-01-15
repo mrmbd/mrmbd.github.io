@@ -1,0 +1,28 @@
+---
+layout: default
+title: "404 - Bombay Studio"
+---
+
+<div class="policy">
+  <div class="container">
+    <h1>404 - Error <span>oops! sorry about that :P</span></h1>
+    <p>
+      Page you were looking for does not exist, but we have lots of content for you to choose from :)
+    </p>
+    <div class="policy-content">
+      <h2>Blog - snippets</h2>
+
+        {% for categories in site.categories %}
+        <ul>
+          <h3>{{ categories[0] }}</h3>
+          {% for post in categories[1] %}
+              <li class="post-link">
+              <a href="{{ post.url }}">{% include icon-info.html %}<span>{{ post.title }}</span></a>
+              </li>
+            {% endfor %}
+        </ul>
+      {% endfor %}
+
+    </div>
+  </div>
+</div>

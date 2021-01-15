@@ -11,8 +11,8 @@ description: "Agency with profound focus on international growth. We help you la
 url: "" # the base hostname & protocol for your site
 # baseurl: "/the/subpath/of/your/site" # Set this value to "" if you want your site to be root
 baseurl: ""
-cover: "/assets/cover.png"
-logo: "/assets/logo.png"
+cover: "/img/bombay-studio-logo-filled-01.png"
+logo: "/img/bombay-studio-logo-filled-01.png"
 
 # Build settings
 markdown: kramdown
