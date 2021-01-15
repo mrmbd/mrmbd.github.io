@@ -52,7 +52,6 @@ html.is-animating .transition-fade::after {
     height: 100%;
     z-index: 999999;
     opacity: 1;
-    transition: opacity 0.4s;
     pointer-events: none;
     background: #DB9195;
     animation-duration: 0.4s;

@@ -8,6 +8,12 @@
 
   <body class="{% if page.permalink == '/contact' %}contact-page{% elsif page.permalink == '/investments' %}invest-page{% endif %}">
     <svg id="fader"></svg>
+    <style>
+    #fader {
+      transition: all 0.4s ease;
+      background: #DB9195;
+    }
+    </style>
     <script>
     function fadeInPage() {
       if (!window.AnimationEvent) { return; }
@@ -44,7 +50,9 @@
         var fader = document.getElementById('fader');
         fader.classList.remove('fade-in');
       });
-      fadeInPage();
+      window.addEventListener('DOMContentLoaded', (event) => {
+        fadeInPage();
+      });
         </script>
     <div id="swup" class="transition-fade">
 
