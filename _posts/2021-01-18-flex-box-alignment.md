@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "vertically center element using flex"
+description: "To center our box we use the align-items property to align our item on the cross axis"
 tags: flex html css webdev
 category: website-development
 excerpt_separator: <!--more-->

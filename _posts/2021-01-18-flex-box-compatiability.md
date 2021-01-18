@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Flexbox browser compatiability"
+description: "Browser support for flexbox is excellent, and the majority of browsers do not need a prefix"
 tags: flex html css webdev
 category: website-development
 excerpt_separator: <!--more-->
@@ -8,7 +9,7 @@ excerpt_separator: <!--more-->
 
 # Flexbox browser compatiability
 
-Browser support for flexbox is **excellent**, and the majority of browsers do not need a prefix<!--more--> at this point. Safari was the last of the major browsers to remove prefixes, with the release of Safari 9 in 2015. The two browsers you should still keep in mind for cross-browser compatibility are:
+Browser support for flexbox is **excellent**, and the majority of browsers do not need a prefix at this point. Safari was the last of the major browsers to remove prefixes, with the release of Safari 9 in 2015. The two browsers you should still keep in mind for cross-browser compatibility are:
 
 - Internet Explorer 10, which implemented the display: flexbox version of the specification with the -ms- prefix.
 - UC Browser, which still supports the 2009 display: box version only with the -webkit- prefix.
