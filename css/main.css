@@ -1661,4 +1661,25 @@ button.btn.btn-footer.btn-m-smol {
 .policy h1 span::after {
     right: calc( 50% - 100px );
 }
+.post-link a:before, .post-link a svg {
+    display: none;
+}
+.post-link a {
+  padding: 0;
+  text-align: center;
+  color: #fff;
+}
+.post-link {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 16px;
+    max-width: none;
+    line-height: 1;
+    margin-bottom: 20px;
+    padding: 5px;
+    height: auto;
+    border-radius: 3px;
+    background-color: #db9195;
+    text-align: center;
+}
 }
