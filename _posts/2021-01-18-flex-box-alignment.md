@@ -1,23 +1,36 @@
 ---
 layout: post
-title:  "Flexbox layouts"
+title:  "vertically center element using flex"
 tags: flex html css webdev
 category: website-development
 excerpt_separator: <!--more-->
 ---
 
-# Flex layouts
+# Vertically center element using flex
 
-**Flexbox** after being web ready for all browsers is a whole css layout system itself.
-<!--more-->
-you don't have to have the huge layout files for bootstrap or others to get your page right if you know Flexbox. we'll see some uses for flexbox below
-Hope you find it useful!
+To center our box we use the **align-items** property to align our item on the cross axis, which in this case is the block axis running vertically. We use **justify-content** to align the item on the main axis, which in this case the inline axis running horizontally.
 
-![flex layouts](/img/posts/1.gif)
+```css
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-As you can see **flexbox** can be used to make everyting from header to footer for responsive screens. Read out more about flex css style with our blog snippets.
+.box div {
+  width: 100px;
+  height: 100px;
+}
+```
+
+```html
+<div class="box">
+  <div></div>
+</div>
+```
 
 
+![flex align](/img/posts/3-1.png)
 
 {% include sharebox.html %}
 

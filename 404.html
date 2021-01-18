@@ -14,10 +14,10 @@ title: "404 - Bombay Studio"
 
         {% for categories in site.categories %}
         <ul>
-          <h3>{{ categories[0] }}</h3>
+          <h3 class="p-404">{{ categories[0] }}</h3>
           {% for post in categories[1] %}
               <li class="post-link">
-              <a href="{{ post.url }}">{% include icon-info.html %}<span>{{ post.title }}</span></a>
+              <a href="{{ post.url }}"><span>{{ post.title }}</span><svg width="13px" height="10px" viewBox="0 0 13 10"><path d="M1,5 L11,5"></path><polyline points="8 1 12 5 8 9"></polyline></svg></a>
               </li>
             {% endfor %}
         </ul>
