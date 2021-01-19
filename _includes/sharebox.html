@@ -1,0 +1,33 @@
+<div class="sharebox">
+  <h3>Share this blog snippet!</h3>
+  <a href="#" title="Copy link" id="copy-blog" class="no-m" onclick="copylink();return false;">{% include icon-copy.html %}<span class="tooltiptext" id="myTooltip">Copy to clipboard</span></a>
+  <a href="http://www.facebook.com/sharer.php?u=https://bombay-studio.com{{ page.url }}" title="facebook">{% include icon-facebook.html %}</a>
+  <a href="http://twitter.com/share?url=https://bombay-studio.com{{ page.url }}" title="twitter">{% include icon-twitter.html %}</a>
+  <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://bombay-studio.com{{ page.url }}" title="linkedin">{% include icon-linkedin.html %}</a>
+  <a class="no-d" href="#" onclick="sharelink();return false;">{% include icon-share.html %}</a>
+</div>
+<script type="text/javascript">
+  function copylink() {
+      var el = document.createElement('textarea');
+      el.value = "https://bombay-studio.com{{ page.url }}";
+      document.body.appendChild(el);
+      el.select();
+      el.setSelectionRange(0, 99999);
+      document.execCommand('copy');
+      document.body.removeChild(el);
+
+      var tooltip = document.getElementById("myTooltip");
+      tooltip.innerHTML = "Copied to clipboard";
+    }
+    function sharelink() {
+      if (navigator.share) {
+        navigator.share({
+          title: 'bombay-studio.com',
+          text: '{{ page.title | escape }}',
+          url: 'https://bombay-studio.com{{ page.url }}',
+        })
+        .then(() => console.log('Successful share'))
+        .catch((error) => console.log('Error sharing', error));
+      }
+    }
+</script>

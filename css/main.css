@@ -1081,34 +1081,85 @@ input::-ms-input-placeholder, textarea::-ms-input-placeholder { /* Microsoft Edg
   width: 100%;
   margin: 0 auto;
 }
-.post ul {
+.post ul li{
+  color: #1F2249;
+  font-size: 24px;
+  font-weight: 300;
+  max-width: 691px;
+  line-height: 1.4;
+  margin: 0 auto;
+  margin-bottom: 32px;
+}
+.post .related-links {
   list-style: none;
   padding: 0;
+}
+.p-404 {
+  margin: 50px 0;
+  color: #db9195;
+  font-family: arvo, serif;
 }
 .post-link {
   display: inline-block;
   margin-right: 10px;
+  font-size: 16px;
+  max-width: none;
+  line-height: 1;
+  margin-bottom: 0;
+  height: 60px;
 }
 .post-link a {
-    background-color: #28b76b;
-    padding: 0.6rem 1.25rem;
-    transition: all 0.4s ease-in-out;
-    text-decoration: none;
-    color: #fff;
-    border-radius: 2px;
+  position: relative;
+  margin: auto;
+  padding: 19px 22px 22px;
+  transition: all 0.2s ease;
+  color: #1f2249;
+  text-decoration: none;
 }
 .post-link a:hover {
-  background-color: #db9195;
+  color: #ffffff;
+}
+
+.post-link a:before {
+  content: "";
+  position: absolute;
+  top: calc( 50% - 28px );
+  left: 0;
+  display: block;
+  border-radius: 28px;
+  background: #db9195;
+  width: 56px;
+  height: 56px;
+  transition: all 0.3s ease;
+}
+.post-link a span {
+  position: relative;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 900;
+  vertical-align: middle;
+}
+.post-link a:hover:before {
+  width: 100%;
+  background: #ffab9d;
 }
 .post-link a svg {
-    height: 25px;
-    width: 30px;
-    padding-top: 4px;
-    margin-bottom: -4px;
-    transition: all 0.4s ease-in-out;
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #111;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
 }
 .post-link a:hover svg {
-  transform: rotateZ(90deg) translateX(2.5px) translateY(-2.5px);
+  transform: translateX(0);
+}
+.post-link a:hover svg path, .post-link a:hover svg polyline {
+  stroke: #ffffff;
 }
 .policy-content {
   width: 100%;
@@ -1128,6 +1179,106 @@ input::-ms-input-placeholder, textarea::-ms-input-placeholder { /* Microsoft Edg
     font-weight: 300;
     line-height: 1.4;
     max-width: none;
+}
+.sharebox {
+    display: table;
+    margin: 40px auto;
+}
+.sharebox h3 {
+    color: #db9195;
+    font-family: arvo, serif;
+}
+.sharebox a {
+    height: 40px;
+    width: 40px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 8px;
+    position: relative;
+}
+.sharebox a svg {
+    height: 40px;
+    width: 40px;
+}
+.sharebox a svg path, .sharebox a svg circle {
+    fill: #db9195;
+}
+.sharebox a:hover svg path, .sharebox a:hover svg circle {
+  fill: #ffab9d;
+}
+.sharebox a:hover .h-color {
+  fill: #ffab9d !important;
+}
+.tooltiptext {
+  width: 80px;
+    background-color: rgba(0,0,0,0.65);
+    color: #fff;
+    text-align: center;
+    border-radius: 3px;
+    padding: 5px 6px;
+    position: absolute;
+    top: -40px;
+    left: calc( 50% - 40px );
+    margin-left: 0;
+    display: none;
+    transition: all 0.4s ease;
+    font-size: 10px;
+    z-index: 1;
+}
+#copy-blog:hover .tooltiptext {
+  display: block;
+}
+.tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: calc(50% - 5px );
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(0,0,0,0.65) transparent transparent transparent;
+}
+
+.highlighter-rouge {
+    color: #1F2249;
+    font-size: 18px;
+    font-weight: 300;
+    max-width: 691px;
+    line-height: 1.4;
+    margin: 0 auto;
+    margin-bottom: 32px;
+    padding: 20px;
+    border-radius: 3px;
+    background-color: #F8F8F9;
+}
+span.nc {
+    color: chocolate;
+}
+span.p {
+    color: cornflowerblue;
+}
+span.nl {
+    color: blue;
+}
+span.p {
+    color: cornflowerblue;
+}
+span.n {
+    color: blueviolet;
+}
+span.nb {
+    color: blueviolet;
+}
+span.nt {
+    color: chocolate;
+}
+span.m {
+    color: blueviolet;
+}
+span.na {
+    color: blue;
+}
+span.s {
+    color: blue;
 }
 
 @media (min-width: 992px) {
@@ -1509,5 +1660,26 @@ button.btn.btn-footer.btn-m-smol {
 }
 .policy h1 span::after {
     right: calc( 50% - 100px );
+}
+.post-link a:before, .post-link a svg {
+    display: none;
+}
+.post-link a {
+  padding: 0;
+  text-align: center;
+  color: #fff;
+}
+.post-link {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 16px;
+    max-width: none;
+    line-height: 1;
+    margin-bottom: 20px;
+    padding: 5px;
+    height: auto;
+    border-radius: 3px;
+    background-color: #db9195;
+    text-align: center;
 }
 }
