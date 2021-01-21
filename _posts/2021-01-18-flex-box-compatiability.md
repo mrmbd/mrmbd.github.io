@@ -20,6 +20,8 @@ Note also that Internet Explorer 11 supports the modern display: flex specificat
 
 {% include sharebox.html %}
 
+{% include tagbox.html %}
+
 {% assign tag_topics = 0 %}
 {% for tag in site.tags limit: 1 %}{% for post in tag[1] %}{% assign tag_topics = tag_topics | plus: 1 %}{% endfor %}{% endfor %}
 {% if tag_topics > 1 %}
