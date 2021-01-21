@@ -1,0 +1,9 @@
+<div class="tagbox">
+<h3 class="text-center">This post is tagged in</h3>
+{% for tag in page.tags %}
+{% assign tag_slug = tag | slugify: "raw" %}
+<a class="tag" href="{{ site.baseurl | append: "/tags/" | append: tag_slug | append: "/" }}" rel="category tag">
+#{{ tag }}
+</a>
+{% endfor %}
+</div>

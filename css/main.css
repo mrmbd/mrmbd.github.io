@@ -1181,11 +1181,11 @@ input::-ms-input-placeholder, textarea::-ms-input-placeholder { /* Microsoft Edg
     line-height: 1.4;
     max-width: none;
 }
-.sharebox {
+.sharebox, .tagbox {
     display: table;
     margin: 40px auto;
 }
-.sharebox h3 {
+.sharebox h3, .tagbox h3{
     color: #db9195;
     font-family: arvo, serif;
 }
@@ -1209,6 +1209,55 @@ input::-ms-input-placeholder, textarea::-ms-input-placeholder { /* Microsoft Edg
 }
 .sharebox a:hover .h-color {
   fill: #ffab9d !important;
+}
+
+
+.tag {
+  background: #db9195;
+  border-radius: 3px 0 0 3px;
+  color: #fff;
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 20px 0 23px;
+  position: relative;
+  margin: 0 10px 10px 0;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+  transition: 0.3s ease;
+}
+
+.tag::before {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.15);
+  content: '';
+  height: 6px;
+  left: 10px;
+  position: absolute;
+  width: 6px;
+  top: 10px;
+}
+
+.tag::after {
+  background: #fff;
+  border-bottom: 13px solid transparent;
+  border-left: 10px solid #db9195;
+  border-top: 13px solid transparent;
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.3s ease;
+}
+
+.tag:hover {
+  background-color: #ffab9d;
+  color: white;
+}
+
+.tag:hover::after {
+   border-left-color: #ffab9d;
 }
 .tooltiptext {
   width: 80px;
