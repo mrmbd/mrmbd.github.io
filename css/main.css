@@ -1,6 +1,7 @@
-* {
+*, *::before, *::after {
     outline: none !important;
-    box-sizing: border-box
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html {
@@ -507,7 +508,7 @@ nav.right-nav.flex-box {
     left: 80px;
 }
 .h2-sub-5 {
-    left: 210px;
+    left: 162px;
 }
 .h2-sub::after {
     content: "";
@@ -792,17 +793,17 @@ input::-ms-input-placeholder, textarea::-ms-input-placeholder { /* Microsoft Edg
     right: -125px;
 }
 .h2-sub-6 {
-    left: 510px;
+    left: 400px;
 }
 .service-col-text, .service-col-img {
     width: calc( 50% - 60px );
 }
 .h2-sub-7 {
-    left: 720px;
+    left: 465px;
 }
 @media (max-width: 1100px) {
   .h2-sub-7 {
-      left: 620px;
+      left: 360px;
   }
 }
 .services-blocks {
@@ -821,11 +822,11 @@ input::-ms-input-placeholder, textarea::-ms-input-placeholder { /* Microsoft Edg
     margin-bottom: 25px;
 }
 .h2-sub-8 {
-    left: 610px;
+    left: 475px;
 }
 @media (max-width: 1145px) {
   .h2-sub-8 {
-      left: 450px;
+      left: 320px;
   }
 }
 .h2-sub-9 {
@@ -879,7 +880,7 @@ input::-ms-input-placeholder, textarea::-ms-input-placeholder { /* Microsoft Edg
 }
 .bg-blue {
     background-color: #1F2249;
-    height: 206px;
+    height: 180px;
 }
 
 .hero-invest {
@@ -1681,5 +1682,9 @@ button.btn.btn-footer.btn-m-smol {
     border-radius: 3px;
     background-color: #db9195;
     text-align: center;
+}
+.bg-blue {
+    background-color: #1F2249;
+    height: 232px;
 }
 }

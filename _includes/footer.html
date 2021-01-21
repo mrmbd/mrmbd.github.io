@@ -1,6 +1,6 @@
 <!-- footer Start -->
-<footer class="footer {% if page.permalink == '/cookies' or  page.permalink == '/privacy' %}smol-footer{% endif %}">
-  {% unless page.permalink == '/cookies' or  page.permalink == '/privacy' %}
+<footer class="footer {% if page.permalink == '/cookies' or  page.permalink == '/privacy' or  page.permalink == '/blog' %}smol-footer{% endif %}">
+  {% unless page.permalink == '/cookies' or  page.permalink == '/privacy' or  page.permalink == '/blog' %}
   <div class="container">
     <div class="flex-box justify-between">
       <div class="flex-center footer-col">
@@ -47,12 +47,14 @@
         <a class="rel btn-underline no-m"  href="/investments">Investments</a>
         <a class="rel btn-underline no-m"  href="/us-eu">US to EU</a>
         <a class="rel btn-underline no-m"  href="/contact">Contact</a>
+        <a class="rel btn-underline no-m"  href="/blog">Blog</a>
       </div>
       <div class="footer-sub-right flex-center">
         <a class="rel btn-fat no-d" href="/services">Services</a>
         <a class="rel btn-fat no-d"  href="/investments">Investments</a>
         <a class="rel btn-fat no-d"  href="/us-eu">US to EU</a>
         <a class="rel btn-fat no-d"  href="/contact">Contact</a>
+        <a class="rel btn-fat no-d"  href="/blog">Blog</a>
         <a href="/cookies">Cookies</a>
         <a href="/privacy">Privacy</a>
       </div>
@@ -60,7 +62,7 @@
     {% endif %}
   </div>
   {% endunless %}
-  {% if page.permalink == '/contact' or  page.permalink == '/cookies' or  page.permalink == '/privacy' %}
+  {% if page.permalink == '/contact' or  page.permalink == '/cookies' or  page.permalink == '/privacy' or  page.permalink == '/blog' %}
   <div class="bg-blue flex-box" style="flex-direction: column-reverse;">
     <div class="container">
     <div class="footer-sub flex-box justify-between">
@@ -70,12 +72,14 @@
         <a class="rel btn-underline no-m"  href="/investments">Investments</a>
         <a class="rel btn-underline no-m"  href="/us-eu">US to EU</a>
         <a class="rel btn-underline no-m"  href="/contact">Contact</a>
+        <a class="rel btn-underline no-m"  href="/blog">Blog</a>
       </div>
       <div class="footer-sub-right flex-center">
         <a class="rel btn-fat no-d" href="/services">Services</a>
         <a class="rel btn-fat no-d"  href="/investments">Investments</a>
         <a class="rel btn-fat no-d"  href="/us-eu">US to EU</a>
         <a class="rel btn-fat no-d"  href="/contact">Contact</a>
+        <a class="rel btn-fat no-d"  href="/blog">Blog</a>
         <a href="/cookies">Cookies</a>
         <a href="/privacy">Privacy</a>
       </div>
@@ -84,7 +88,7 @@
   </div>
   {% endif %}
 </footer>
-{% unless  page.permalink == '/cookies' or  page.permalink == '/privacy' %}
+{% unless  page.permalink == '/cookies' or  page.permalink == '/privacy'  or  page.permalink == '/blog' %}
 <script>
 var acc = document.getElementById("accordion");
 var i;

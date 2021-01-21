@@ -1,0 +1,29 @@
+---
+layout: default
+title: "Blog - Bombay Studio"
+permalink: /blog
+---
+
+<div class="policy">
+  <div class="container">
+    <h1>Snippets <span>To the point!</span></h1>
+    <p>
+      I you are an explorer like us, We have tons of content in the form of snippet blog for you to choose from :)
+    </p>
+    <div class="policy-content">
+      <h2>Blog - snippets</h2>
+
+        {% for categories in site.categories %}
+        <ul>
+          <h3 class="p-404">{{ categories[0] }}</h3>
+          {% for post in categories[1] %}
+              <li class="post-link">
+              <a href="{{ post.url }}"><span>{{ post.title }}</span><svg width="13px" height="10px" viewBox="0 0 13 10"><path d="M1,5 L11,5"></path><polyline points="8 1 12 5 8 9"></polyline></svg></a>
+              </li>
+            {% endfor %}
+        </ul>
+      {% endfor %}
+
+    </div>
+  </div>
+</div>
