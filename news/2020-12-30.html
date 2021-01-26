@@ -1,0 +1,20 @@
+---
+layout: news
+title:  "Technology news around the world 30/12/2020"
+description: "Comprehensive source for Technologyrelated news and quick information"
+permalink: /news/30-12-2020
+prevpage: 29-12-2020
+---
+<h1>Tech news <span>30th Dec 2020</span></h1>
+<div class="news-carousel">
+{% for data in site.data.f20201230.articles %}
+  <div class="news-card">
+    <a href="{{ data.url }}" rel="noopener noreferrer nofollow" target="_blank">
+      <img src="{{ data.urlToImage }}" alt="{{ data.title }}" onerror="if (this.src != '/img/news.png') this.src = '/img/news.png';">
+      <h3>{{ data.title | xml_escape | textilize }}</h3>
+      <span>{{ data.source.name }}</span>
+      <p>{{ data.description | xml_escape | textilize }}</p>
+    </a>
+  </div>
+{% endfor %}
+</div>

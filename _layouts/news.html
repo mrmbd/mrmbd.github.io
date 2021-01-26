@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html class="no-js"  lang="en">
+  <head>
+
+    {% include head.html %}
+
+  </head>
+
+  <body class="news">
+    <svg id="fader"></svg>
+    <style>
+    #fader {
+      transition: all 0.4s ease;
+      background: #DB9195;
+    }
+    </style>
+    <script>
+    console.log("%cGreetings from bombay-studio.com \n   Visit contact page and ping   \n us if you want to join our team ", ["background: #DB9195", "color: white", "display: block", "text-align: center", "font-weight: bold", "padding: 15px 30px", "border-radius: 2px"].join(";"))
+    function fadeInPage() {
+      if (!window.AnimationEvent) { return; }
+            var fader = document.getElementById('fader');
+            fader.classList.add('fade-out');
+      }
+      document.addEventListener('DOMContentLoaded', function() {
+              if (!window.AnimationEvent) { return; }
+              var anchors = document.getElementsByTagName('a');
+              for (var idx=0; idx<anchors.length; idx+=1) {
+                if (anchors[idx].hostname !== window.location.hostname ||
+                  anchors[idx].pathname === window.location.pathname) {
+                  continue;
+              }
+              anchors[idx].addEventListener('click', function(event) {
+                  var fader = document.getElementById('fader'),
+                      anchor = event.currentTarget;
+
+                  var listener = function() {
+                      window.location = anchor.href;
+                      fader.removeEventListener('animationend', listener);
+                  };
+                  fader.addEventListener('animationend', listener);
+
+                  event.preventDefault();
+                  fader.classList.add('fade-in');
+              });
+          }
+      });
+      window.addEventListener('pageshow', function (event) {
+        if (!event.persisted) {
+          return;
+        }
+        var fader = document.getElementById('fader');
+        fader.classList.remove('fade-in');
+      });
+      window.addEventListener('DOMContentLoaded', (event) => {
+        fadeInPage();
+      });
+        </script>
+
+
+    {% include header.html %}
+    <div class="main">
+      <div class="policy">
+        <div class="container">
+          {{ content }}
+          <div class="policy-content">
+            <ul>
+              <h3 class="p-404">change edition?</h3>
+                <li class="post-link">
+                  <a href="/news/{{ page.prevpage }}"><span>Yesterday</span><svg width="13px" height="10px" viewBox="0 0 13 10"><path d="M1,5 L11,5"></path><polyline points="8 1 12 5 8 9"></polyline></svg></a>
+                </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- footer Start -->
+    <footer class="footer smol-footer">
+      <div class="bg-blue flex-box" style="flex-direction: column-reverse;">
+        <div class="container">
+        <div class="footer-sub flex-box justify-between">
+          <div class="footer-sub-left flex-center">
+            <a class="btn btn-default" href="/">{% include icon-b.html %} <span class="plus-space">{% include icon-plus.html %}</span></a>
+            <a class="rel btn-underline no-m" href="/services">Services</a>
+            <a class="rel btn-underline no-m"  href="/investments">Investments</a>
+            <a class="rel btn-underline no-m"  href="/us-eu">US to EU</a>
+            <a class="rel btn-underline no-m"  href="/contact">Contact</a>
+            <a class="rel btn-underline no-m"  href="/blog">Blog</a>
+          </div>
+          <div class="footer-sub-right flex-center">
+            <a class="rel btn-fat no-d" href="/services">Services</a>
+            <a class="rel btn-fat no-d"  href="/investments">Investments</a>
+            <a class="rel btn-fat no-d"  href="/us-eu">US to EU</a>
+            <a class="rel btn-fat no-d"  href="/contact">Contact</a>
+            <a class="rel btn-fat no-d"  href="/blog">Blog</a>
+            <a href="/cookies">Cookies</a>
+            <a href="/privacy">Privacy</a>
+          </div>
+        </div>
+        </div>
+      </div>
+    </footer>
+
+    </body>
+</html>

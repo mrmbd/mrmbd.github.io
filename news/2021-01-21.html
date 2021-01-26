@@ -1,0 +1,20 @@
+---
+layout: news
+title:  "Technology news around the world 21/01/2021"
+description: "Comprehensive source for Technologyrelated news and quick information"
+permalink: /news/21-01-2021
+prevpage: 20-01-2021
+---
+<h1>Tech news <span>21 Jan 2021</span></h1>
+<div class="news-carousel">
+{% for data in site.data.f20210121.articles %}
+  <div class="news-card">
+    <a href="{{ data.url }}" rel="noopener noreferrer nofollow" target="_blank">
+      <img src="{{ data.urlToImage }}" alt="{{ data.title }}" onerror="if (this.src != '/img/news.png') this.src = '/img/news.png';">
+      <h3>{{ data.title | xml_escape | textilize }}</h3>
+      <span>{{ data.source.name }}</span>
+      <p>{{ data.description | xml_escape | textilize }}</p>
+    </a>
+  </div>
+{% endfor %}
+</div>
