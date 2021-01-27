@@ -1,20 +1,24 @@
 ---
 layout: news
 title:  "Technology news around the world 01/01/2021"
-description: "Comprehensive source for Technologyrelated news and quick information"
+description: "Comprehensive source for Technology related news and quick information"
 permalink: /news/01-01-2021
 prevpage: 31-12-2020
 ---
-<h1>Tech news <span>01 Jan 2021</span></h1>
+<h1>Tech news <span>01 Jan, 2021</span></h1>
 <div class="news-carousel">
 {% for data in site.data.f20210101.articles %}
   <div class="news-card">
-    <a href="{{ data.url }}" rel="noopener noreferrer nofollow" target="_blank">
-      <img src="{{ data.urlToImage }}" alt="{{ data.title }}" onerror="if (this.src != '/img/news.png') this.src = '/img/news.png';">
-      <h3>{{ data.title | xml_escape | textilize }}</h3>
-      <span>{{ data.source.name }}</span>
-      <p>{{ data.description | xml_escape | textilize }}</p>
-    </a>
-  </div>
+      <a href="{{ data.url }}" rel="noopener noreferrer nofollow" target="_blank">
+        <div class="news-data">
+          <h3>{{ data.title | xml_escape | textilize }}</h3>
+          <span>{{ data.source.name }}</span>
+          <p>{{ data.description | xml_escape | textilize }}</p>
+        </div>
+         <div class="news-image">
+          <img src="{{ data.urlToImage }}" alt="{{ data.title }}" onerror="if (this.src != '/img/news.png') this.src = '/img/news.png';">
+         </div>
+      </a>
+    </div>
 {% endfor %}
 </div>
