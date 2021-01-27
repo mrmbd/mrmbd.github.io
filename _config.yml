@@ -8,7 +8,7 @@ keep_files:
 title: Bombay Studio
 subtitle: "Bombay Studio"
 description: "Agency with profound focus on international growth. We help you launch and scale. We also invest."
-url: "" # the base hostname & protocol for your site
+url: "https://bombay-studio.com" # the base hostname & protocol for your site
 # baseurl: "/the/subpath/of/your/site" # Set this value to "" if you want your site to be root
 baseurl: ""
 cover: "/img/bombay-studio-logo-filled-01.png"
@@ -27,3 +27,6 @@ descriptions:
 
   - cat: dummy
     desc: "Just some placeholder posts, lorem ipsum and the rest."
+
+plugins:
+  - jekyll-sitemap
