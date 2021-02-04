@@ -1373,14 +1373,14 @@ span.s {
   object-fit: cover;
   object-position: center;
 }
-.news-card h3 {
+.news-card h3, .news-card h2 {
     color: #1F2249;
     margin: 0;
     margin-bottom: 24px;
     margin-top: 24px;
     font-size: 26px;
 }
-.news-card:hover h3 {
+.news-card:hover h3, .news-card:hover h2 {
   text-decoration: underline;
 }
 .news-card span {
@@ -1394,6 +1394,18 @@ span.s {
   font-size: 16px !important;
 }
 
+.topic-wrapper {
+    margin-bottom: 24px;
+}
+.topic-wrapper-selector {
+  display: block;
+  color: #1F2249;
+  margin: 0;
+  margin-bottom: 32px;
+  margin-top: 32px;
+  font-size: 26px;
+  font-weight: 500;
+}
 
 @media (min-width: 992px) {
   .no-d {
@@ -1830,5 +1842,8 @@ button.btn.btn-footer.btn-m-smol {
     position: absolute;
     bottom: 25px;
     right: 15%;
+}
+.topic-wrapper-selector {
+    margin-top: 0;
 }
 }

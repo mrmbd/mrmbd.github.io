@@ -1,0 +1,39 @@
+
+<div class="topic-wrapper">
+  <span class="topic-wrapper-selector">Other categories</span>
+  {% if page.newscategory != 'general' %}
+  <div class="post-link">
+    <a href="/news/{{ page.country }}/general/{{ page.currpage }}"><span>General</span>{% include icon-next.html %}</a>
+  </div>
+  {% endif %}
+  {% if page.newscategory != 'business' %}
+  <div class="post-link">
+    <a href="/news/{{ page.country }}/business/{{ page.currpage }}"><span>Business</span>{% include icon-next.html %}</a>
+  </div>
+  {% endif %}
+  {% if page.newscategory != 'entertainment' %}
+  <div class="post-link">
+    <a href="/news/{{ page.country }}/entertainment/{{ page.currpage }}"><span>Entertainment</span>{% include icon-next.html %}</a>
+  </div>
+  {% endif %}
+  {% if page.newscategory != 'health' %}
+  <div class="post-link">
+    <a href="/news/{{ page.country }}/entertainment/{{ page.currpage }}"><span>Health</span>{% include icon-next.html %}</a>
+  </div>
+  {% endif %}
+  {% if page.newscategory != 'technology' %}
+  <div class="post-link">
+    <a href="/news/{{ page.country }}/technology/{{ page.currpage }}"><span>Technology</span>{% include icon-next.html %}</a>
+  </div>
+  {% endif %}
+  {% if page.newscategory != 'sports' %}
+  <div class="post-link">
+    <a href="/news/{{ page.country }}/sports/{{ page.currpage }}"><span>Sports</span>{% include icon-next.html %}</a>
+  </div>
+  {% endif %}
+  {% if page.newscategory != 'science' %}
+  <div class="post-link">
+    <a href="/news/{{ page.country }}/science/{{ page.currpage }}"><span>Science</span>{% include icon-next.html %}</a>
+  </div>
+  {% endif %}
+</div>
