@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js"  lang="{% if page.country == 'be' %}fr{% else %}en{% endif %}">
+<html class="no-js"  lang="{% if page.country == 'be' or page.country == 'fr'%}fr{% elsif page.country == 'de' %}de{% elsif page.country == 'nl' %}nl{% else %}en{% endif %}">
   <head>
 
     {% include head.html %}
@@ -67,7 +67,7 @@
               <h3 class="p-404">change edition?</h3>
                 <li class="post-link">
                   {% if page.country %}
-                  <a href="https://bombay-studio.com{{ page.url | replace: page.currpage,page.prevpage}}"><span>Previous edition</span><svg width="13px" height="10px" viewBox="0 0 13 10"><path d="M1,5 L11,5"></path><polyline points="8 1 12 5 8 9"></polyline></svg></a>
+                  <a href="/news/{{ page.country }}/{{ page.newscategory }}/{{ page.prevpage }}"><span>Previous edition</span><svg width="13px" height="10px" viewBox="0 0 13 10"><path d="M1,5 L11,5"></path><polyline points="8 1 12 5 8 9"></polyline></svg></a>
                   {% else %}
                   <a href="/news/{{ page.prevpage }}"><span>Previous edition</span><svg width="13px" height="10px" viewBox="0 0 13 10"><path d="M1,5 L11,5"></path><polyline points="8 1 12 5 8 9"></polyline></svg></a>
                   {% endif %}
