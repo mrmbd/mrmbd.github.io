@@ -1,0 +1,29 @@
+---
+layout: news
+title:  "Netherlands - health news for 11 February, 2021"
+description: "Bombay studio a comprehensive source for news and quick information in Netherlands"
+permalink: /news/nl/health/11-02-2021
+prevpage: 10-02-2021
+currpage: 11-02-2021
+newscategory: health
+country: nl
+---
+{% include newstopic.html %}
+
+<h1>Health news <span>11 Feb, 2021</span></h1>
+<div class="news-carousel">
+{% for data in site.data.nlhe20210211.articles %}
+  <div class="news-card">
+      <a href="{{ data.url }}" rel="noopener noreferrer nofollow" target="_blank">
+        <div class="news-data">
+          <h2>{{ data.title | xml_escape | textilize }}</h2>
+          <span>{{ data.source.name }}</span>
+          <p>{{ data.description | xml_escape | textilize }}</p>
+        </div>
+         <div class="news-image">
+          <img src="{{ data.urlToImage }}" alt="{{ data.title }}" onerror="if (this.src != '/img/news.png') this.src = '/img/news.png';">
+         </div>
+      </a>
+    </div>
+{% endfor %}
+</div>
