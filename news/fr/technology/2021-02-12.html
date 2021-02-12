@@ -1,0 +1,29 @@
+---
+layout: news
+title:  "France - technology news for 12 February, 2021"
+description: "Bombay studio a comprehensive source for news and quick information in France"
+permalink: /news/fr/technology/12-02-2021
+prevpage: 11-02-2021
+currpage: 12-02-2021
+newscategory: technology
+country: fr
+---
+{% include newstopic.html %}
+
+<h1>Technology news <span>12 Feb, 2021</span></h1>
+<div class="news-carousel">
+{% for data in site.data.frte20210212.articles %}
+  <div class="news-card">
+      <a href="{{ data.url }}" rel="noopener noreferrer nofollow" target="_blank">
+        <div class="news-data">
+          <h2>{{ data.title | xml_escape | textilize }}</h2>
+          <span>{{ data.source.name }}</span>
+          <p>{{ data.description | xml_escape | textilize }}</p>
+        </div>
+         <div class="news-image">
+          <img src="{{ data.urlToImage }}" alt="{{ data.title }}" onerror="if (this.src != '/img/news.png') this.src = '/img/news.png';">
+         </div>
+      </a>
+    </div>
+{% endfor %}
+</div>
