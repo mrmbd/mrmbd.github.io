@@ -938,6 +938,62 @@ input::-ms-input-placeholder, textarea::-ms-input-placeholder { /* Microsoft Edg
 .h2-sub-12 {
   left: 360px;
 }
+
+.hero-invest2 {
+    background-image: url("/img/paris-photos.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.hero-invest .hero-heading {
+    max-width: 590px;
+}
+.two-col-smol img {
+    display: block;
+    width: 100%;
+}
+.h2-sub-10 {
+    left: 690px;
+}
+@media (max-width: 1240px) {
+  .h2-sub-10 {
+      left: 440px;
+  }
+}
+.invest-page .two-col-smol {
+  max-width: 489px;
+}
+.h2-sub-11 {
+    left: 650px;
+}
+@media (max-width: 1250px) {
+  .h2-sub-11 {
+      left: 394px;
+  }
+}
+.invest-page h2.hero-heading {
+    color: #1F2249;
+    font-size: 48px;
+    font-family: ubuntu, sans-serif;
+    font-weight: 300;
+    line-height: 1.4;
+    position: relative;
+    display: inline-block;
+}
+.invest-page h2.hero-heading::after {
+    content: "";
+    width: 200px;
+    height: 1px;
+    background-color: #1f2249;
+    position: absolute;
+    bottom: -10px;
+    right: -150px;
+}
+.invest-page .scroll .arrow {
+  stroke: #ffffff;
+}
+.h2-sub-12 {
+  left: 360px;
+}
 .hero-team {
     background-image: url("/img/team/Placement Area@2x.jpg");
     background-position: center;
