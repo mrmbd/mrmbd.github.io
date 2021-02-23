@@ -567,9 +567,13 @@ nav.right-nav.flex-box {
     background-color: #db9195;
     left: 0;
 }
-.blog .post li a {
+.blog .post a:not(.tag) {
   color: #db9195;
   text-decoration: none;
+  word-break: break-all;
+}
+.blog .post a::after {
+  height: 0;
 }
 .projects-carousel {
   padding: 0 100px;
