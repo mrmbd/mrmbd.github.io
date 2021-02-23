@@ -567,6 +567,10 @@ nav.right-nav.flex-box {
     background-color: #db9195;
     left: 0;
 }
+.blog .post li a {
+  color: #db9195;
+  text-decoration: none;
+}
 .projects-carousel {
   padding: 0 100px;
 }
