@@ -1929,10 +1929,10 @@ button.btn.btn-footer.btn-m-smol {
 	transition: .4s ease-out;
 }
 .launch-bombay:hover path.exhaust-2 {
-	transform: translate(-2px, 2px);
+	transform: translate(-3px, 3px);
 }
 .launch-bombay:hover path.rocket {
-	transform: translate(2px, -2px);
+	transform: translate(5px, -5px);
 }
 .language-box {
 	transition: .4s ease-out;
