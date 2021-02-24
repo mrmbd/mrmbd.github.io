@@ -1928,10 +1928,10 @@ button.btn.btn-footer.btn-m-smol {
 .launch-bombay {
 	transition: .4s ease-out;
 }
-.launch-bombay:hover path.exhaust-2 {
+.services-box:hover .launch-bombay path.exhaust-2 {
 	transform: translate(-3px, 3px);
 }
-.launch-bombay:hover path.rocket {
+.services-box:hover .launch-bombay path.rocket {
 	transform: translate(5px, -5px);
 }
 .language-box {
@@ -1940,7 +1940,7 @@ button.btn.btn-footer.btn-m-smol {
 .message-box {
 	fill: #E2EBF4;
 }
-.language-box:hover path.message-box {
+.services-box:hover .language-box path.message-box {
 	fill: #1f2249;
 }
 .no-disp {
