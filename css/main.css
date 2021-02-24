@@ -1924,3 +1924,25 @@ button.btn.btn-footer.btn-m-smol {
     margin-top: 0;
 }
 }
+
+.launch-bombay {
+	transition: .4s ease-out;
+}
+.launch-bombay:hover path.exhaust-2 {
+	transform: translate(-2px, 2px);
+}
+.launch-bombay:hover path.rocket {
+	transform: translate(2px, -2px);
+}
+.language-box {
+	transition: .4s ease-out;
+}
+.message-box {
+	fill: #E2EBF4;
+}
+.language-box:hover path.message-box {
+	fill: #1f2249;
+}
+.no-disp {
+	display: none;
+}
