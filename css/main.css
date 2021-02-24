@@ -1943,3 +1943,6 @@ button.btn.btn-footer.btn-m-smol {
 .language-box:hover path.message-box {
 	fill: #1f2249;
 }
+.no-disp {
+	display: none;
+}
