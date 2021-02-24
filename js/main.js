@@ -52,3 +52,16 @@ $(window).on('load', function(){
       )
     }, 4000);
 });
+
+$( ".currency" ).hover(
+  function() {
+    if ($(".euro-symbol").hasClass("no-disp")) {
+		  $(".euro-symbol").removeClass("no-disp");
+		  $(".pound-symbol").addClass("no-disp");
+	  }
+    else {
+      $(".pound-symbol").removeClass("no-disp");
+      $(".euro-symbol").addClass("no-disp");
+    }
+  }
+);
