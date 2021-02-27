@@ -1,0 +1,29 @@
+---
+layout: news
+title:  "Belgium - sports news for 27 February, 2021"
+description: "Bombay studio a comprehensive source for news and quick information in Belgium"
+permalink: /news/be/sports/27-02-2021
+prevpage: 26-02-2021
+currpage: 27-02-2021
+newscategory: sports
+country: be
+---
+{% include newstopic.html %}
+
+<h1>Sports news <span>27 Feb, 2021</span></h1>
+<div class="news-carousel">
+{% for data in site.data.besp20210227.articles %}
+  <div class="news-card">
+      <a href="{{ data.url }}" rel="noopener noreferrer nofollow" target="_blank">
+        <div class="news-data">
+          <h2>{{ data.title | xml_escape | textilize }}</h2>
+          <span>{{ data.source.name }}</span>
+          <p>{{ data.description | xml_escape | textilize }}</p>
+        </div>
+         <div class="news-image">
+          <img src="{{ data.urlToImage }}" alt="{{ data.title }}" onerror="if (this.src != '/img/news.png') this.src = '/img/news.png';">
+         </div>
+      </a>
+    </div>
+{% endfor %}
+</div>
