@@ -1,0 +1,29 @@
+---
+layout: news
+title:  "India - science news for 12 March, 2021"
+description: "Bombay studio a comprehensive source for news and quick information in India"
+permalink: /news/in/science/12-03-2021
+prevpage: 11-03-2021
+currpage: 12-03-2021
+newscategory: science
+country: in
+---
+{% include newstopic.html %}
+
+<h1>Science news <span>12 Mar, 2021</span></h1>
+<div class="news-carousel">
+{% for data in site.data.insc20210312.articles %}
+  <div class="news-card">
+      <a href="{{ data.url }}" rel="noopener noreferrer nofollow" target="_blank">
+        <div class="news-data">
+          <h2>{{ data.title | xml_escape | textilize }}</h2>
+          <span>{{ data.source.name }}</span>
+          <p>{{ data.description | xml_escape | textilize }}</p>
+        </div>
+         <div class="news-image">
+          <img src="{{ data.urlToImage }}" alt="{{ data.title }}" onerror="if (this.src != '/img/news.png') this.src = '/img/news.png';">
+         </div>
+      </a>
+    </div>
+{% endfor %}
+</div>
