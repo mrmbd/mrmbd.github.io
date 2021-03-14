@@ -1,0 +1,29 @@
+---
+layout: news
+title:  "Germany - health news for 14 March, 2021"
+description: "Bombay studio a comprehensive source for news and quick information in Germany"
+permalink: /news/de/health/14-03-2021
+prevpage: 13-03-2021
+currpage: 14-03-2021
+newscategory: health
+country: de
+---
+{% include newstopic.html %}
+
+<h1>Health news <span>14 Mar, 2021</span></h1>
+<div class="news-carousel">
+{% for data in site.data.dehe20210314.articles %}
+  <div class="news-card">
+      <a href="{{ data.url }}" rel="noopener noreferrer nofollow" target="_blank">
+        <div class="news-data">
+          <h2>{{ data.title | xml_escape | textilize }}</h2>
+          <span>{{ data.source.name }}</span>
+          <p>{{ data.description | xml_escape | textilize }}</p>
+        </div>
+         <div class="news-image">
+          <img src="{{ data.urlToImage }}" alt="{{ data.title }}" onerror="if (this.src != '/img/news.png') this.src = '/img/news.png';">
+         </div>
+      </a>
+    </div>
+{% endfor %}
+</div>
