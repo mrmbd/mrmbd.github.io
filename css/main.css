@@ -1161,7 +1161,7 @@ input::-ms-input-placeholder, textarea::-ms-input-placeholder { /* Microsoft Edg
 }
 .post ul li{
   color: #1F2249;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 300;
   max-width: 691px;
   line-height: 1.4;
