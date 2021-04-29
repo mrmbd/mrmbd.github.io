@@ -18,7 +18,7 @@ That's why we have designed a training and internship course for students who wi
 
 **Internship Guidelines:**
 
-- During the internship period, you'll have training on the weekends. Predefined tasks which you will have to do during the weekdays. Timings and details will be provided later. The goal of tasks would be for you to eventually be able to build your own shoppiy stores.
+- During the internship period, you'll have training on the weekends. Predefined tasks which you will have to do during the weekdays. Timings and details will be provided later. The goal of tasks would be for you to eventually be able to build your own shopify stores.
 - We want to find people who are willing to solve problems on their own. People who are capable of doing a little research on the problems that they are confronted with, showing that they are interested in solving the problem at hand.
 - Obviously, the level of the “tasks” grows more and more complex. It ranges from “easy” and gradually increases in difficulty to “advanced”. When you are constantly able to do "Advanced" level tasks you are ready to become a full fledged employee of the company. Again, feedback will be given on how to make the task perfect.
 - You will receive 120€( 10,000₹ approx. depending on the market conversion) stipend every month of your training period and an internship certificate at the end.
